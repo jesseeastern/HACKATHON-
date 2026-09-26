@@ -141,12 +141,12 @@ button:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
 
 .wheel{position:relative;width:min(560px,86vw);aspect-ratio:1;margin-inline:auto}
 .wheel svg{position:absolute;inset:10%;width:80%;height:80%}
-.wheel .spark{transform-origin:200px 200px;animation:orbit 8s linear infinite}
+.wheel .spark{transform-origin:200px 200px;animation:orbit 10s linear infinite}
 @keyframes orbit{to{transform:rotate(360deg)}}
-.wheel span{position:absolute;width:40%;box-sizing:border-box;transform:translate(-50%,-50%);border:1px solid rgba(185,192,218,.4);background:var(--indigo-2);border-radius:16px;padding:12px 14px;
-  font:500 clamp(15px,1.5vw,21px)/1.25 var(--display);text-align:center;animation:lit2 8s linear infinite}
-.wheel .w1{left:50%;top:12%}.wheel .w2{left:79%;top:50%;animation-delay:2s}.wheel .w3{left:50%;top:88%;animation-delay:4s}.wheel .w4{left:21%;top:50%;animation-delay:6s}
-@keyframes lit2{0%,18%{border-color:var(--gold);color:var(--gold)}25%,100%{border-color:rgba(185,192,218,.4);color:var(--cream)}}
+.wheel span{position:absolute;width:31%;box-sizing:border-box;transform:translate(-50%,-50%);border:1px solid rgba(185,192,218,.4);background:var(--indigo-2);border-radius:16px;padding:12px 14px;
+  font:500 clamp(13px,1.25vw,18px)/1.25 var(--display);text-align:center;animation:lit2 10s linear infinite}
+.wheel .w1{left:50%;top:10%}.wheel .w2{left:86%;top:38%;animation-delay:2s}.wheel .w3{left:72%;top:82%;animation-delay:4s}.wheel .w4{left:28%;top:82%;animation-delay:6s}.wheel .w5{left:14%;top:38%;animation-delay:8s}
+@keyframes lit2{0%,16%{border-color:var(--gold);color:var(--gold)}25%,100%{border-color:rgba(185,192,218,.4);color:var(--cream)}}
 .wheel .you{box-shadow:0 0 0 3px rgba(224,174,76,.35)}
 .wheel em{display:block;font:italic 600 clamp(12px,1.1vw,15px)/1.2 var(--body);color:var(--gold);margin-top:4px}
 @media (max-width:760px){
@@ -214,12 +214,13 @@ button:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
     <p class="eyebrow r">How we grow</p>
     <div class="wheel r" aria-label="Growth loop in four steps">
       <svg class="ring-arrows" viewBox="0 0 400 400" aria-hidden="true"><circle cx="200" cy="200" r="150" fill="none" stroke="rgba(185,192,218,.3)" stroke-width="2" stroke-dasharray="6 10"/><circle class="spark" cx="200" cy="50" r="7" fill="#E0AE4C"/></svg>
-      <span class="w1">Organisers list events, free</span>
-      <span class="w2">Newcomers check it every week</span>
-      <span class="w3 you">They request and vote<em>you, tonight</em></span>
-      <span class="w4">We recruit Thai hosts</span>
+      <span class="w1">One free calendar: every event, Thai and expat</span>
+      <span class="w2">Organisers promote it, it fills their events</span>
+      <span class="w3">Expats come, and find Thai experiences</span>
+      <span class="w4 you">They upvote what they want<em>you, tonight</em></span>
+      <span class="w5">Nomads help us recruit Thai hosts</span>
     </div>
-    <aside class="notes">~20 s. The calendar is free, and expat organisers share it because it fills their events. Newcomers come back every week. Every request and vote tells us which Thai host to recruit next, and every new host gives newcomers another reason to come back. Step three is you, tonight.</aside>
+    <aside class="notes">~20 s. We gather every event in the city, Thai and expat, into one free calendar. Organisers promote it because it fills their events. Expats come for the calendar and find the Thai experiences. They upvote what they want, which proves demand. And nomads help us recruit the Thai hosts, through their trainer, their barista, their language partner. Step four is you, tonight.</aside>
   </section>
 
   <section class="slide cta" id="s-cta" aria-label="Call to action">
