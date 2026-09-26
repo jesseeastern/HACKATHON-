@@ -1,156 +1,414 @@
 {
-  "updatedAt": "2026-09-26T22:30:00+07:00",
-  "source": "a curated calendar of public Chiang Mai events",
-  "events": [
-    {
-      "title": "Slowcial Running Club CM",
-      "start": "2026-09-26T07:30:00+07:00",
-      "end": "2026-09-26T09:30:00+07:00",
-      "location": "Living A Dream",
-      "description": "A gentle, social run every Saturday at 7:30 from the CMU campus: about 20 to 25 minutes of easy jogging, then coffee and food together. Open to expats and locals.",
-      "sourceName": "Meetup"
-    },
-    {
-      "title": "Slow + Social Running",
-      "start": "2026-09-26T07:30:00+07:00",
-      "end": "2026-09-26T08:30:00+07:00",
-      "location": null,
-      "description": "",
-      "sourceName": "Todo.Today"
-    },
-    {
-      "title": "Social Padel for Beginner (Low Silver Americano)",
-      "start": "2026-09-26T09:30:00+07:00",
-      "end": "2026-09-26T12:00:00+07:00",
-      "location": "Lanna Padel AC",
-      "description": "A Saturday morning social padel session at Lanna Padel for beginners (low silver level), with games and time to mingle with the morning crowd. Warm-up from 9:30 AM and play from 10 AM; complete first-timers are invited to come at 9:30 for ball-machine training. Rackets can be rented at reception, and payment is cash or QR transfer only.",
-      "sourceName": "Todo.Today",
-      "price": "฿350"
-    },
-    {
-      "title": "Saturday Low Silver Americano",
-      "start": "2026-09-26T10:00:00+07:00",
-      "end": "2026-09-26T12:00:00+07:00",
-      "location": null,
-      "description": "Saturday morning padel for beginners, with a free ball-machine warm-up.",
-      "sourceName": "Playtomic"
-    },
-    {
-      "title": "Contact Improv Class + Jam",
-      "start": "2026-09-26T10:00:00+07:00",
-      "end": "2026-09-26T13:00:00+07:00",
-      "location": null,
-      "description": "A weekly Saturday morning contact improvisation session: a facilitated class exploring CI principles, followed by an open jam where everyone dances. Teachers rotate, and you can come for the class, the jam, or both. People are invited to stay for a community lunch at the market afterwards. Runs 10 AM to 1 PM at The Little Something Studio.",
-      "sourceName": "Todo.Today",
-      "price": "฿350"
-    },
-    {
-      "title": "Saturday Walking Street Night Market",
-      "start": "2026-09-26T16:00:00+07:00",
-      "end": "2026-09-26T22:00:00+07:00",
-      "location": "Wua Lai Walking Street",
-      "description": "Chiang Mai's Saturday night market along Wua Lai Road, just outside Chiang Mai Gate south of the Old City, open roughly 4 to 10 PM. Stalls sell handmade crafts, silver jewellery and street food, with live music and performances. Described as more relaxed than the Sunday market and suited to an evening cultural stroll.",
-      "sourceName": "Todo.Today",
-      "price": null
-    },
-    {
-      "title": "Ecstatic Dance CNX",
-      "start": "2026-09-27T12:30:00+07:00",
-      "end": "2026-09-27T14:30:00+07:00",
-      "location": "VIVID DANCE STUIOS",
-      "description": "Free, barefoot movement to music, danced in silence, with no phones, cameras, alcohol or drugs. ฿300 per session.",
-      "sourceName": "Facebook"
-    },
-    {
-      "title": "Sunday Walking Street Market",
-      "start": "2026-09-27T16:00:00+07:00",
-      "end": "2026-09-27T22:00:00+07:00",
-      "location": "Tha Phae Walking Street",
-      "description": "Chiang Mai's best-known weekly market, the Sunday Walking Street running along Ratchadamnoen Road from Tha Pae Gate through the Old City, roughly 4 to 10 PM. It offers hill tribe handicrafts, souvenirs, traditional snacks and live performances. Visitors are advised to arrive early to beat the crowds.",
-      "sourceName": "Todo.Today",
-      "price": null
-    },
-    {
-      "title": "Social Padel - All Level (Mexicano)",
-      "start": "2026-09-27T16:30:00+07:00",
-      "end": "2026-09-27T19:00:00+07:00",
-      "location": "Lanna Padel AC",
-      "description": "A Sunday late-afternoon all-level padel Mexicano at Lanna Padel, where matchups are adjusted each round based on results so beginners and regulars play together. First-timers get a free training session at 4:30 PM, warm-up is from 4:30 and matches start at 5 PM. Racket rental is available, payment is cash or QR only, and the top three players win a vending machine item plus a free next session.",
-      "sourceName": "Todo.Today",
-      "price": "฿400"
-    },
-    {
-      "title": "Sunday All Level Mexicano",
-      "start": "2026-09-27T17:00:00+07:00",
-      "end": "2026-09-27T19:00:00+07:00",
-      "location": null,
-      "description": "Sunday afternoon padel for all levels.",
-      "sourceName": "Playtomic"
-    },
-    {
-      "title": "Loving-Kindness Meditation & Buddhist Q&A",
-      "start": "2026-09-27T18:30:00+07:00",
-      "end": "2026-09-27T19:30:00+07:00",
-      "location": "Wat Tung Yu",
-      "description": "",
-      "sourceName": "Todo.Today"
-    },
-    {
-      "title": "Buddhist Study Group: Meditation, Teachings & Q&A",
-      "start": "2026-09-27T21:00:00+07:00",
-      "end": "2026-09-27T22:30:00+07:00",
-      "location": "Wat Tung Yu",
-      "description": "",
-      "sourceName": "Todo.Today"
-    },
-    {
-      "title": "Social Padel for Intermediate/Advanced (Mexicano)",
-      "start": "2026-09-28T09:30:00+07:00",
-      "end": "2026-09-28T12:00:00+07:00",
-      "location": "Lanna Padel AC",
-      "description": "A Monday morning padel Mexicano at Lanna Padel for stronger players, with matchups adjusted round by round based on results. Requires a minimum Playtomic level of 2.0; warm-up from 9:30 AM and matches from 10 AM. Racket rental available, payment cash or QR only, and the top three win a vending machine item plus a free next session.",
-      "sourceName": "Todo.Today",
-      "price": "฿400"
-    },
-    {
-      "title": "Dune Days Tuesdays",
-      "start": "2026-09-29T18:00:00+07:00",
-      "end": "2026-09-29T23:00:00+07:00",
-      "location": "Game Tree Cafe",
-      "description": "A weekly Tuesday strategy night built around Dune: Imperium Uprising, with lighter warm-up games first and a teaching table for newcomers.",
-      "sourceName": "Meetup"
-    },
-    {
-      "title": "Intro Gamers night",
-      "start": "2026-09-30T18:00:00+07:00",
-      "end": "2026-09-30T23:00:00+07:00",
-      "location": "Game Tree Cafe",
-      "description": "A relaxed Wednesday night of Catan and its variants, with a new game starting roughly every hour. Beginners welcome.",
-      "sourceName": "Meetup"
-    },
-    {
-      "title": "Strategy Thursdays",
-      "start": "2026-10-01T18:00:00+07:00",
-      "end": "2026-10-01T23:00:00+07:00",
-      "location": "Game Tree Cafe",
-      "description": "A weekly Thursday night of medium to heavy Euro-style strategy games, with the line-up changing every week.",
-      "sourceName": "Meetup"
-    },
-    {
-      "title": "New Gamers Night",
-      "start": "2026-10-02T18:00:00+07:00",
-      "end": "2026-10-02T23:00:00+07:00",
-      "location": "Game Tree Cafe",
-      "description": "A Friday night of light, fast party and card games with few rules. Made for newcomers.",
-      "sourceName": "Meetup"
-    },
-    {
-      "title": "Slowcial Running Club CM",
-      "start": "2026-10-03T07:30:00+07:00",
-      "end": "2026-10-03T09:30:00+07:00",
-      "location": "Living A Dream",
-      "description": "A gentle, social run every Saturday at 7:30 from the CMU campus: about 20 to 25 minutes of easy jogging, then coffee and food together. Open to expats and locals.",
-      "sourceName": "Meetup"
-    }
-  ]
+ "updatedAt": "2026-09-27T01:08:00+07:00",
+ "source": "a curated calendar of public Chiang Mai events",
+ "events": [
+  {
+   "title": "Skate X Create",
+   "start": "2026-09-27T14:00:00+07:00",
+   "end": "2026-09-27T16:00:00+07:00",
+   "location": "Chiang Mai Railway Station",
+   "url": "https://www.meetup.com/chiang-mai-professionals-expats-and-digital-nomads/events/316239702/",
+   "description": "Spend an easy afternoon outdoors skating, drawing, and relaxing in the park. Open to skaters and creatives of all skill levels."
+  },
+  {
+   "title": "Sunday Sunset Walk & Connect at CMU",
+   "start": "2026-09-27T17:00:00+07:00",
+   "end": "2026-09-27T19:00:00+07:00",
+   "location": null,
+   "url": "https://www.meetup.com/beyond-small-talk-chiang-mai/events/316454663/",
+   "description": "Take a gentle evening stroll around the CMU grounds to chat and unwind. Ideal for expats, travelers, and locals looking to meet new people."
+  },
+  {
+   "title": "All Day Gaming",
+   "start": "2026-09-27T19:00:00+07:00",
+   "end": "2026-09-27T21:00:00+07:00",
+   "location": "Game Tree Cafe",
+   "url": "https://www.meetup.com/chiang-mai-professionals-expats-and-digital-nomads/events/316455742/",
+   "description": "Play a wide variety of tabletop titles, from casual picks to heavy strategy games. Perfect for both solo newcomers and seasoned players."
+  },
+  {
+   "title": "High-Intensity Circuit Training & Social Chat @ Decathlon – Central Festival",
+   "start": "2026-09-29T11:00:00+07:00",
+   "end": "2026-09-29T13:00:00+07:00",
+   "location": "Decathlon Chiang Mai",
+   "url": "https://www.meetup.com/hiit-cnx/events/316479586/",
+   "description": "Boost your endurance with an energizing circuit workout, then hang out with the group. Open to all fitness levels, with exercise modifications offered."
+  },
+  {
+   "title": "Dune Days Tuesdays",
+   "start": "2026-09-29T18:00:00+07:00",
+   "end": "2026-09-29T23:00:00+07:00",
+   "location": "Game Tree Cafe",
+   "url": "https://www.meetup.com/chiang-mai-professionals-expats-and-digital-nomads/events/316481865/",
+   "description": "Learn and play strategic deck-building and worker-placement games, centered around Dune Imperium. Great for board game enthusiasts of any experience level."
+  },
+  {
+   "title": "Intro Gamers night",
+   "start": "2026-09-30T18:00:00+07:00",
+   "end": "2026-09-30T23:00:00+07:00",
+   "location": "Game Tree Cafe",
+   "url": "https://www.meetup.com/chiang-mai-professionals-expats-and-digital-nomads/events/316497380/",
+   "description": "Enjoy casual rounds of Catan across multiple editions, with rules taught on site. Ideal for beginner board gamers and social players."
+  },
+  {
+   "title": "Loose-Leaf Playground Writing X Poetry Club",
+   "start": "2026-09-30T17:00:00+07:00",
+   "end": "2026-09-30T19:00:00+07:00",
+   "location": "rare finds bookstore & cafe",
+   "url": "https://www.meetup.com/chiang-mai-professionals-expats-and-digital-nomads/events/316496893/",
+   "description": "Work on creative writing and poetry through light prompts, quiet focus time, and optional sharing. Suited to writers of all experience levels."
+  },
+  {
+   "title": "Strategy Thursdays",
+   "start": "2026-10-01T18:00:00+07:00",
+   "end": "2026-10-01T23:00:00+07:00",
+   "location": "Game Tree Cafe",
+   "url": "https://www.meetup.com/chiang-mai-professionals-expats-and-digital-nomads/events/316512035/",
+   "description": "Tackle medium to heavy Euro-style board games focusing on pure strategy over luck. Perfect for fans of deep, analytical tabletop gameplay."
+  },
+  {
+   "title": "HAS YOUR LIFE ALREADY HAPPENED?",
+   "start": "2026-10-01T18:00:00+07:00",
+   "end": "2026-10-01T20:00:00+07:00",
+   "location": "Spice Garden",
+   "url": "https://www.meetup.com/beyond-small-talk-chiang-mai/events/316526284/",
+   "description": "Explore mind-bending philosophical questions about time, fate, and the nature of existence. Suited to anyone curious about deep discussions."
+  },
+  {
+   "title": "Bring-a-Book Reading Club",
+   "start": "2026-09-27T10:00:00+07:00",
+   "end": "2026-09-27T12:00:00+07:00",
+   "location": "Zuzalu Library Event Space - 1st Floor",
+   "url": "https://app.sola.day/event/detail/3mtds4tfhiihe",
+   "description": "Bring your current book and enjoy a relaxed reading session with fellow book lovers."
+  },
+  {
+   "title": "Founders Meetup by AI Fusion Labs",
+   "start": "2026-09-27T11:00:00+07:00",
+   "end": "2026-09-27T12:00:00+07:00",
+   "location": "AI Fusion Labs",
+   "url": "https://todo.today/chiang-mai/2026/09/27/founders-meetup-by-ai-fusion-labs",
+   "description": "Connect with fellow entrepreneurs, tech innovators, and founders working with AI."
+  },
+  {
+   "title": "SWAPAHOLIC: Women's Clothing Swap",
+   "start": "2026-09-27T13:00:00+07:00",
+   "end": "2026-09-27T15:00:00+07:00",
+   "location": "Free Bird Cafe",
+   "url": "https://todo.today/chiang-mai/2026/09/27/swapaholic-womens-clothing-accessories-swap-4",
+   "description": "Refresh your wardrobe sustainably by exchanging pre-loved clothes with other women."
+  },
+  {
+   "title": "Youth Club — Screen-Free Sunday for Kids",
+   "start": "2026-09-27T13:00:00+07:00",
+   "end": "2026-09-27T14:00:00+07:00",
+   "location": "Zuzalu Library Event Space - 1st Floor",
+   "url": "https://app.sola.day/event/detail/3mvqc26jlgwb5",
+   "description": "Kids engage in creative, offline play and social activities during a screen-free Sunday session."
+  },
+  {
+   "title": "Be Fxcking Real: Authentic Connection Circle",
+   "start": "2026-09-27T14:00:00+07:00",
+   "end": "2026-09-27T15:30:00+07:00",
+   "location": null,
+   "url": "https://todo.today/chiang-mai/2026/09/27/be-fxcking-real-authentic-connection-circle-w-anne",
+   "description": "Share genuine conversation and practice vulnerable, authentic communication in a supportive group circle."
+  },
+  {
+   "title": "Art Weekend: Terracotta & Water Color Workshops",
+   "start": "2026-09-27T14:00:00+07:00",
+   "end": "2026-09-27T19:00:00+07:00",
+   "location": null,
+   "url": "https://todo.today/chiang-mai/2026/09/27/art-weekend---terracotta-water-color-workshops-live-music-in-the-garden-5",
+   "description": "Explore your creative side with hands-on terracotta crafting and watercolor painting workshops."
+  },
+  {
+   "title": "Sunday Dog Social @ Olio Homemade",
+   "start": "2026-09-27T16:00:00+07:00",
+   "end": "2026-09-27T18:00:00+07:00",
+   "location": "olio.homemade",
+   "url": "https://todo.today/chiang-mai/2026/09/27/sunday-dog-social-olio-homemade-30",
+   "description": "Bring your pup for a friendly social meetup open to local dog owners and pet lovers."
+  },
+  {
+   "title": "Sunday Walking Street Market",
+   "start": "2026-09-27T16:00:00+07:00",
+   "end": "2026-09-27T22:00:00+07:00",
+   "location": "Tha Phae Walking Street",
+   "url": "https://todo.today/chiang-mai/2026/09/27/sunday-walking-street-market-tha-pae-to-ratchadamnoen-64",
+   "description": "Browse local handicrafts, street food, and vibrant stalls at this popular weekend walking street market."
+  },
+  {
+   "title": "Social Padel - All Level (Mexicano)",
+   "start": "2026-09-27T16:30:00+07:00",
+   "end": "2026-09-27T19:00:00+07:00",
+   "location": "Lanna Padel AC",
+   "url": "https://todo.today/chiang-mai/2026/09/27/social-padel-for-all-level-mexicano-9",
+   "description": "Play rotating padel matches in a fun Mexicano format, open to players of all skill levels."
+  },
+  {
+   "title": "Bollyx Dance with Live Dhol Beats",
+   "start": "2026-09-27T17:00:00+07:00",
+   "end": "2026-09-27T18:00:00+07:00",
+   "location": "Amore Chiang Mai",
+   "url": "https://todo.today/chiang-mai/2026/09/27/bollyx-dance-with-live-dhol-beats",
+   "description": "Dance to energetic Bollywood rhythms accompanied by live dhol drumming. Great for anyone wanting a fun, upbeat workout."
+  },
+  {
+   "title": "Improv Jam & Show",
+   "start": "2026-09-27T17:30:00+07:00",
+   "end": "2026-09-27T20:30:00+07:00",
+   "location": null,
+   "url": "https://todo.today/chiang-mai/2026/09/27/improv-jam-show-kindred-studio-2",
+   "description": "Watch spontaneous comedy scenes unfold or take the stage yourself in this playful improv session."
+  },
+  {
+   "title": "Chiang Mai Social & Singles Meetup",
+   "start": "2026-09-27T18:00:00+07:00",
+   "end": "2026-09-27T20:00:00+07:00",
+   "location": "Tidabell",
+   "url": "https://todo.today/chiang-mai/2026/09/27/chiang-mai-social-singles-meetup-25",
+   "description": "Mingle, chat, and make new connections in a relaxed social setting for local singles and expats."
+  },
+  {
+   "title": "Dance in Flow",
+   "start": "2026-09-27T18:00:00+07:00",
+   "end": "2026-09-27T20:00:00+07:00",
+   "location": null,
+   "url": "https://todo.today/chiang-mai/2026/09/27/dance-in-flow-16",
+   "description": "Move freely to evocative music in a guided, expressive dance and movement practice."
+  },
+  {
+   "title": "Loving-Kindness Meditation & Buddhist Q&A",
+   "start": "2026-09-27T18:30:00+07:00",
+   "end": "2026-09-27T19:30:00+07:00",
+   "location": "Wat Tung Yu",
+   "url": "https://todo.today/chiang-mai/2026/09/27/loving-kindness-meditation-buddhist-qa-9",
+   "description": "Practice loving-kindness meditation followed by an open Q&A on Buddhist philosophy and practice."
+  },
+  {
+   "title": "Stand-Up Comedy: Dana Alexander Live in Chiang Mai",
+   "start": "2026-09-27T19:30:00+07:00",
+   "end": "2026-09-27T21:30:00+07:00",
+   "location": "Chiang Mai Marriott Hotel",
+   "url": "https://todo.today/chiang-mai/2026/09/27/stand-up-comedy-dana-alexander-live-in-chiang-mai-1",
+   "description": "Enjoy a night of sharp stand-up comedy featuring international touring comedian Dana Alexander."
+  },
+  {
+   "title": "Buddhist Study Group: Meditation, Teachings & Q&A",
+   "start": "2026-09-27T21:00:00+07:00",
+   "end": "2026-09-27T22:30:00+07:00",
+   "location": "Wat Tung Yu",
+   "url": "https://todo.today/chiang-mai/2026/09/27/buddhist-study-group-meditation-teachings-qa-9",
+   "description": "Deepen your understanding of Buddhist teachings through guided meditation, study, and open group discussion."
+  },
+  {
+   "title": "Enjoy Health, Live Well｜乐享健康·轻松养生 CHN event",
+   "start": "2026-09-28T10:00:00+07:00",
+   "end": "2026-09-28T12:00:00+07:00",
+   "location": "Zuzalu Library Event Space - 1st Floor",
+   "url": "https://app.sola.day/event/detail/3muhmvbrpthpm",
+   "description": "A wellness-focused gathering conducted in Chinese exploring healthy living and holistic self-care."
+  },
+  {
+   "title": "AI for Women: Create, Learn & Connect - AI Goddesses Meetup Chiang Mai",
+   "start": "2026-09-28T10:00:00+07:00",
+   "end": "2026-09-28T11:00:00+07:00",
+   "location": "Event Space - 1st Floor 4Seas Nimman",
+   "url": "https://app.sola.day/event/detail/3mqoo2ou46vgc",
+   "description": "Women learn, experiment, and collaborate on artificial intelligence tools and creative tech projects."
+  },
+  {
+   "title": "MOVE STRONG – Bodyweight Strength & Quality Movement Session",
+   "start": "2026-09-28T14:00:00+07:00",
+   "end": "2026-09-28T15:00:00+07:00",
+   "location": "Event Space - 1st Floor 4Seas Nimman",
+   "url": "https://app.sola.day/event/detail/3mup5wk3j5bpm",
+   "description": "Build functional bodyweight strength and mobility in a focused movement session suitable for all levels."
+  },
+  {
+   "title": "Zen Strength Breathwork + Ice Bath Experience",
+   "start": "2026-09-29T14:30:00+07:00",
+   "end": "2026-09-29T15:30:00+07:00",
+   "location": "Zuzalu Library Discussion Room - 2nd Floor",
+   "url": "https://app.sola.day/event/detail/3mtixexelrche",
+   "description": "Combine conscious breathwork techniques with cold-water immersion to reset mind and body."
+  },
+  {
+   "title": "Vibecoding for Women: Building Websites & Web Apps with Claude Code + AI",
+   "start": "2026-09-29T18:00:00+07:00",
+   "end": "2026-09-29T20:00:00+07:00",
+   "location": "Conference Room - 3rd Floor 4Seas Nimman",
+   "url": "https://app.sola.day/event/detail/3mtkqff2glghe",
+   "description": "A hands-on workshop empowering women to build web apps and sites using AI coding assistants."
+  },
+  {
+   "title": "CNX Book Club Lite",
+   "start": "2026-09-29T18:30:00+07:00",
+   "end": "2026-09-29T20:30:00+07:00",
+   "location": "Zuzalu Library Event Space - 1st Floor",
+   "url": "https://app.sola.day/event/detail/3mmo4bxzv5o6p",
+   "description": "Enjoy light, friendly literary discussion in an informal and relaxed book club setting."
+  },
+  {
+   "title": "Conversations and Mind traps",
+   "start": "2026-09-30T16:00:00+07:00",
+   "end": "2026-09-30T17:00:00+07:00",
+   "location": "Zuzalu Library Event Space - 3rd Floor",
+   "url": "https://app.sola.day/event/detail/3mvwlm5fdaib5",
+   "description": "Examine common cognitive biases and thought patterns through engaging, interactive conversations."
+  },
+  {
+   "title": "QTM Event",
+   "start": "2026-09-30T18:00:00+07:00",
+   "end": "2026-09-30T20:00:00+07:00",
+   "location": "Event Space - 1st Floor 4Seas Nimman",
+   "url": "https://app.sola.day/event/detail/3mrluljk4pygc",
+   "description": "A community gathering hosted by QTM for networking and shared discussion."
+  },
+  {
+   "title": "Intro to Zen and Zen Meditation practice | weekly",
+   "start": "2026-10-01T11:30:00+07:00",
+   "end": "2026-10-01T13:00:00+07:00",
+   "location": "Zuzalu Library Event Space - 1st Floor",
+   "url": "https://app.sola.day/event/detail/3muzid6msonpm",
+   "description": "Learn foundational Zen meditation techniques and philosophy in a welcoming weekly introductory class."
+  },
+  {
+   "title": "MAI Thursday Board Game Meetup",
+   "start": "2026-10-01T14:00:00+07:00",
+   "end": "2026-10-01T18:00:00+07:00",
+   "location": "Zuzalu Library Discussion Room - 2nd Floor",
+   "url": "https://app.sola.day/event/detail/3msxsbp22l2lr",
+   "description": "Meet up to play a variety of tabletop and board games in a relaxed social setting."
+  },
+  {
+   "title": "Expat Karaoke Thursdays @ Extend Bar",
+   "start": "2026-10-01T20:30:00+07:00",
+   "end": "2026-10-01T23:30:00+07:00",
+   "location": "The Extend Bar",
+   "url": "https://www.meetup.com/chiang-mai-professionals-expats-and-digital-nomads/events/nnwhbvyjcnbcb/",
+   "description": "Pick your favorite tracks on YouTube and sing along in a welcoming, laid-back bar setting. Great for expats and music lovers."
+  },
+  {
+   "title": "High-Intensity Circuit Training & Social Chat @ Decathlon – Central Festival",
+   "start": "2026-10-02T11:00:00+07:00",
+   "end": "2026-10-02T13:00:00+07:00",
+   "location": "Decathlon Chiang Mai",
+   "url": "https://www.meetup.com/hiit-cnx/events/316523730/",
+   "description": "Push your limits with a high-energy circuit workout followed by casual social chats. Open to all fitness levels."
+  },
+  {
+   "title": "New Gamers Night",
+   "start": "2026-10-02T18:00:00+07:00",
+   "end": "2026-10-02T23:00:00+07:00",
+   "location": "Game Tree Cafe",
+   "url": "https://www.meetup.com/chiang-mai-professionals-expats-and-digital-nomads/events/316525743/",
+   "description": "Play quick, lighthearted card and party games without worrying about complicated rules. Perfect for beginners and solo attendees."
+  },
+  {
+   "title": "Slowcial Running Club CM",
+   "start": "2026-10-03T07:30:00+07:00",
+   "end": "2026-10-03T09:30:00+07:00",
+   "location": "Living A Dream",
+   "url": "https://www.meetup.com/chiang-mai-professionals-expats-and-digital-nomads/events/cxktztyjcnbfb/",
+   "description": "Take part in an easy 20-minute jog around campus, followed by coffee and conversation. Suited to beginners and social runners."
+  },
+  {
+   "title": "Sunday Sunset Walk & Connect at CMU",
+   "start": "2026-10-04T17:00:00+07:00",
+   "end": "2026-10-04T19:00:00+07:00",
+   "location": null,
+   "url": "https://www.meetup.com/beyond-small-talk-chiang-mai/events/316551098/",
+   "description": "Walk around CMU at sunset and connect with friendly locals, travelers, and expats. Great for anyone wanting relaxed conversation."
+  },
+  {
+   "title": "All Day Gaming",
+   "start": "2026-10-04T19:00:00+07:00",
+   "end": "2026-10-04T21:00:00+07:00",
+   "location": "Game Tree Cafe",
+   "url": "https://www.meetup.com/chiang-mai-professionals-expats-and-digital-nomads/events/316552049/",
+   "description": "Drop in anytime to play tabletop games ranging from casual favorites to sprawling campaigns. Beginners and regulars welcome."
+  },
+  {
+   "title": "Ecstatic Dance CNX",
+   "start": "2026-09-27T12:30:00+07:00",
+   "end": "2026-09-27T14:30:00+07:00",
+   "location": "VIVID DANCE STUIOS",
+   "url": "",
+   "description": "Move freely and barefoot to rhythmic music in a substance-free, silent space. Suited to anyone seeking conscious dance and release."
+  },
+  {
+   "title": "Sunday All Level Mexicano",
+   "start": "2026-09-27T17:00:00+07:00",
+   "end": "2026-09-27T19:00:00+07:00",
+   "location": null,
+   "url": "https://app.playtomic.io/tournaments/70e937bb-8cb7-4dbd-9b80-66b691bb16e4?utm_source=manager",
+   "description": "Join an all-levels Mexicano padel session featuring rotating partners and casual gameplay."
+  },
+  {
+   "title": "Morning Flow Yoga",
+   "start": "2026-09-28T09:00:00+07:00",
+   "end": "2026-09-28T10:15:00+07:00",
+   "location": null,
+   "url": "https://todo.today/chiang-mai/2026/09/28/morning-flow-yoga-55",
+   "description": "Awaken your body with an energizing morning flow yoga practice suitable for all experience levels."
+  },
+  {
+   "title": "Social Padel for Intermediate/Advanced (Mexicano)",
+   "start": "2026-09-28T09:30:00+07:00",
+   "end": "2026-09-28T12:00:00+07:00",
+   "location": "Lanna Padel AC",
+   "url": "https://todo.today/chiang-mai/2026/09/28/padel-tournament-for-advanced-king-of-the-court-5",
+   "description": "Compete in fast-paced Mexicano padel matches tailored for intermediate and advanced players."
+  },
+  {
+   "title": "Shut Up & Write",
+   "start": "2026-09-28T10:00:00+07:00",
+   "end": "2026-09-28T11:30:00+07:00",
+   "location": "Mi Chan Tchung",
+   "url": "https://todo.today/chiang-mai/2026/09/28/shut-up-and-write-9",
+   "description": "Enjoy dedicated, silent writing time alongside fellow writers, followed by optional casual chatting."
+  },
+  {
+   "title": "AI Goddesses Meetup (Women Only)",
+   "start": "2026-09-28T10:00:00+07:00",
+   "end": "2026-09-28T11:30:00+07:00",
+   "location": "AI with Fey",
+   "url": "https://todo.today/chiang-mai/2026/09/28/ai-goddesses-meetup-women-only-64",
+   "description": "A women-only community meetup focused on learning, networking, and creating with AI tools."
+  },
+  {
+   "title": "Vinyasa Flow",
+   "start": "2026-09-28T10:00:00+07:00",
+   "end": "2026-09-28T11:15:00+07:00",
+   "location": "Studio Layla Yoga Admin",
+   "url": "https://todo.today/chiang-mai/2026/09/28/vinyasa-flow-1623",
+   "description": "Synchronize breath and movement in a dynamic, continuous vinyasa yoga class."
+  },
+  {
+   "title": "Gentle Flow",
+   "start": "2026-09-28T17:00:00+07:00",
+   "end": "2026-09-28T18:15:00+07:00",
+   "location": "Studio Layla Yoga Admin",
+   "url": "https://todo.today/chiang-mai/2026/09/28/gentle-flow-639",
+   "description": "Slow down and stretch with a soothing, gentle yoga flow that suits beginners and relaxing movers."
+  },
+  {
+   "title": "CMU Sunset Walk: Community, Connection, Presence",
+   "start": "2026-09-28T17:30:00+07:00",
+   "end": "2026-09-28T19:00:00+07:00",
+   "location": null,
+   "url": "https://todo.today/chiang-mai/2026/09/28/sunset-walk-cmu-24",
+   "description": "Enjoy a peaceful group sunset walk around CMU campus focused on mindfulness and connection."
+  },
+  {
+   "title": "Blood on Clocktower - A Social Game",
+   "start": "2026-09-28T18:30:00+07:00",
+   "end": "2026-09-28T22:00:00+07:00",
+   "location": null,
+   "url": "https://todo.today/chiang-mai/2026/09/28/blood-on-clocktower-social-deduction-game",
+   "description": "Play Blood on the Clocktower, an engaging social deduction game of bluffing, deception, and deduction."
+  }
+ ]
 }
