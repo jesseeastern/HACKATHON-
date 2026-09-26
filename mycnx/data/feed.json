@@ -1,0 +1,156 @@
+{
+  "updatedAt": "2026-09-26T22:30:00+07:00",
+  "source": "a curated calendar of public Chiang Mai events",
+  "events": [
+    {
+      "title": "Slowcial Running Club CM",
+      "start": "2026-09-26T07:30:00+07:00",
+      "end": "2026-09-26T09:30:00+07:00",
+      "location": "Living A Dream",
+      "description": "A gentle, social run every Saturday at 7:30 from the CMU campus: about 20 to 25 minutes of easy jogging, then coffee and food together. Open to expats and locals.",
+      "sourceName": "Meetup"
+    },
+    {
+      "title": "Slow + Social Running",
+      "start": "2026-09-26T07:30:00+07:00",
+      "end": "2026-09-26T08:30:00+07:00",
+      "location": null,
+      "description": "",
+      "sourceName": "Todo.Today"
+    },
+    {
+      "title": "Social Padel for Beginner (Low Silver Americano)",
+      "start": "2026-09-26T09:30:00+07:00",
+      "end": "2026-09-26T12:00:00+07:00",
+      "location": "Lanna Padel AC",
+      "description": "A Saturday morning social padel session at Lanna Padel for beginners (low silver level), with games and time to mingle with the morning crowd. Warm-up from 9:30 AM and play from 10 AM; complete first-timers are invited to come at 9:30 for ball-machine training. Rackets can be rented at reception, and payment is cash or QR transfer only.",
+      "sourceName": "Todo.Today",
+      "price": "฿350"
+    },
+    {
+      "title": "Saturday Low Silver Americano",
+      "start": "2026-09-26T10:00:00+07:00",
+      "end": "2026-09-26T12:00:00+07:00",
+      "location": null,
+      "description": "Saturday morning padel for beginners, with a free ball-machine warm-up.",
+      "sourceName": "Playtomic"
+    },
+    {
+      "title": "Contact Improv Class + Jam",
+      "start": "2026-09-26T10:00:00+07:00",
+      "end": "2026-09-26T13:00:00+07:00",
+      "location": null,
+      "description": "A weekly Saturday morning contact improvisation session: a facilitated class exploring CI principles, followed by an open jam where everyone dances. Teachers rotate, and you can come for the class, the jam, or both. People are invited to stay for a community lunch at the market afterwards. Runs 10 AM to 1 PM at The Little Something Studio.",
+      "sourceName": "Todo.Today",
+      "price": "฿350"
+    },
+    {
+      "title": "Saturday Walking Street Night Market",
+      "start": "2026-09-26T16:00:00+07:00",
+      "end": "2026-09-26T22:00:00+07:00",
+      "location": "Wua Lai Walking Street",
+      "description": "Chiang Mai's Saturday night market along Wua Lai Road, just outside Chiang Mai Gate south of the Old City, open roughly 4 to 10 PM. Stalls sell handmade crafts, silver jewellery and street food, with live music and performances. Described as more relaxed than the Sunday market and suited to an evening cultural stroll.",
+      "sourceName": "Todo.Today",
+      "price": null
+    },
+    {
+      "title": "Ecstatic Dance CNX",
+      "start": "2026-09-27T12:30:00+07:00",
+      "end": "2026-09-27T14:30:00+07:00",
+      "location": "VIVID DANCE STUIOS",
+      "description": "Free, barefoot movement to music, danced in silence, with no phones, cameras, alcohol or drugs. ฿300 per session.",
+      "sourceName": "Facebook"
+    },
+    {
+      "title": "Sunday Walking Street Market",
+      "start": "2026-09-27T16:00:00+07:00",
+      "end": "2026-09-27T22:00:00+07:00",
+      "location": "Tha Phae Walking Street",
+      "description": "Chiang Mai's best-known weekly market, the Sunday Walking Street running along Ratchadamnoen Road from Tha Pae Gate through the Old City, roughly 4 to 10 PM. It offers hill tribe handicrafts, souvenirs, traditional snacks and live performances. Visitors are advised to arrive early to beat the crowds.",
+      "sourceName": "Todo.Today",
+      "price": null
+    },
+    {
+      "title": "Social Padel - All Level (Mexicano)",
+      "start": "2026-09-27T16:30:00+07:00",
+      "end": "2026-09-27T19:00:00+07:00",
+      "location": "Lanna Padel AC",
+      "description": "A Sunday late-afternoon all-level padel Mexicano at Lanna Padel, where matchups are adjusted each round based on results so beginners and regulars play together. First-timers get a free training session at 4:30 PM, warm-up is from 4:30 and matches start at 5 PM. Racket rental is available, payment is cash or QR only, and the top three players win a vending machine item plus a free next session.",
+      "sourceName": "Todo.Today",
+      "price": "฿400"
+    },
+    {
+      "title": "Sunday All Level Mexicano",
+      "start": "2026-09-27T17:00:00+07:00",
+      "end": "2026-09-27T19:00:00+07:00",
+      "location": null,
+      "description": "Sunday afternoon padel for all levels.",
+      "sourceName": "Playtomic"
+    },
+    {
+      "title": "Loving-Kindness Meditation & Buddhist Q&A",
+      "start": "2026-09-27T18:30:00+07:00",
+      "end": "2026-09-27T19:30:00+07:00",
+      "location": "Wat Tung Yu",
+      "description": "",
+      "sourceName": "Todo.Today"
+    },
+    {
+      "title": "Buddhist Study Group: Meditation, Teachings & Q&A",
+      "start": "2026-09-27T21:00:00+07:00",
+      "end": "2026-09-27T22:30:00+07:00",
+      "location": "Wat Tung Yu",
+      "description": "",
+      "sourceName": "Todo.Today"
+    },
+    {
+      "title": "Social Padel for Intermediate/Advanced (Mexicano)",
+      "start": "2026-09-28T09:30:00+07:00",
+      "end": "2026-09-28T12:00:00+07:00",
+      "location": "Lanna Padel AC",
+      "description": "A Monday morning padel Mexicano at Lanna Padel for stronger players, with matchups adjusted round by round based on results. Requires a minimum Playtomic level of 2.0; warm-up from 9:30 AM and matches from 10 AM. Racket rental available, payment cash or QR only, and the top three win a vending machine item plus a free next session.",
+      "sourceName": "Todo.Today",
+      "price": "฿400"
+    },
+    {
+      "title": "Dune Days Tuesdays",
+      "start": "2026-09-29T18:00:00+07:00",
+      "end": "2026-09-29T23:00:00+07:00",
+      "location": "Game Tree Cafe",
+      "description": "A weekly Tuesday strategy night built around Dune: Imperium Uprising, with lighter warm-up games first and a teaching table for newcomers.",
+      "sourceName": "Meetup"
+    },
+    {
+      "title": "Intro Gamers night",
+      "start": "2026-09-30T18:00:00+07:00",
+      "end": "2026-09-30T23:00:00+07:00",
+      "location": "Game Tree Cafe",
+      "description": "A relaxed Wednesday night of Catan and its variants, with a new game starting roughly every hour. Beginners welcome.",
+      "sourceName": "Meetup"
+    },
+    {
+      "title": "Strategy Thursdays",
+      "start": "2026-10-01T18:00:00+07:00",
+      "end": "2026-10-01T23:00:00+07:00",
+      "location": "Game Tree Cafe",
+      "description": "A weekly Thursday night of medium to heavy Euro-style strategy games, with the line-up changing every week.",
+      "sourceName": "Meetup"
+    },
+    {
+      "title": "New Gamers Night",
+      "start": "2026-10-02T18:00:00+07:00",
+      "end": "2026-10-02T23:00:00+07:00",
+      "location": "Game Tree Cafe",
+      "description": "A Friday night of light, fast party and card games with few rules. Made for newcomers.",
+      "sourceName": "Meetup"
+    },
+    {
+      "title": "Slowcial Running Club CM",
+      "start": "2026-10-03T07:30:00+07:00",
+      "end": "2026-10-03T09:30:00+07:00",
+      "location": "Living A Dream",
+      "description": "A gentle, social run every Saturday at 7:30 from the CMU campus: about 20 to 25 minutes of easy jogging, then coffee and food together. Open to expats and locals.",
+      "sourceName": "Meetup"
+    }
+  ]
+}
