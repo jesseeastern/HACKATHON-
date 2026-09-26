@@ -2,6 +2,24 @@
 
 This is why the prototype looks the way it does. The decisions were made during the Chiang Mai hackathon, 26 September 2026.
 
+## In one line each
+
+- **Who:** Nomads and expats who arrive in Chiang Mai alone and stay for months.
+- **Problem:** They find the events but skip them, because walking in alone is hard.
+- **Solution:** A local regular takes you, introduces you, and adds you to the group chat.
+- **Differentiator:** Airbnb sells one-off tours. We get you into real weekly life, with friends, not photos.
+- **For hosts:** Locals get paid to bring newcomers to events they already go to.
+
+## Lean canvas
+
+| | |
+|---|---|
+| Customer | Long-stay newcomers in Chiang Mai who don't know anyone |
+| Problem | Showing up alone to a room of strangers stops people going |
+| Solution | Book a regular who brings you in, max 6 per group |
+| Unfair advantage | Hosts are already insiders at recurring events that tour apps can't list |
+| Revenue | 20% of every booking; hosts keep 80% |
+
 ## Positioning
 
 - **The host is the product, not the event.** Guests book a person who is already a regular somewhere. The events underneath are real, recurring and often free, so what we sell is the introduction: before, during and after.
