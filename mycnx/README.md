@@ -1,36 +1,29 @@
-# MyCNX: go with a regular
+# MyCNX: meet Thai Chiang Mai through a local
 
 Chiang Mai Hackathon, 26 September 2026, Mövenpick Hotel.
 Team: Toby, Ryan, Slava, Jesse, Molly.
 
-| Explore | Experience | Host profile | Map | Earn (Thai) |
+| Explore | Calendar | Experience | Plans | Host side (Thai) |
 |---|---|---|---|---|
-| ![Explore](screenshots/explore.jpg) | ![Experience](screenshots/x-muaythai.jpg) | ![Host](screenshots/h-beam.jpg) | ![Map](screenshots/map.jpg) | ![Earn](screenshots/earn.jpg) |
+| ![Explore](screenshots/explore.jpg) | ![Calendar](screenshots/calendar.jpg) | ![Experience](screenshots/x-muaythai.jpg) | ![Plans](screenshots/plans.jpg) | ![Host side](screenshots/earn.jpg) |
 
-Chiang Mai has something social on every night: run clubs, game nights, temple meditation, dance jams, padel, night markets. Newcomers rarely go, because walking into a room of strangers is hard. Airbnb Experiences only sells one-off tourist outings, where you meet other tourists and nobody stays in touch.
+Newcomers who move to Chiang Mai for months often never get to know Thai people. The city's community calendar is full, but it's mostly where foreigners meet other foreigners, and tours sell sights, not people.
 
-**MyCNX pairs you with a local host who is already a regular.** They meet you before the event, bring you in, introduce you to the people who matter, and add you to the group chat afterwards. The events are real and recurring. The host is what you book.
+**MyCNX mixes small, paid experiences hosted only by Thai locals into a free calendar of real community events.** Muay Thai at a working camp, Sunday khao soi in a family kitchen, the Saturday silver street with a silversmith's daughter. Guests request a spot, vote for what they want next, and nominate Thai friends who'd be great hosts.
+
+See [DECISIONS.md](DECISIONS.md) for the lean canvas and why each choice was made.
 
 ## What's in the prototype
 
-Everything runs inside a phone frame. It's built for mobile first.
+Everything runs inside a phone frame. It's built for mobile first. Three tabs for newcomers, and a separate host side for Thai locals.
 
-- **Explore:** a discovery page, not an endless feed. It has search, category filters, a Featured carousel, "This weekend", "Meet the locals" and a row per category. Every card leads with the host's face in a gold ring.
-- **Experience page:**
-  - The host.
-  - A small-group line: max 6, and you can tap the faces of who's going.
-  - A Before / During / After timeline of what the host adds.
-  - The real event it's built on, what to bring, and good-to-know notes.
-  - A map, and reviews with ratings on four dimensions.
-  - "More with this host" and "You might also like", so the page never dead-ends.
+- **Explore:** people first. Experience cards lead with the host's face in a gold ring, then "Meet the locals", a short "This week" agenda, sample guest quotes, "Which Thai experience do you want?" and "Nominate a Thai local".
+- **Calendar:** one schedule for the week. Thai-hosted sessions stand out in gold; the real community events sit between them. Filter by all, with a Thai host, or community events. Switch to the map to see where the hosted sessions are.
+- **Plans:** your requests, votes and nominations, plus "Help a Thai friend earn" to send the host invite by LINE or WhatsApp. Empty, it suggests first-week experiences.
+- **Experience page:** the host, the small group (max 6), a Before / During / After timeline, what to bring, good-to-know notes, a map, reviews on four dimensions, and "More with this host" and "You might also like".
 - **Host profile:** why they host, their community, social links with follower counts, their experiences and reviews.
-- **Booking:** pick a date and group size, then send a request. It opens a group chat with the host and the other guests (Trips tab).
-- **Map:** host-photo pins with category filters.
-- **Earn (for hosts, opens in Thai):**
-  - An earnings estimator and host stories.
-  - "It's the will, not the skill": what you need and what you don't.
-  - "Hosts wanted" listings from guests and venues, or suggest your own idea.
-  - A 4-step sign-up that goes live immediately, followed by a welcome call with the community manager.
+- **Request a spot:** pick a date and group size, leave a name and a LINE, WhatsApp or email contact. Nothing to pay until the host confirms; then the guest pays through MyCNX by PromptPay QR.
+- **Host side (opens in Thai):** an earnings estimator, host stories, "It's the will, not the skill", guest-voted "Hosts wanted" ideas, and a 4-step application (including English level) followed by a call from the community manager. On a desktop, "View as: Newcomer / Thai host" above the phone switches sides.
 - **Thai and English** throughout, plus light and dark modes.
 
 ## Where the data comes from
@@ -59,7 +52,8 @@ Then open http://localhost:8000. It's designed for a phone-sized screen.
 - **Built at the hackathon:** the product concept, this page (plain HTML, CSS and JavaScript, no framework), the host and experience content, the Thai and English copy, and the images. We built it with Claude as a Claude artifact.
 - **Already existed:** the events pipeline that gathers and removes duplicates from Chiang Mai listings into one calendar. It isn't in this repo.
 - **Fonts:** Mitr and Sarabun from Google Fonts, under the SIL Open Font License.
-- **Bookings and host sign-ups:** saved only when the page runs inside Claude. When the page runs on its own, they are demo-only and nothing is sent.
+- **Sign-ups:** requests, votes, nominations and host applications go to a Google Sheet once `API` in `index.html` is set (see [backend/README.md](backend/README.md)). Until then the app is in demo mode and says so.
+- **Event refresh:** the events pipeline (not in this repo) exports the next 8 days of the calendar, removes private names, rewrites descriptions and commits `data/feed.json`.
 
 ## Business model
 

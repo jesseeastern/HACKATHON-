@@ -3,7 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>MyCNX</title>
+<title>ThaiCNX</title>
+<meta name="description" content="Meet Thai Chiang Mai through a local. Free community events every week, and small groups with Thai hosts.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://thaicnx.com/">
+<meta property="og:title" content="ThaiCNX: meet Thai Chiang Mai through a local">
+<meta property="og:description" content="Free community events every week, and small groups with Thai hosts.">
+<meta property="og:image" content="https://thaicnx.com/img/s_silver.jpg">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22%3E%3Crect width=%2232%22 height=%2232%22 rx=%228%22 fill=%22%2322305C%22/%3E%3Ctext x=%2216%22 y=%2222%22 font-size=%2216%22 text-anchor=%22middle%22 fill=%22%23E0B25A%22 font-family=%22sans-serif%22 font-weight=%22700%22%3EM%3C/text%3E%3C/svg%3E">
 <style>:root{padding:env(safe-area-inset-top,0px) 0 env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
 </head>
@@ -58,7 +65,7 @@ a{color:inherit;text-decoration:none}
 .sec-h{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:10px;gap:8px}
 .sec-h h2{font-size:18px}
 .sec-h small{color:var(--muted);font-size:13px}
-.row{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;margin-inline:-16px;padding-inline:16px;padding-bottom:4px;scrollbar-width:none}
+.row{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-inline:16px;margin-inline:-16px;padding-inline:16px;padding-bottom:4px;scrollbar-width:none}
 .row::-webkit-scrollbar{display:none}
 .row>*{scroll-snap-align:start;flex:none}
 
@@ -85,8 +92,11 @@ a{color:inherit;text-decoration:none}
 .tile .t1{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 .grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px 12px}
 .grid2 .tile{width:auto}
-.locals .loc{width:78px;text-align:center;font-size:13px;font-weight:600}
-.locals .ring{width:72px;height:72px;margin-bottom:4px}
+.locals .loc{width:112px;text-align:center;font-size:13px;display:grid;justify-items:center;gap:2px}
+.locals .loc b{font-size:14px}
+.locals .loc small{color:var(--muted);font-size:11.5px;line-height:1.25;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.locals .lr{font-size:12px}
+.locals .ring{width:84px;height:84px;margin-bottom:4px}
 
 /* bottom bars live inside the phone */
 .tabbar{flex:none;display:grid;grid-template-columns:repeat(4,1fr);background:var(--app);border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom,0px)}
@@ -95,6 +105,9 @@ a{color:inherit;text-decoration:none}
 .tabbar svg{width:22px;height:22px}
 .bookbar{flex:none;display:flex;justify-content:space-between;align-items:center;gap:10px;padding:10px 16px calc(env(safe-area-inset-bottom,0px) + 10px);background:var(--app);border-top:1px solid var(--line)}
 .bookbar b{font-size:17px}
+.me{width:34px;height:34px;border-radius:50%;border:0;background:var(--brand);color:#fff;font-weight:700;font-size:14px;display:grid;place-items:center;padding:0}
+.menu{display:grid;gap:2px}.menu a,.menu button{display:flex;align-items:center;gap:12px;width:100%;text-align:left;background:none;border:0;border-radius:12px;padding:12px 8px;font:inherit;font-size:15px;color:var(--ink)}.menu a:active,.menu button:active{background:var(--soft)}.menu span.v{margin-left:auto;color:var(--muted);font-size:13px}.menu hr{border:0;border-top:1px solid var(--line);margin:4px 0}
+.mehead{display:flex;align-items:center;gap:12px}.mehead .me{width:48px;height:48px;font-size:20px}
 .btn{background:var(--brand);color:var(--on-brand);border:0;border-radius:12px;padding:12px 18px;font-weight:700;font-size:15px;display:inline-block;text-align:center}
 .btn.gold{background:var(--gold);color:#fff}
 .btn.wide{width:100%;display:block}
@@ -216,6 +229,76 @@ input[type=range]{padding:0;border:0;background:none;accent-color:var(--gold)}
 .want{display:flex;justify-content:space-between;align-items:center;gap:10px;border:1px solid var(--line);border-radius:14px;padding:10px 12px;margin-top:8px}
 .want small{display:block;color:var(--muted)}
 .want .btn{padding:8px 12px;font-size:13px;flex:none}
+.want .btn.on{background:var(--good)}
+.hero{font-family:var(--display);font-size:20px;line-height:1.25;margin:10px 0 4px}
+.stayq{border:1px solid var(--line);border-radius:14px;padding:10px 12px;margin:8px 0;display:grid;gap:8px}
+.stayq div{display:flex;gap:6px;flex-wrap:wrap}
+.evlist{display:grid;gap:6px}
+.evday{font-size:13px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);margin:12px 0 0}
+.evrow{display:grid;grid-template-columns:62px 1fr auto;gap:10px;align-items:center;text-align:left;background:none;border:1px solid var(--line);border-radius:12px;padding:8px 10px;color:var(--ink);font:inherit;width:100%}
+.evrow .when{font-size:12px;color:var(--muted);display:grid}
+.evrow .when b{color:var(--ink);font-size:12px}
+.evrow .what{display:grid;min-width:0}
+.evrow .what b{font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.evrow .what small{color:var(--muted);font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.evrow .pr{font-size:12px;font-weight:700;color:var(--good);display:flex;align-items:center;gap:6px}
+.evrow .pr i .ring{width:26px;height:26px}
+.how{margin:2px 0 8px;padding-left:18px;color:var(--muted);font-size:14px;display:grid;gap:2px}
+.kick{font-family:var(--display);font-size:22px;line-height:1.2;margin:6px 0 12px;text-wrap:balance}
+.agenda{display:grid;gap:6px}
+.crow{display:grid;grid-template-columns:48px 1fr;gap:8px;align-items:center;text-align:left;background:none;border:0;padding:0;color:var(--ink);font:inherit;width:100%}
+.crow time{font-size:12px;font-weight:700;color:var(--muted);font-variant-numeric:tabular-nums}
+.crow .cb{display:flex;align-items:center;gap:10px;min-width:0;border:1px solid var(--line);border-radius:12px;padding:8px 10px;background:var(--app)}
+.crow .cb>span{display:grid;min-width:0;flex:1}
+.crow b{font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.crow small{font-size:12px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.crow:not(.host) .cb{border:0;border-bottom:1px solid var(--line);border-radius:0;padding:7px 2px;background:none}
+.crow.host{margin-block:4px}
+.crow.host .cb{background:var(--surface);border-color:var(--ring);box-shadow:inset 3px 0 0 var(--ring)}
+.crow.host .cb>img{width:44px;height:44px;border-radius:10px;object-fit:cover;flex:none}
+.crow.host .ring{width:34px;height:34px;flex:none}
+.cday{display:flex;align-items:center;gap:10px;margin:14px 0 2px}
+.cday b{font-family:var(--display);font-size:28px;line-height:1;width:48px}
+.cday span{font-weight:700;font-size:14px;display:grid}
+.cday small{font-weight:400;color:var(--muted);font-size:12px}
+.cal-h{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:4px}
+.cal-h .h-big{font-size:22px;margin:0}
+.seg{display:flex;border:1px solid var(--line);border-radius:999px;padding:3px;flex:none}
+.seg button{border:0;background:none;border-radius:999px;padding:6px 12px;font:inherit;font-size:13px;font-weight:700;color:var(--muted)}
+.seg button[aria-pressed="true"]{background:var(--brand);color:var(--on-brand)}
+.fchips{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0 4px}
+.fchips .chipbtn[aria-pressed="true"]{background:var(--brand);color:var(--on-brand)}
+.quote{width:250px;display:grid;gap:10px;border:1px solid var(--line);border-radius:16px;padding:14px;background:var(--surface)}
+.quote p{margin:0;font-size:14px;line-height:1.4}
+.qwho{display:flex;gap:8px;align-items:center;font-size:13px}
+.qwho .ring{width:36px;height:36px;flex:none}
+.qwho small{color:var(--muted)}
+.soon{display:flex;gap:12px;align-items:flex-start;border:1px dashed var(--ring);border-radius:16px;padding:14px;margin:10px 0;background:var(--surface)}
+.soon>span{font-size:24px}
+.soon p{margin:4px 0 0;font-size:14px;color:var(--muted)}
+.compose input:disabled{opacity:.6}
+.compose button:disabled{opacity:.45}
+.help{margin-top:22px;border-radius:18px;padding:16px;background:var(--brand);color:var(--on-brand)}
+.help h2{font-size:18px;margin:0 0 4px}
+.help p{margin:0 0 12px;font-size:14px;opacity:.9}
+.helpbtns{display:flex;gap:8px;flex-wrap:wrap}
+.help .btn{background:var(--on-brand);color:var(--brand);padding:9px 14px;font-size:14px}
+.help .btn[style]{color:#fff}
+.help .ghostbtn{background:none;border:1px solid var(--on-brand);color:var(--on-brand)}
+.hostlink{display:block;text-align:center;margin-top:16px;font-weight:700;color:var(--brand);font-size:14px}
+.viewas{display:flex;align-items:center;gap:6px;margin-bottom:12px;font-size:13px;color:var(--muted)}
+.viewas button{border:1px solid var(--line);background:var(--app);color:var(--ink);border-radius:999px;padding:6px 12px;font:inherit;font-weight:700}
+.viewas button[aria-pressed="true"]{background:var(--brand);color:var(--on-brand);border-color:var(--brand)}
+@media (max-width:520px){.viewas{display:none}}
+.consent{font-size:12px;margin:0}
+.who-tag{display:inline-block;font-size:11px;font-weight:700;border-radius:999px;padding:2px 8px;margin-left:6px;vertical-align:middle;white-space:nowrap}
+.who-tag.th{background:color-mix(in srgb,var(--gold) 18%,transparent);color:var(--gold)}
+.who-tag.nc{background:color-mix(in srgb,var(--good) 16%,transparent);color:var(--good)}
+.locals .who-tag{margin:2px 0 0}
+.hp-head .who-tag{margin:4px 0}
+.faces button{position:relative}
+.faces .flag{position:absolute;right:-4px;bottom:-4px;font-style:normal;font-size:12px;line-height:1}
+.nomcard{margin-top:18px;background:var(--app)}
 .steps4{counter-reset:s;list-style:none;margin:0;padding:0;display:grid;gap:8px}
 .steps4 li{counter-increment:s;display:flex;gap:10px;align-items:center}
 .steps4 li::before{content:counter(s);width:26px;height:26px;border-radius:50%;background:var(--gold);color:#fff;display:grid;place-items:center;font-weight:700;font-size:13px;flex:none}
@@ -234,7 +317,7 @@ input[type=range]{padding:0;border:0;background:none;accent-color:var(--gold)}
 @media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
 </style>
 
-<div class="stage"><div class="phone" id="phone"></div></div>
+<div class="stage"><div class="viewas" id="viewas"></div><div class="phone" id="phone"></div></div>
 
 <script>
 (() => {
@@ -249,12 +332,12 @@ const HOSTS = {
     line:{en:"3rd-generation Wua Lai silversmith",th:"ช่างเงินวัวลายรุ่นที่ 3"},
     why:{en:"My grandfather hammered silver on this street. I want visitors to meet the people, not just buy the bowls.",th:"ปู่ของฉันตีเงินบนถนนนี้ อยากให้คนมาเที่ยวได้รู้จักคน ไม่ใช่แค่ซื้อของ"},
     community:{en:"Every stop is a family I've known since I was a kid. They get new customers; guests get the stories.",th:"ทุกร้านที่พาไปคือครอบครัวที่รู้จักกันตั้งแต่เด็ก ร้านได้ลูกค้าใหม่ แขกได้เรื่องเล่า"},
-    socials:[["Instagram","@noi.wualai","2.1k"]]},
+    socials:[["Instagram","@sample_noi","2.1k"]]},
   beam:{name:"Beam",th:"บีม",photo:"img/beam.jpg",rating:4.95,reviews:88,since:2025,langs:"TH · EN",
     line:{en:"Former stadium fighter, 12 years coaching",th:"อดีตนักมวยเวที โค้ชมา 12 ปี"},
     why:{en:"Tourists see Muay Thai as a show. I show them the gym family behind it.",th:"นักท่องเที่ยวเห็นมวยไทยเป็นโชว์ ผมอยากให้เห็นครอบครัวค่ายมวยที่อยู่เบื้องหลัง"},
-    community:{en:"Guests train with the kids from our camp, and part of every booking funds their gear.",th:"แขกได้ซ้อมกับเด็กๆ ในค่าย และส่วนหนึ่งของทุกการจองช่วยซื้ออุปกรณ์ให้น้องๆ"},
-    socials:[["Instagram","@beam.muaythai","104k"],["TikTok","@beamfightcnx","38k"]]},
+    community:{en:"Guests train with the kids from our camp, and part of every guest's fee funds their gear.",th:"แขกได้ซ้อมกับเด็กๆ ในค่าย และส่วนหนึ่งของค่าแขกทุกคนช่วยซื้ออุปกรณ์ให้น้องๆ"},
+    socials:[["Instagram","@sample_beam","104k"],["TikTok","@sample_beam_fights","38k"]]},
   jaeng:{name:"Grandma Jaeng",th:"ยายแจ๋ง",photo:"img/jaeng.jpg",rating:4.99,reviews:63,since:2025,langs:"TH (Mint translates)",
     line:{en:"Has cooked khao soi for the neighbourhood for 40 years",th:"ทำข้าวซอยให้คนในซอยกินมา 40 ปี"},
     why:{en:"My grandchildren moved to Bangkok. Now my kitchen is full again every Sunday.",th:"หลานๆ ย้ายไปกรุงเทพหมด ตอนนี้ครัวกลับมาคึกคักทุกวันอาทิตย์"},
@@ -264,17 +347,17 @@ const HOSTS = {
     line:{en:"At every dance jam in town, 2 years running",th:"นักเต้น ไปทุกแจมในเมือง 2 ปีแล้ว"},
     why:{en:"I remember how scary my first jam was. Nobody should stand by the wall alone.",th:"จำได้ว่าแจมครั้งแรกน่ากลัวแค่ไหน ไม่อยากให้ใครยืนเก้อข้างกำแพง"},
     community:{en:"I bring newcomers into the same circle of dancers who welcomed me.",th:"พาคนใหม่เข้าวงเดียวกับที่เคยต้อนรับฉัน"},
-    socials:[["Instagram","@fah.moves","6.4k"]]},
+    socials:[["Instagram","@sample_fah","6.4k"]]},
   mint:{name:"Mint",th:"มิ้นท์",photo:"img/mint.jpg",rating:4.96,reviews:52,since:2025,langs:"TH · EN",
     line:{en:"3 years of Saturday runs with this club",th:"วิ่งกับคลับนี้ทุกเสาร์ 3 ปีแล้ว"},
     why:{en:"Running is how I made every friend I have in this city.",th:"เพื่อนทุกคนในเมืองนี้ ฉันได้มาจากการวิ่ง"},
     community:{en:"The breakfast café after the run is my aunt's.",th:"คาเฟ่ที่กินข้าวเช้าหลังวิ่งเป็นของน้าฉันเอง"},
-    socials:[["Strava","Mint R.","1.2k"]]},
+    socials:[["Strava","sample_mint","1.2k"]]},
   tee:{name:"Tee",th:"ตี๋",photo:"img/tee.jpg",rating:4.92,reviews:45,since:2025,langs:"TH · EN",
     line:{en:"60+ games. Runs the newbie table.",th:"มีบอร์ดเกม 60+ เกม ดูแลโต๊ะมือใหม่"},
     why:{en:"A board game gives shy people something to do with their hands and a reason to talk.",th:"บอร์ดเกมทำให้คนขี้อายมีอะไรทำ และมีเรื่องคุย"},
     community:{en:"Half the league started as my guests.",th:"ครึ่งหนึ่งของลีกเริ่มจากการเป็นแขกของผม"},
-    socials:[["Instagram","@tee.plays","3.3k"]]},
+    socials:[["Instagram","@sample_tee","3.3k"]]},
   ananda:{name:"Ananda",th:"อานันท์",photo:"img/ananda.jpg",rating:4.98,reviews:29,since:2025,langs:"TH · EN · Pali",
     line:{en:"8 years a monk in Chiang Mai",th:"เคยบวช 8 ปีที่เชียงใหม่"},
     why:{en:"Temples are open to everyone, but most visitors don't know how to step inside.",th:"วัดเปิดให้ทุกคน แต่คนส่วนใหญ่ไม่รู้ว่าจะเข้าไปยังไง"},
@@ -284,17 +367,17 @@ const HOSTS = {
     line:{en:"Chiang Mai born. Coaches padel.",th:"คนเชียงใหม่แท้ๆ โค้ชพาเดล"},
     why:{en:"Padel is doubles, so you always meet three new people.",th:"พาเดลเล่นคู่ ได้เจอเพื่อนใหม่ทีละสามคน"},
     community:{en:"I match visitors with Thai players at their level.",th:"จับคู่แขกกับผู้เล่นไทยระดับเดียวกัน"},
-    socials:[["Instagram","@krit.padel","8.9k"]]},
+    socials:[["Instagram","@sample_krit","8.9k"]]},
   bank:{name:"Bank",th:"แบงก์",photo:"img/bank.jpg",rating:4.94,reviews:26,since:2026,langs:"TH · EN",
     line:{en:"Thursday karaoke regular, knows every song",th:"ขาประจำคาราโอเกะคืนวันพฤหัส ร้องได้ทุกเพลง"},
     why:{en:"Nobody is shy after the second song.",th:"เพลงที่สองมา ไม่มีใครเขินแล้ว"},
     community:{en:"I introduce every guest to the bar crew by name.",th:"แนะนำแขกทุกคนให้รู้จักทีมร้านด้วยชื่อ"},
-    socials:[["TikTok","@banksings","21k"]]},
+    socials:[["TikTok","@sample_bank","21k"]]},
   pim:{name:"Pim",th:"พิม",photo:"img/pim.jpg",rating:4.91,reviews:18,since:2026,langs:"TH · EN",
     line:{en:"Painter, at the Saturday art jam every week",th:"นักวาด ไปอาร์ตแจมทุกเสาร์"},
     why:{en:"You don't need talent to make art with people. You need a table and a friend.",th:"ไม่ต้องเก่งก็วาดรูปกับคนอื่นได้ แค่มีโต๊ะกับเพื่อน"},
     community:{en:"I bring supplies so first-timers never arrive empty-handed.",th:"เตรียมอุปกรณ์ให้คนมาครั้งแรกไม่ต้องมามือเปล่า"},
-    socials:[["Instagram","@pim.paints","12k"]]},
+    socials:[["Instagram","@sample_pim","12k"]]},
 };
 const FACE = ["#B8862B","#22305C","#2F6F57","#A3322A","#6B4E9B","#1F7A8C"];
 const GUESTS = {A:{n:"Anna",f:"🇩🇪 Berlin",x:4},K:{n:"Kenji",f:"🇯🇵 Osaka",x:2},S:{n:"Sara",f:"🇺🇸 Austin",x:7},M:{n:"Marco",f:"🇮🇹 Milan",x:1},J:{n:"June",f:"🇹🇭 Bangkok",x:3},
@@ -303,7 +386,7 @@ const GUESTS = {A:{n:"Anna",f:"🇩🇪 Berlin",x:4},K:{n:"Kenji",f:"🇯🇵 Os
 const B = (en,th) => ({en,th});
 const EXP = [
   {id:"silver", host:"noi", cat:"crafts", tags:["market","craft","night"], featured:true, img:["img/s_silver.jpg","img/noi.jpg"], price:690, cap:6, dur:B("3.5 h","3.5 ชม."), hood:"wualai", xy:[228,250],
-   title:B("Saturday night on Silver Street","คืนวันเสาร์ ถนนคนเดินวัวลาย"), match:/saturday walking street/i, rating:4.97, n:41, going:["A","K","S"],
+   title:B("Saturday night on Silver Street","คืนวันเสาร์ ถนนคนเดินวัวลาย"), match:/saturday walking street/i, sched:{days:[6],time:"16:30"}, rating:4.97, n:41, going:["A","K","S"],
    tl:[["before","16:30",B("Noi's family workshop. Watch a bowl hammered by hand.","เจอกันที่โรงตีเงินบ้านน้อย ดูตีขันเงินด้วยมือ")],["during","17:30",B("Walk the market. Meet silversmiths her family has known for decades.","เดินตลาด น้อยพาไปทักช่างเงินที่รู้จักกันมาหลายสิบปี")],["during","19:00",B("Dinner at her favourite street stalls.","กินข้าวเย็นร้านข้างทางที่น้อยชอบ")],["after","20:30",B("Stamp your own little silver piece. Take it home.","ตอกลายเงินชิ้นเล็กของตัวเอง เอากลับบ้านได้")]],
    bring:[["💵",B("Cash for the market (about ฿300)","เงินสดไว้ช้อป (ประมาณ ฿300)")],["👟",B("Comfortable walking shoes","รองเท้าเดินสบาย")]],
    good:[["🙂",B("No experience needed. Kids 10+ welcome.","ไม่ต้องมีพื้นฐาน เด็ก 10 ขวบขึ้นไปมาได้")],["🍜",B("Dinner is included in the price.","รวมค่าอาหารเย็นแล้ว")]]},
@@ -319,111 +402,97 @@ const EXP = [
    tl:[["before","09:30",B("Shop the market stalls she has used for 40 years.","เดินตลาดแผงเดิมที่ยายซื้อมา 40 ปี")],["during","10:30",B("Pound the curry paste and cook khao soi with her.","ตำพริกแกงและทำข้าวซอยกับยาย")],["after","12:30",B("Lunch at the family table. Take the recipe home.","กินข้าวที่โต๊ะครอบครัว ได้สูตรกลับบ้าน")]],
    bring:[["🛍️",B("A tote bag for the market","ถุงผ้าไว้ใส่ของ")],["📷",B("An empty stomach","ท้องว่างๆ")]],
    good:[["🌶️",B("Vegetarian version on request.","ขอเมนูมังสวิรัติได้")],["🗣️",B("Grandma speaks Thai; Mint translates.","ยายพูดไทย มิ้นท์ช่วยแปล")]]},
-  {id:"dance", host:"fah", cat:"dance", tags:["dance","morning","community"], img:["img/s_dance.jpg","img/fah.jpg"], price:790, cap:6, dur:B("3 h","3 ชม."), hood:"santitham", xy:[186,110],
-   title:B("Your first dance jam","แดนซ์แจมครั้งแรกของคุณ"), match:/contact improv|ecstatic dance/i, rating:4.93, n:37, going:["M","J","P"],
-   tl:[["before","09:30",B("Coffee with Fah: how the jam works, when to join, when to rest.","กินกาแฟกับฟ้า เล่าว่าแจมเป็นยังไง อยากเข้าหรือพักก็ได้")],["during","10:00",B("She dances with you first, then brings you into the circle.","ฟ้าเต้นกับคุณก่อน แล้วพาเข้าวง")],["after","12:30",B("Lunch with the dancers.","กินข้าวเที่ยงกับแก๊งนักเต้น")]],
-   bring:[["💧",B("Water","น้ำดื่ม")],["👗",B("Loose clothes. You dance barefoot.","เสื้อผ้าหลวมๆ เต้นเท้าเปล่า")]],
-   good:[["🙂",B("No dance experience needed.","ไม่ต้องเคยเต้นมาก่อน")],["📵",B("Phones stay off the floor.","ไม่ใช้โทรศัพท์ในฟลอร์")]]},
   {id:"karaoke", host:"bank", cat:"social", tags:["nightlife","music","bar"], img:["img/s_karaoke.jpg","img/bank.jpg"], price:490, cap:6, dur:B("3 h","3 ชม."), hood:"oldcity", xy:[196,168],
-   title:B("Karaoke Thursday with the regulars","คาราโอเกะคืนวันพฤหัสกับขาประจำ"), match:/karaoke/i, rating:4.94, n:26, going:["R","C","E","L"],
+   title:B("Thai karaoke Thursday with the regulars","คาราโอเกะไทยคืนวันพฤหัสกับขาประจำ"), sched:{days:[4],time:"19:30"}, rating:4.94, n:26, going:["R","C","E","L"],
    tl:[["before","19:30",B("Street food with Bank. Pick your first song together.","กินของริมทางกับแบงก์ เลือกเพลงแรกด้วยกัน")],["during","20:30",B("He sings the first duet with you and introduces the bar crew.","ร้องคู่เพลงแรกกับคุณ แล้วแนะนำทีมร้าน")],["after","23:00",B("You're in the karaoke group chat for next week.","เข้ากลุ่มแชทคาราโอเกะไว้สัปดาห์หน้า")]],
    bring:[["💵",B("Cash for drinks","เงินสดค่าเครื่องดื่ม")],["🎤",B("Your worst song","เพลงที่ร้องแย่ที่สุด")]],
    good:[["🔞",B("20+ only.","อายุ 20 ปีขึ้นไป")],["🥤",B("No need to drink alcohol.","ไม่ดื่มแอลกอฮอล์ก็ได้")]]},
-  {id:"art", host:"pim", cat:"crafts", tags:["art","morning","cafe"], img:["img/s_art.jpg","img/pim.jpg"], price:590, cap:6, dur:B("3 h","3 ชม."), hood:"nimman", xy:[124,150],
-   title:B("Saturday art jam, supplies included","อาร์ตแจมวันเสาร์ มีอุปกรณ์ให้"), match:/art jam/i, rating:4.91, n:18, going:["E","A"],
-   tl:[["before","10:30",B("Pim sets you up with paper and paints, and a warm-up sketch.","พิมเตรียมกระดาษ สี และสเก็ตช์วอร์มมือ")],["during","11:00",B("Make art at the big table with the regulars.","วาดรูปที่โต๊ะใหญ่กับขาประจำ")],["after","13:30",B("Lunch nearby and a little show-and-tell.","กินข้าวใกล้ๆ แล้วเอางานมาอวดกัน")]],
-   bring:[["☕",B("Nothing. Supplies and a drink are included.","ไม่ต้องเอาอะไรมา มีอุปกรณ์และเครื่องดื่มให้")]],
-   good:[["🙂",B("No talent needed. Really.","ไม่ต้องมีพรสวรรค์ จริงๆ")]]},
-  {id:"run", host:"mint", cat:"sport", tags:["running","morning","outdoor"], img:["img/s_run.jpg","img/mint.jpg"], price:590, cap:6, dur:B("2.5 h","2.5 ชม."), hood:"cmu", xy:[80,112],
-   title:B("Slow run, then breakfast","วิ่งชิลๆ แล้วไปกินข้าวเช้า"), match:/slowcial|slow \+ social running/i, rating:4.96, n:52, going:["R","D"],
-   tl:[["before","07:10",B("Meet Mint by the café. Who's who in the club.","เจอมิ้นท์หน้าคาเฟ่ เล่าให้ฟังว่าใครเป็นใครในคลับ")],["during","07:30",B("Run your pace. Meet three regulars on the way.","วิ่งตามสปีดตัวเอง ระหว่างทางได้รู้จักขาประจำ 3 คน")],["after","08:15",B("Breakfast with the crew. You're in the runners' chat.","กินข้าวเช้ากับกลุ่ม เข้ากลุ่มแชทนักวิ่ง")]],
-   bring:[["💧",B("Water","น้ำดื่ม")],["👟",B("Running shoes","รองเท้าวิ่ง")]],
-   good:[["🐢",B("Slow pace, 20 to 25 minutes. Walking breaks are fine.","วิ่งช้า 20–25 นาที เดินพักได้")]]},
-  {id:"games", host:"tee", cat:"games", tags:["board games","evening","cafe"], img:["img/s_games.jpg","img/tee.jpg"], price:690, cap:6, dur:B("4 h","4 ชม."), hood:"nimman", xy:[156,196],
-   title:B("Board game night with the regulars","คืนบอร์ดเกมกับขาประจำ"), match:/dune days|strategy thursdays|new gamers night|intro gamers/i, rating:4.92, n:45, going:["B","N","T"],
-   tl:[["before","17:30",B("Khao soi first. Tee explains the game-café scene.","กินข้าวซอยก่อน ตี๋เล่าเรื่องวงการร้านบอร์ดเกม")],["during","18:30",B("Learn the game in 5 minutes. Sit with regulars.","เรียนเกมใน 5 นาที นั่งกับขาประจำ")],["after","22:00",B("Join the league chat. Your seat's saved for next week.","เข้ากลุ่มลีก มีที่นั่งรอสัปดาห์หน้า")]],
-   bring:[["💵",B("Cash for food and the table fee","เงินสดค่าอาหารและค่าโต๊ะ")]],
-   good:[["🎲",B("Never played? That's the point.","ไม่เคยเล่นเลย? ยิ่งดี")]]},
   {id:"temple", host:"ananda", cat:"culture", tags:["meditation","temple","evening"], img:["img/s_temple.jpg","img/ananda.jpg"], price:490, cap:6, dur:B("3 h","3 ชม."), hood:"oldcity", xy:[222,204],
-   title:B("Evening meditation at a Lanna temple","นั่งสมาธิยามเย็นที่วัดล้านนา"), match:/loving-kindness|buddhist study/i, rating:4.98, n:29, going:["E","W"],
+   title:B("Evening meditation at a Lanna temple","นั่งสมาธิยามเย็นที่วัดล้านนา"), link:/loving-kindness|buddhist study/i, sched:{days:[0],time:"18:30"}, rating:4.98, n:29, going:["E","W"],
    tl:[["before","18:00",B("Temple walk: what to wear, where to sit, the temple's story.","เดินชมวัด รู้ว่าแต่งตัวยังไง นั่งตรงไหน และเรื่องของวัด")],["during","18:30",B("Meditation and Q&A, Ananda beside you.","นั่งสมาธิและถามตอบ อานันท์นั่งข้างคุณ")],["after","20:00",B("Tea, and ask anything about monk life.","จิบชา ถามเรื่องชีวิตพระได้ทุกเรื่อง")]],
    bring:[["👖",B("Clothes covering shoulders and knees","เสื้อผ้าปิดไหล่และเข่า")]],
-   good:[["🤫",B("Quiet space. Phones on silent.","พื้นที่เงียบ ปิดเสียงโทรศัพท์")]]},
-  {id:"padel", host:"krit", cat:"sport", tags:["padel","morning","racket"], img:["img/s_padel.jpg","img/krit.jpg"], price:990, cap:4, dur:B("2.5 h","2.5 ชม."), hood:"canal", xy:[74,228],
-   title:B("Social padel, racket included","พาเดลสังสรรค์ มีไม้ให้ยืม"), match:/padel|americano|mexicano/i, rating:4.9, n:34, going:["C","F"],
-   tl:[["before","09:10",B("20 minutes of coaching. Racket on loan.","โค้ชให้ 20 นาที มีไม้ให้ยืม")],["during","09:30",B("Partners rotate every game. Always a fair match.","สลับคู่ทุกเกม เจอคู่ฝีมือพอๆ กัน")],["after","11:30",B("Iced tea, and you're in the booking chat.","ชาเย็นแก้วนึง แล้วเข้ากลุ่มจองคอร์ท")]],
-   bring:[["💧",B("Water","น้ำดื่ม")],["👟",B("Court or running shoes","รองเท้ากีฬา")]],
-   good:[["🎾",B("Court fee included.","รวมค่าคอร์ทแล้ว")]]},
+   good:[["🙏",B("The temple session is free. You pay for Ananda's walk, guidance and tea.","การนั่งสมาธิที่วัดฟรี คุณจ่ายค่าเดินชมวัด การแนะนำ และน้ำชากับอานันท์")],["🤫",B("Quiet space. Phones on silent.","พื้นที่เงียบ ปิดเสียงโทรศัพท์")]]},
 ];
 const REVIEWS = {
   silver:[["Anna","Berlin","September",5,"Noi's uncle let me try the hammer. I'd never have found that workshop on my own."],["Kenji","Osaka","August",5,"It felt like being shown around by a friend's family."]],
   muaythai:[["Ben","Perth","September",5,"Hardest and friendliest two hours of my trip. The kids at the camp are amazing."],["Dan","Leeds","September",5,"Beam's story before training made the whole thing mean more."]],
   cooking:[["Nina","Lyon","September",5,"Grandma Jaeng barely speaks English and we laughed for four hours."],["Wei","Singapore","August",5,"Best khao soi in the city, and now I can make it."]],
-  dance:[["Marco","Milan","September",5,"I was terrified. Fah made it the best morning of my month."],["Priya","Pune","August",4,"Lovely people. Lunch afterwards was the highlight."]],
   karaoke:[["Rosa","Valencia","September",5,"Bank knows everyone. I left with ten new numbers."],["Chloe","Toronto","September",5,"I sang Celine Dion to strangers. No regrets."]],
-  art:[["Emma","Malmö","September",5,"I hadn't painted since school. Pim made it easy."],["Anna","Berlin","August",5,"Cosy, chatty, and I still have my painting."]],
-  run:[["Rosa","Valencia","September",5,"Slow pace, great breakfast, and now I have a Saturday crew."],["Dan","Leeds","August",5,"Mint's aunt's café alone is worth it."]],
-  games:[["Ben","Perth","September",5,"Tee explained Dune in five minutes. Wizardry."],["Tom","Utrecht","August",4,"Came alone, left with a league."]],
   temple:[["Emma","Malmö","September",5,"Ananda answered every question I'd been too shy to ask."],["Wei","Singapore","August",5,"Peaceful, and I finally understand what I was looking at."]],
-  padel:[["Chloe","Toronto","September",5,"Perfectly matched games. Krit is a great coach."],["Finn","Cork","August",5,"Met my now-regular padel partners here."]],
 };
 const DIMS = [["host",B("Host","โฮสต์")],["intro",B("Introductions","การแนะนำเพื่อน")],["value",B("Value","ความคุ้มค่า")],["vibe",B("Vibe","บรรยากาศ")]];
 const HOODS = {oldcity:B("Old City","คูเมือง"), nimman:B("Nimman","นิมมาน"), cmu:B("CMU","มช."), santitham:B("Santitham","สันติธรรม"), wualai:B("Wua Lai","วัวลาย"), canal:B("Canal Rd","ถนนคลองชล")};
 const WANTED = [
-  {i:"🥊",t:B("Muay Thai for women","มวยไทยสำหรับผู้หญิง"),by:B("A gym in Santitham","ค่ายมวยย่านสันติธรรม"),earn:14000},
-  {i:"🎶",t:B("Lanna music: learn the salaw","ดนตรีล้านนา: สะล้อ"),by:B("MyCNX guests are asking","แขก MyCNX ขอมา"),earn:9000},
-  {i:"🌄",t:B("Sunrise hike up Doi Suthep","เดินขึ้นดอยสุเทพยามเช้า"),by:B("MyCNX guests are asking","แขก MyCNX ขอมา"),earn:12000},
-  {i:"☕",t:B("Host evenings in our back room","จัดกิจกรรมในห้องด้านหลังร้าน"),by:B("A café in Nimman","คาเฟ่ย่านนิมมาน"),earn:10000},
+  {id:"w-muaywomen",i:"🥊",t:B("Muay Thai for women","มวยไทยสำหรับผู้หญิง"),by:B("ThaiCNX guests are asking","แขก ThaiCNX ขอมา"),earn:14000},
+  {id:"w-salaw",i:"🎶",t:B("Lanna music: learn the salaw","ดนตรีล้านนา: สะล้อ"),by:B("ThaiCNX guests are asking","แขก ThaiCNX ขอมา"),earn:9000},
+  {id:"w-doi",i:"🌄",t:B("Sunrise hike to a Doi Suthep temple","เดินขึ้นวัดบนดอยสุเทพยามเช้า"),by:B("ThaiCNX guests are asking","แขก ThaiCNX ขอมา"),earn:12000},
+  {id:"w-market",i:"🥭",t:B("Morning market breakfast like a local","กินข้าวเช้าที่ตลาดแบบคนท้องถิ่น"),by:B("ThaiCNX guests are asking","แขก ThaiCNX ขอมา"),earn:10000},
+  {id:"w-thai",i:"🗣️",t:B("Street Thai: order food, bargain, make friends","ภาษาไทยข้างถนน: สั่งอาหาร ต่อราคา หาเพื่อน"),by:B("ThaiCNX guests are asking","แขก ThaiCNX ขอมา"),earn:11000},
+  {id:"w-football",i:"⚽",t:B("Evening football with a Thai team","เตะบอลตอนเย็นกับทีมคนไทย"),by:B("ThaiCNX guests are asking","แขก ThaiCNX ขอมา"),earn:9000},
 ];
 const STORIES = [
-  {h:"noi", earned:18400, stat:B("41 guests · 6 new shops on her route","แขก 41 คน · ร้านใหม่ในเส้นทาง 6 ร้าน"), learn:B("\"I never spoke English in front of people. Now I tell our family story twice a week.\"","\"ไม่เคยพูดอังกฤษต่อหน้าคนอื่น ตอนนี้เล่าเรื่องครอบครัวสัปดาห์ละสองรอบ\"")},
-  {h:"beam", earned:31200, stat:B("88 guests · new gloves for 14 camp kids","แขก 88 คน · นวมใหม่ให้เด็กในค่าย 14 คน"), learn:B("\"I thought I was just a fighter. Turns out I'm a teacher.\"","\"คิดว่าตัวเองเป็นแค่นักมวย ที่แท้เป็นครูได้ด้วย\"")},
-  {h:"jaeng", earned:15600, stat:B("63 guests · a full table every Sunday","แขก 63 คน · โต๊ะเต็มทุกวันอาทิตย์"), learn:B("\"My kitchen is loud again.\"","\"ครัวของยายกลับมาเสียงดังอีกครั้ง\"")},
+  {h:"noi", earned:18400, stat:B("33 guests this month · 6 new shops on her route","แขกเดือนนี้ 33 คน · ร้านใหม่ในเส้นทาง 6 ร้าน"), learn:B("\"I never spoke English in front of people. Now I tell our family story twice a week.\"","\"ไม่เคยพูดอังกฤษต่อหน้าคนอื่น ตอนนี้เล่าเรื่องครอบครัวสัปดาห์ละสองรอบ\"")},
+  {h:"beam", earned:31200, stat:B("44 guests this month · new gloves for 14 camp kids","แขกเดือนนี้ 44 คน · นวมใหม่ให้เด็กในค่าย 14 คน"), learn:B("\"I thought I was just a fighter. Turns out I'm a teacher.\"","\"คิดว่าตัวเองเป็นแค่นักมวย ที่แท้เป็นครูได้ด้วย\"")},
+  {h:"jaeng", earned:15600, stat:B("25 guests this month · a full table every Sunday","แขกเดือนนี้ 25 คน · โต๊ะเต็มทุกวันอาทิตย์"), learn:B("\"My kitchen is loud again.\"","\"ครัวของยายกลับมาเสียงดังอีกครั้ง\"")},
 ];
-const SCENES = ["food","sport","culture","social","crafts","dance","games","wellness"];
+const SCENES = ["food","sport","culture","social","crafts"];
 
 /* ======================= i18n ======================= */
 const T = {
-  en:{explore:"Explore",map:"Map",trips:"Trips",earn:"Earn",search:"Search: Muay Thai, cooking, Nimman…",all:"All",featured:"Featured",weekend:"This weekend",locals:"Meet the locals",
+  en:{explore:"Explore",map:"Map",calendar:"Calendar",trips:"Plans",chats:"Chats",soonH:"Group chats are coming soon",soonP:"When a Thai host confirms your spot, you'll chat here with them and everyone going, before and after.",soonInput:"Coming soon",earn:"Earn",search:"Search: Muay Thai, cooking, Nimman…",all:"All",featured:"Featured",weekend:"This weekend",locals:"Meet the locals",
       more:"More",with:"with",hostedBy:"Hosted by",guest:"/ guest",reviews:"reviews",back:"Back",duration:"Duration",spotsLeft:(a,b)=>`${a} of ${b} left`,language:"Language",
       small:(n,c)=>`Small group · max ${c}. You + ${n} others going.`,tapFace:"Tap a face to see who's going.",open:"Open spot",
       plan:"The plan with",before:"Before",during:"During",after:"After",theEvent:"The event",bring:"What to bring",good:"Good to know",where:"Where",
       reviewsH:"Reviews",sample:"Sample",moreHost:n=>`More with ${n}`,similar:"You might also like",noResults:"Nothing here yet. Try another category.",
       book:"Book",choose:"Pick a date",guests:"Guests",yourName:"Your name",request:"Send request",noPay:"Pay nothing now. Your host confirms first.",
-      sent:(h,d)=>`Sent! ${h} will confirm ${d}.`,demo:" (demo, nothing was sent)",goTrip:"Open trip chat",fail:"Didn't go through. Try again.",noDates:"No dates yet.",
-      mapNote:"Approx. locations",tripsH:"Your trips",tripsEmpty:"No trips yet. Book an experience and your group chat appears here.",groupChat:"Group chat",chatPh:"Message the group…",send:"Send",
+      sent:(h,d)=>`Sent! ${h} will confirm ${d}.`,demo:" (demo, nothing was sent)",goTrip:"See my requests",fail:"Didn't go through. Try again.",noDates:"No dates yet.",
+      mapNote:"Approx. locations",tripsH:"Your plans",firstWeek:"Good for your first week",myVotes:"You want",voteNote:"We'll tell you when a Thai host is ready.",myNoms:"You nominated",helpH:"Help a Thai friend earn",helpP:"Send them the host invite. It takes 10 seconds.",nothing:"Nothing planned yet.",tripsEmpty:"No requests yet. Request a spot and it appears here. The group chat opens when your host confirms.",groupChat:"Group chat",chatPh:"Message the group…",send:"Send",
       memberSince:"Hosting since",whyHost:"Why I host",myCommunity:"My community",followers:"followers",experiences:"Experiences",verified:"ID verified",
-      eCap:"earned last month",eBig:"Earn from the scene you already love.",eMoney:"/ month, est.",eG:"Guests each time",eP:"Times a week",eAvg:"฿590/guest · you keep 80%",start:"Start earning",
-      willH:"It's the will, not the skill",need:"You need",needL:["To be a regular somewhere","To enjoy people","A phone"],noNeed:"You don't need",noNeedL:["To be a professional","Perfect English","A venue or equipment"],
-      storiesH:"Hosts like you",perMonth:"/ month",wantedH:"Hosts wanted",wantedP:"Guests and venues are asking for these.",canHost:"I can host this",est:"est.",ownIdea:"Your own idea",ownIdeaP:"Something missing? Suggest it and we'll build it with you.",suggest:"Suggest",
-      howH:"Live in 10 minutes",howL:["Create your profile","Describe your experience","Set your price","Pick your days. You're live."],
-      supportH:"You're not alone",supportP:"Ploy, our community manager, calls every new host for a 30-minute welcome. Bring your friends as co-hosts, and join the monthly host meet-up.",
+      eCap:"earned last month",eBig:"Earn by showing newcomers your Chiang Mai.",eMoney:"/ month, est.",eG:"Guests each time",eP:"Times a week",eAvg:"฿590/guest · you keep 80%",start:"Start earning",
+      willH:"It's the will, not the skill",need:"You need",needL:["To be Thai and know your Chiang Mai","To enjoy people","Basic English is fine to start. We help, or bring a co-host."],noNeed:"You don't need",noNeedL:["To be a professional","Perfect English","A venue or equipment"],
+      storiesH:"Hosts like you",perMonth:"/ month",wantedH:"Hosts wanted",wantedP:"ThaiCNX guests voted for these.",canHost:"I can host this",est:"est.",ownIdea:"Your own idea",ownIdeaP:"Something missing? Suggest it and we'll build it with you.",suggest:"Suggest",
+      howH:"Sign up in 5 minutes",howL:["Create your profile","Describe your experience","Set your price","Pick your days. We call you to plan your first date."],
+      supportH:"You're not alone",supportP:"Our community team calls every new host for a 30-minute welcome. Bring your friends as co-hosts, and join the monthly host meet-up.",
       s1:"Your profile",fName:"First name",fPhone:"Phone or LINE",fSocial:"Instagram or TikTok (optional)",next:"Next",
       s2:"Your experience",fCat:"Category",fTitle:"Give it a name",fTitlePh:"e.g. Sunday Muay Thai with a real camp",fEvent:"Part of a weekly event? (optional)",
       s3:"Your price",perGuest:"per guest",maxG:"Max guests",could:"You could earn",
-      s4:"Your schedule",fDays:"Which days?",fTime:"Start time",goLive:"Go live",days:["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],
-      liveH:"You're live!",liveP:"Guests can book you now. Ploy will call you today to say hi.",callPloy:"Book my welcome call",yourCard:"How guests see you",
-      foot:"Demo: hosts, photos, prices, reviews and bookings are samples. Events are real public listings. Not affiliated with any venue or organiser."},
-  th:{explore:"สำรวจ",map:"แผนที่",trips:"ทริป",earn:"หารายได้",search:"ค้นหา: มวยไทย ทำอาหาร นิมมาน…",all:"ทั้งหมด",featured:"แนะนำ",weekend:"สุดสัปดาห์นี้",locals:"รู้จักคนท้องถิ่น",
+      s4:"Your schedule",fDays:"Which days?",fTime:"Start time",goLive:"Send my application",days:["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],
+      liveH:"Application sent!",liveP:"Our team will call you within a day to plan your first guests.",callPloy:"Book my welcome call",yourCard:"How guests see you",
+      foot:"Community events are real public listings. Thai hosts, photos, prices and reviews are samples while we recruit. Not affiliated with any venue or organiser.",
+      hero:"New in Chiang Mai? Meet it through a Thai local.",stayQ:"How long are you in Chiang Mai?",stay:["Just arrived","1–3 months","Longer"],firstMonth:"Your first month: with a Thai local",withLocal:"With a Thai local",how:["Free community events every week","Small groups with Thai locals","Request free · hosts keep 80%"],
+      freeH:"This week in Chiang Mai",freeP:"Real community events, mostly where newcomers meet each other. Want Thai Chiang Mai? Go with a host.",seeAll:"See all",free:"Free",eventsH:"Community events",withHost:"Go with a Thai host",
+      voteH:"Which Thai experience do you want?",voteP:"Vote, and we'll find a Thai local to host it.",want:"I want this",wanted:"✓ Counted",
+      nomH:"Know a Thai local who'd be a great host?",nomP:"Your trainer, barista, language partner…",nominate:"Nominate",nomName:"Their first name",nomWhat:"What could they host?",
+      nomYou:"Your name",nomContact:"Your LINE, WhatsApp or email",nomSend:"Send",nomDone:"Thanks! Now send them the invite, so they can say yes themselves.",shareInvite:"Send invite",
+      contact:"LINE, WhatsApp or email",requestSpot:"Request a spot",reqNote:"No payment. We'll message you when a Thai host confirms.",reqSent:"Request noted! This host is a sample while we recruit real Thai hosts. We'll message you on LINE or WhatsApp when one runs it.",
+      forThai:"For Thai locals",kick:"Meet Thai Chiang Mai through a local",thisWeek:"This week",openCal:"Open calendar",guestsSay:"What guests say",hostLink:"Are you Thai? Host with ThaiCNX",calH:"This week in Chiang Mai",fAll:"All",fHost:"With a Thai host",fFree:"Community events",list:"List",today:"Today",mapHosts:"The map shows sessions with a Thai host.",viewAs:"View as",newcomer:"Newcomer",thaiHost:"Thai host",fEng:"Your English",eng:["Basic","Conversational","Fluent"]},
+  th:{explore:"สำรวจ",map:"แผนที่",calendar:"ปฏิทิน",trips:"แผน",chats:"แชท",soonH:"แชทกลุ่มกำลังจะมา",soonP:"เมื่อโฮสต์คนไทยยืนยันที่นั่งของคุณ คุณจะคุยกับโฮสต์และทุกคนในกลุ่มได้ที่นี่ ทั้งก่อนและหลังกิจกรรม",soonInput:"เร็วๆ นี้",earn:"หารายได้",search:"ค้นหา: มวยไทย ทำอาหาร นิมมาน…",all:"ทั้งหมด",featured:"แนะนำ",weekend:"สุดสัปดาห์นี้",locals:"รู้จักคนท้องถิ่น",
       more:"ดูเพิ่ม",with:"กับ",hostedBy:"โฮสต์โดย",guest:"/ คน",reviews:"รีวิว",back:"กลับ",duration:"ระยะเวลา",spotsLeft:(a,b)=>`เหลือ ${a} จาก ${b}`,language:"ภาษา",
       small:(n,c)=>`กลุ่มเล็ก สูงสุด ${c} คน · คุณ + อีก ${n} คน`,tapFace:"แตะรูปเพื่อดูว่าใครไปบ้าง",open:"ที่ว่าง",
       plan:"ไปกับ",before:"ก่อนเริ่ม",during:"ระหว่างงาน",after:"หลังจบ",theEvent:"อีเวนต์",bring:"สิ่งที่ต้องเตรียม",good:"ข้อควรรู้",where:"ที่ไหน",
       reviewsH:"รีวิว",sample:"ตัวอย่าง",moreHost:n=>`กิจกรรมอื่นของ${n}`,similar:"คุณอาจจะชอบ",noResults:"ยังไม่มีในหมวดนี้ ลองหมวดอื่น",
       book:"จองเลย",choose:"เลือกวัน",guests:"กี่คน",yourName:"ชื่อเล่น",request:"ส่งคำขอ",noPay:"ยังไม่ต้องจ่าย รอโฮสต์ตอบรับก่อน",
-      sent:(h,d)=>`ส่งแล้ว! รอ${h}ยืนยันวัน ${d}`,demo:" (เดโม ไม่ได้ส่งจริง)",goTrip:"เปิดแชทของทริป",fail:"ส่งไม่ผ่าน ลองใหม่นะ",noDates:"ยังไม่มีรอบ",
-      mapNote:"ตำแหน่งคร่าวๆ",tripsH:"ทริปของคุณ",tripsEmpty:"ยังไม่มีทริป จองกิจกรรมแล้วแชทกลุ่มจะอยู่ที่นี่",groupChat:"แชทกลุ่ม",chatPh:"ส่งข้อความถึงกลุ่ม…",send:"ส่ง",
+      sent:(h,d)=>`ส่งแล้ว! รอ${h}ยืนยันวัน ${d}`,demo:" (เดโม ไม่ได้ส่งจริง)",goTrip:"ดูคำขอของฉัน",fail:"ส่งไม่ผ่าน ลองใหม่นะ",noDates:"ยังไม่มีรอบ",
+      mapNote:"ตำแหน่งคร่าวๆ",tripsH:"แผนของคุณ",firstWeek:"เหมาะกับสัปดาห์แรก",myVotes:"คุณอยากลอง",voteNote:"เราจะบอกเมื่อมีโฮสต์คนไทยพร้อม",myNoms:"คุณแนะนำ",helpH:"ช่วยเพื่อนคนไทยหารายได้",helpP:"ส่งคำชวนเป็นโฮสต์ ใช้เวลา 10 วินาที",nothing:"ยังไม่มีแผน",tripsEmpty:"ยังไม่มีคำขอ ขอที่นั่งแล้วจะแสดงที่นี่ แชทกลุ่มเปิดเมื่อโฮสต์ยืนยัน",groupChat:"แชทกลุ่ม",chatPh:"ส่งข้อความถึงกลุ่ม…",send:"ส่ง",
       memberSince:"เป็นโฮสต์ตั้งแต่",whyHost:"ทำไมถึงเป็นโฮสต์",myCommunity:"ชุมชนของฉัน",followers:"ผู้ติดตาม",experiences:"กิจกรรม",verified:"ยืนยันตัวตนแล้ว",
-      eCap:"รายได้เดือนที่แล้ว",eBig:"สร้างรายได้จากสิ่งที่คุณรักอยู่แล้ว",eMoney:"/ เดือน โดยประมาณ",eG:"พาแขกกี่คน/รอบ",eP:"กี่รอบ/สัปดาห์",eAvg:"฿590/คน · คุณได้ 80%",start:"เริ่มเลย",
-      willH:"ใจสำคัญกว่าฝีมือ",need:"สิ่งที่ต้องมี",needL:["เป็นขาประจำที่ไหนสักที่","ชอบเจอผู้คน","โทรศัพท์หนึ่งเครื่อง"],noNeed:"ไม่จำเป็นต้องมี",noNeedL:["ความเป็นมืออาชีพ","ภาษาอังกฤษเป๊ะๆ","สถานที่หรืออุปกรณ์"],
-      storiesH:"โฮสต์ที่เหมือนคุณ",perMonth:"/ เดือน",wantedH:"กำลังหาโฮสต์",wantedP:"แขกและสถานที่กำลังมองหาสิ่งเหล่านี้",canHost:"ฉันทำได้",est:"ประมาณ",ownIdea:"ไอเดียของคุณเอง",ownIdeaP:"ไม่เห็นสิ่งที่คุณถนัด? เสนอมา เราช่วยสร้างด้วยกัน",suggest:"เสนอไอเดีย",
-      howH:"เปิดรับแขกได้ใน 10 นาที",howL:["สร้างโปรไฟล์","เล่าว่ากิจกรรมคืออะไร","ตั้งราคา","เลือกวัน แล้วเปิดรับแขกได้เลย"],
-      supportH:"คุณไม่ได้ทำคนเดียว",supportP:"พลอย ผู้ดูแลชุมชนของเรา จะโทรต้อนรับโฮสต์ใหม่ทุกคน 30 นาที ชวนเพื่อนมาเป็นโฮสต์ร่วมได้ และมีมีตติ้งโฮสต์ทุกเดือน",
+      eCap:"รายได้เดือนที่แล้ว",eBig:"สร้างรายได้จากการพาคนมาใหม่รู้จักเชียงใหม่ของคุณ",eMoney:"/ เดือน โดยประมาณ",eG:"พาแขกกี่คน/รอบ",eP:"กี่รอบ/สัปดาห์",eAvg:"฿590/คน · คุณได้ 80%",start:"เริ่มเลย",
+      willH:"ใจสำคัญกว่าฝีมือ",need:"สิ่งที่ต้องมี",needL:["เป็นคนไทยที่รู้จักเชียงใหม่ของตัวเอง","ชอบเจอผู้คน","ภาษาอังกฤษพื้นฐานก็เริ่มได้ หรือมีคนช่วยแปล เราช่วยฝึกให้"],noNeed:"ไม่จำเป็นต้องมี",noNeedL:["ความเป็นมืออาชีพ","ภาษาอังกฤษเป๊ะๆ","สถานที่หรืออุปกรณ์"],
+      storiesH:"โฮสต์ที่เหมือนคุณ",perMonth:"/ เดือน",wantedH:"กำลังหาโฮสต์",wantedP:"แขก ThaiCNX โหวตอยากลองสิ่งเหล่านี้",canHost:"ฉันทำได้",est:"ประมาณ",ownIdea:"ไอเดียของคุณเอง",ownIdeaP:"ไม่เห็นสิ่งที่คุณถนัด? เสนอมา เราช่วยสร้างด้วยกัน",suggest:"เสนอไอเดีย",
+      howH:"สมัครได้ใน 5 นาที",howL:["สร้างโปรไฟล์","เล่าว่ากิจกรรมคืออะไร","ตั้งราคา","เลือกวัน แล้วทีมงานจะโทรมาวางแผนรอบแรก"],
+      supportH:"คุณไม่ได้ทำคนเดียว",supportP:"ทีมชุมชนของเราจะโทรต้อนรับโฮสต์ใหม่ทุกคน 30 นาที ชวนเพื่อนมาเป็นโฮสต์ร่วมได้ และมีมีตติ้งโฮสต์ทุกเดือน",
       s1:"โปรไฟล์ของคุณ",fName:"ชื่อเล่น",fPhone:"เบอร์โทร หรือ LINE ID",fSocial:"Instagram หรือ TikTok (ไม่บังคับ)",next:"ต่อไป",
       s2:"กิจกรรมของคุณ",fCat:"หมวดหมู่",fTitle:"ตั้งชื่อกิจกรรม",fTitlePh:"เช่น มวยไทยวันอาทิตย์กับค่ายจริง",fEvent:"เป็นส่วนหนึ่งของงานประจำสัปดาห์? (ไม่บังคับ)",
       s3:"ตั้งราคา",perGuest:"ต่อคน",maxG:"แขกสูงสุด",could:"น่าจะได้ประมาณ",
-      s4:"ตารางเวลา",fDays:"วันไหนบ้าง?",fTime:"เวลาเริ่ม",goLive:"เปิดรับแขก",days:["อา","จ","อ","พ","พฤ","ศ","ส"],
-      liveH:"เปิดรับแขกแล้ว!",liveP:"แขกจองคุณได้แล้วตอนนี้ พลอยจะโทรมาทักทายวันนี้",callPloy:"นัดคุยต้อนรับ",yourCard:"แขกจะเห็นคุณแบบนี้",
-      foot:"เดโม: โฮสต์ รูป ราคา รีวิว และยอดจองเป็นตัวอย่าง · อีเวนต์จริงจากประกาศสาธารณะ · ไม่มีส่วนเกี่ยวข้องกับสถานที่หรือผู้จัดงานใดๆ"},
+      s4:"ตารางเวลา",fDays:"วันไหนบ้าง?",fTime:"เวลาเริ่ม",goLive:"ส่งใบสมัคร",days:["อา","จ","อ","พ","พฤ","ศ","ส"],
+      liveH:"ส่งใบสมัครแล้ว!",liveP:"ทีมงานจะโทรหาภายใน 1 วัน เพื่อวางแผนแขกกลุ่มแรก",callPloy:"นัดคุยต้อนรับ",yourCard:"แขกจะเห็นคุณแบบนี้",
+      foot:"อีเวนต์ชุมชนเป็นประกาศสาธารณะจริง · โฮสต์ รูป ราคา และรีวิวเป็นตัวอย่างระหว่างรับสมัครโฮสต์ · ไม่มีส่วนเกี่ยวข้องกับสถานที่หรือผู้จัดงานใดๆ",
+      hero:"มาใหม่ที่เชียงใหม่? รู้จักเมืองผ่านคนไทยในท้องถิ่น",stayQ:"อยู่เชียงใหม่นานแค่ไหน?",stay:["เพิ่งมาถึง","1–3 เดือน","นานกว่านั้น"],firstMonth:"เดือนแรกของคุณ: ไปกับคนไทย",withLocal:"ไปกับคนไทยในท้องถิ่น",how:["อีเวนต์ชุมชนฟรีทุกสัปดาห์","กลุ่มเล็กกับคนไทยในท้องถิ่น","ขอที่นั่งฟรี · โฮสต์ได้ 80%"],
+      freeH:"สัปดาห์นี้ในเชียงใหม่",freeP:"อีเวนต์ชุมชนจริง ส่วนใหญ่เป็นที่ที่คนมาใหม่เจอกัน อยากรู้จักเชียงใหม่แบบคนไทย? ไปกับโฮสต์",seeAll:"ดูทั้งหมด",free:"ฟรี",eventsH:"อีเวนต์ชุมชน",withHost:"ไปกับโฮสต์คนไทย",
+      voteH:"อยากลองกิจกรรมไทยแบบไหน?",voteP:"โหวตไว้ แล้วเราจะหาคนไทยมาเป็นโฮสต์",want:"อยากลอง",wanted:"✓ นับแล้ว",
+      nomH:"รู้จักคนไทยที่น่าจะเป็นโฮสต์ที่ดีไหม?",nomP:"ครูมวย บาริสต้า เพื่อนแลกภาษา…",nominate:"แนะนำ",nomName:"ชื่อเล่นของเขา",nomWhat:"เขาน่าจะพาทำอะไร?",
+      nomYou:"ชื่อของคุณ",nomContact:"LINE, WhatsApp หรืออีเมลของคุณ",nomSend:"ส่ง",nomDone:"ขอบคุณ! ส่งคำชวนให้เขา เพื่อให้เขาตัดสินใจเอง",shareInvite:"ส่งคำชวน",
+      contact:"LINE, WhatsApp หรืออีเมล",requestSpot:"ขอที่นั่ง",reqNote:"ยังไม่ต้องจ่าย เราจะทักไปเมื่อโฮสต์ยืนยัน",reqSent:"รับคำขอแล้ว! โฮสต์นี้เป็นตัวอย่างระหว่างที่เรารับสมัครโฮสต์คนไทย เราจะทักทาง LINE หรือ WhatsApp เมื่อมีคนจัดจริง",
+      forThai:"สำหรับคนไทยในท้องถิ่น",kick:"รู้จักเชียงใหม่ผ่านคนไทยในท้องถิ่น",thisWeek:"สัปดาห์นี้",openCal:"เปิดปฏิทิน",guestsSay:"แขกว่าอย่างไร",hostLink:"เป็นคนไทย? มาเป็นโฮสต์กับ ThaiCNX",calH:"สัปดาห์นี้ในเชียงใหม่",fAll:"ทั้งหมด",fHost:"ไปกับโฮสต์คนไทย",fFree:"อีเวนต์ชุมชน",list:"รายการ",today:"วันนี้",mapHosts:"แผนที่แสดงกิจกรรมที่มีโฮสต์คนไทย",viewAs:"มุมมอง",newcomer:"คนมาใหม่",thaiHost:"โฮสต์คนไทย",fEng:"ภาษาอังกฤษของคุณ",eng:["พื้นฐาน","พอคุยได้","คล่อง"]},
 };
 
 /* ======================= state & helpers ======================= */
@@ -432,8 +501,10 @@ const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;
 const baht = n => "฿" + Math.round(n).toLocaleString("en-US");
 const TZ = {timeZone:"Asia/Bangkok"};
 const store = {get(k){try{return localStorage.getItem(k)}catch(e){return null}}, set(k,v){try{localStorage.setItem(k,v)}catch(e){}}};
-let EVENTS = null, db = null, langPref = null;
-let S = {cat:null, q:"", mapCat:null, mapSel:null, sheet:null, date:null, guests:1, name:"", sent:null, calcG:6, calcP:2, ob:null, trips:[{exp:"games", date:null, sample:true}], chat:{}};
+// Where sign-ups go when the page runs on its own: a Google Apps Script web app URL (see backend/README.md). Empty = demo mode.
+const API = "";
+let EVENTS = null, db = null, langPref = null, COUNTS = null;
+let S = {cat:null, q:"", mapCat:null, mapSel:null, sheet:null, date:null, guests:1, name:"", sent:null, calcG:4, calcP:1, ob:null, trips:(() => { try { return JSON.parse(store.get("plans") || "[]"); } catch(e){ return []; } })(), chat:{}, contact:"", bio:"", social:"", stay:store.get("stay"), voted:(() => { try { return JSON.parse(store.get("voted") || "{}"); } catch(e){ return {}; } })(), nom:{}, ev:null, calF:"all", calView:"list"};
 const route = () => location.hash.replace("#","") || "explore";
 const isEarn = r => r.startsWith("earn");
 const L = () => langPref || (isEarn(route()) ? "th" : "en");
@@ -451,7 +522,8 @@ function isDark(){ const a = document.documentElement.dataset.theme; return a ? 
 const WEEK = 7*86400e3;
 function upcoming(x){
   const from = Date.now() - 2*3600e3, to = Date.now() + 21*86400e3, out = [], seen = new Set();
-  if (x.sched){
+  const fromFeed = x.match && (EVENTS||[]).some(e => x.match.test(e.title));
+  if (x.sched && !fromFeed){
     for (let d = 0; d < 21; d++){
       const day = new Date(Date.now() + d*86400e3);
       const ymd = day.toLocaleDateString("en-CA",TZ), dow = new Date(ymd + "T12:00:00+07:00").getUTCDay();
@@ -462,36 +534,63 @@ function upcoming(x){
     return out;
   }
   if (!EVENTS) return [];
-  EVENTS.filter(e => x.match.test(e.title)).forEach(e => {
-    let t0 = new Date(e.start).getTime(); while (t0 < from) t0 += WEEK;
-    for (let t1 = t0; t1 < to; t1 += WEEK){ const k = e.title + t1; if (!seen.has(k)){ seen.add(k); out.push({...e, start:new Date(t1).toISOString()}); } }
-  });
+  // Listed events appear only on their real dates: the calendar has no recurrence data, so nothing is guessed forward.
+  EVENTS.filter(e => x.match.test(e.title)).forEach(e => { const t0 = new Date(e.start).getTime(); const k = e.title + t0;
+    if (t0 > from && t0 < to && !seen.has(k)){ seen.add(k); out.push(e); } });
   return out.sort((a,b) => a.start.localeCompare(b.start));
 }
-const eventInfo = x => x.about ? {title:null, description:tx(x.about)} : (EVENTS||[]).filter(e => x.match.test(e.title)).find(e => e.description && e.description.length > 40) || null;
+const eventInfo = x => x.about ? {title:null, description:tx(x.about)} : null;
+// Saves a request, vote, nomination or host application. Returns false in demo mode (nothing sent).
+async function send(kind, data){
+  const rec = {...data, kind, lang:L(), createdAt:new Date().toISOString()};
+  if (db){ await db.collection(kind).doc(crypto.randomUUID()).set(rec); return true; }
+  if (!API) return false;
+  // Apps Script answers simple text/plain POSTs with readable JSON, so success means the row was written.
+  const res = await fetch(API, {method:"POST", headers:{"Content-Type":"text/plain;charset=utf-8"}, body:JSON.stringify(rec)});
+  const ack = await res.json().catch(() => null);
+  if (!ack || !ack.ok) throw new Error("not saved");
+  return true;
+}
+let busy = false;
+(() => { try { Object.assign(S, JSON.parse(store.get("profile") || "{}")); } catch(e){} })();
+const saveProfile = () => store.set("profile", JSON.stringify({name:S.name, contact:S.contact, bio:S.bio, social:S.social}));
+async function once(fn){ if (busy) return; busy = true; try { await fn(); } finally { busy = false; } }
+// The free calendar: every public event rolled forward to its next date within 7 days.
+function freeWeek(){
+  const from = Date.now() - 2*3600e3, to = Date.now() + 7*86400e3, seen = new Set();
+  return (EVENTS||[]).map((e,i) => ({...e, i})).filter(e => { const t0 = new Date(e.start).getTime(), k = e.title.toLowerCase() + t0;
+    if (t0 < from || t0 > to || seen.has(k)) return false; seen.add(k); return true; }).sort((a,b) => a.start.localeCompare(b.start));
+}
+const hostFor = e => EXP.find(x => (x.link || x.match) && (x.link || x.match).test(e.title));
+const isThai = f => /🇹🇭/.test(f || "");
+const consent = () => `<p class="note consent">${L()==="th" ? "ทีม ThaiCNX เก็บชื่อและช่องทางติดต่อใน Google Sheets (เซิร์ฟเวอร์ Google นอกประเทศไทย) เพื่อประสานงานเรื่องนี้เท่านั้น และลบภายใน 90 วัน" : "The ThaiCNX team keeps your name and contact in Google Sheets (Google's servers, outside Thailand) only to arrange this, and deletes it within 90 days."} <a href="#" data-act="privacy">${L()==="th" ? "ลบข้อมูลของฉัน" : "Delete my data"}</a></p>`;
+const whoTag = (thai) => `<span class="who-tag ${thai ? "th" : "nc"}">${thai ? (L()==="th" ? "🇹🇭 คนไทยท้องถิ่น" : "🇹🇭 Thai local") : (L()==="th" ? "🌏 คนมาใหม่" : "🌏 Newcomer")}</span>`;
 const ring = (src, alt) => `<span class="ring"><img src="${src}" alt="${esc(alt||"")}"></span>`;
 
 /* ======================= pieces ======================= */
 const ICON = {
   explore:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>',
+  calendar:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>',
   map:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 4 3 6v14l6-2 6 2 6-2V4l-6 2-6-2z"/><path d="M9 4v14M15 6v14"/></svg>',
-  trips:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg>',
+  chats:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg>',
+  trips:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 3h12v18l-6-4-6 4z"/></svg>',
   earn:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4.5-6 8-6s7 2 8 6"/></svg>',
 };
 function topBar(){
-  return `<header class="top"><a class="logo" href="#explore">My<span>CNX</span></a><div class="tools">
+  return `<header class="top"><a class="logo" href="#explore">Thai<span>CNX</span></a><div class="tools">
     <button class="chipbtn" data-act="lang" aria-label="Switch language">${L()==="th"?"EN":"ไทย"}</button>
-    <button class="chipbtn" data-act="theme" aria-label="Switch light or dark mode">${isDark()?"☀":"☾"}</button></div></header>`;
+    <button class="me" data-act="menu" aria-label="${L()==="th"?"บัญชีและการตั้งค่า":"Account and settings"}">${esc((S.name||"").trim().slice(0,1).toUpperCase()) || "☺"}</button></div></header>`;
 }
 function tabbar(){
-  const r = route(); const cur = isEarn(r) ? "earn" : r === "map" ? "map" : r.startsWith("trip") ? "trips" : "explore";
-  return `<nav class="tabbar">${["explore","map","trips","earn"].map(k => `<a href="#${k}" ${cur===k?'aria-current="page"':''}>${ICON[k]}${t(k)}</a>`).join("")}</nav>`;
+  const r = route();
+  const cur = ["calendar","map","events"].includes(r) ? "calendar" : r.startsWith("trip") ? "trips" : r.startsWith("chat") ? "chats" : "explore";
+  return `<nav class="tabbar">${["explore","calendar","trips","chats"].map(k => `<a href="#${k}" ${cur===k?'aria-current="page"':''}>${ICON[k]}${t(k)}</a>`).join("")}</nav>`;
 }
 const feat = x => { const h = HOSTS[x.host]; return `<a class="feat" href="#x-${x.id}"><div class="im"><img src="${x.img[0]}" alt=""><span class="badge">${tx(CATS[x.cat])}</span>${ring(h.photo, hn(h))}</div>
   <div class="tx"><div class="t1">${esc(tx(x.title))}</div><div class="t2">${t("with")} <b>${esc(hn(h))}</b> · ${esc(tx(h.line))}</div><div class="t2">${stars(x.rating)} (${x.n}) · <b style="color:var(--ink)">${baht(x.price)}</b> ${t("guest")}</div></div></a>`; };
 const tile = x => { const h = HOSTS[x.host]; return `<a class="tile" href="#x-${x.id}"><div class="im"><img src="${x.img[0]}" alt="">${ring(h.photo, hn(h))}</div>
   <div class="tx"><div class="t1">${esc(tx(x.title))}</div><div class="t2">${t("with")} ${esc(hn(h))} · ${stars(x.rating)}</div><div class="t2"><b style="color:var(--ink)">${baht(x.price)}</b> ${t("guest")}</div></div></a>`; };
-const catChips = (key) => `<div class="cats" role="toolbar"><button data-${key}="" aria-pressed="${!S[key]}"><span>✨</span>${t("all")}</button>${Object.entries(CATS).map(([k,c]) => `<button data-${key}="${k}" aria-pressed="${S[key]===k}"><span>${c.i}</span>${esc(tx(c))}</button>`).join("")}</div>`;
+const catChips = (key) => `<div class="cats" role="toolbar"><button data-${key}="" aria-pressed="${!S[key]}"><span>✨</span>${t("all")}</button>${Object.entries(CATS).filter(([k]) => EXP.some(x => x.cat === k)).map(([k,c]) => `<button data-${key}="${k}" aria-pressed="${S[key]===k}"><span>${c.i}</span>${esc(tx(c))}</button>`).join("")}</div>`;
 const foot = () => `<p class="foot">${esc(t("foot"))}</p>`;
 
 /* ======================= views ======================= */
@@ -502,12 +601,103 @@ function vExplore(){
   if (S.cat || q) return `${head}<div class="sec">${hits.length ? `<div class="grid2">${hits.map(tile).join("")}</div>` : `<p class="note">${t("noResults")}</p>`}</div>${foot()}`;
   const wk = EXP.filter(x => upcoming(x).some(d => { const w = new Date(d.start).toLocaleDateString("en-GB",{...TZ,weekday:"short"}); return (w==="Sat"||w==="Sun") && new Date(d.start) - Date.now() < 7*86400e3; }));
   const cats = Object.keys(CATS).filter(c => EXP.filter(x => x.cat === c).length >= 2);
+  const hosts = Object.entries(HOSTS).filter(([k]) => EXP.some(x => x.host === k));
+  const quotes = EXP.flatMap(x => (REVIEWS[x.id]||[]).slice(0,1).map(r => [r, x]));
   return `${head}
-    <section class="sec"><div class="sec-h"><h2>${t("featured")}</h2></div><div class="row">${EXP.filter(x => x.featured).map(feat).join("")}</div></section>
-    ${wk.length ? `<section class="sec"><div class="sec-h"><h2>${t("weekend")}</h2></div><div class="row">${wk.map(tile).join("")}</div></section>` : ""}
-    <section class="sec locals"><div class="sec-h"><h2>${t("locals")}</h2></div><div class="row">${Object.entries(HOSTS).map(([k,h]) => `<a class="loc" href="#h-${k}">${ring(h.photo, hn(h))}<div>${esc(hn(h))}</div></a>`).join("")}</div></section>
-    ${cats.map(c => `<section class="sec"><div class="sec-h"><h2>${CATS[c].i} ${esc(tx(CATS[c]))}</h2><button class="chipbtn" data-cat="${c}">${t("more")}</button></div><div class="row">${EXP.filter(x => x.cat === c).map(tile).join("")}</div></section>`).join("")}
+    <section class="sec"><p class="kick">${t("kick")}</p><div class="row">${EXP.filter(x => x.featured).concat(EXP.filter(x => !x.featured)).map(feat).join("")}</div></section>
+    <section class="sec locals"><div class="sec-h"><h2>${t("locals")}</h2></div><div class="row">${hosts.map(([k,h]) => `<a class="loc" href="#h-${k}">${ring(h.photo, hn(h))}<b>${esc(hn(h))}</b>${whoTag(true)}<small>${esc(tx(h.line))}</small><span class="lr">${stars(h.rating)}</span></a>`).join("")}</div></section>
+    <section class="sec"><div class="sec-h"><h2>${t("thisWeek")}</h2><a class="chipbtn" href="#calendar">${t("openCal")} ›</a></div><div class="agenda">${calItems().slice(0,4).map(calRow).join("")}</div></section>
+    <section class="sec"><div class="sec-h"><h2>${t("guestsSay")} <span class="tag-sample">${t("sample")}</span></h2></div><div class="row">${quotes.map(([r,x]) => `<a class="quote" href="#x-${x.id}"><p>“${esc(r[4])}”</p><div class="qwho">${ring(HOSTS[x.host].photo,"")}<span><b>${esc(r[0])}</b> · ${esc(r[1])}<br><small>${esc(tx(x.title))}</small></span></div></a>`).join("")}</div></section>
+    ${voteBlock()}
+    <div class="want nomcard"><span style="font-size:22px">🤝</span><div style="flex:1"><b>${t("nomH")}</b><small>${t("nomP")}</small></div><button class="btn" data-act="nom">${t("nominate")}</button></div>
+    <a class="hostlink" href="#earn">🇹🇭 ${t("hostLink")} ›</a>
     ${foot()}`;
+}
+function voteBlock(){
+  return `<section class="sec"><div class="sec-h"><h2>${t("voteH")}</h2></div><p class="note" style="margin:-4px 0 6px">${t("voteP")}</p>
+    ${WANTED.map(w => { const n = (COUNTS && COUNTS[w.id]) || 0; return `<div class="want"><span style="font-size:22px">${w.i}</span><div style="flex:1"><b>${esc(tx(w.t))}</b>${n ? `<small>${n} ${L()==="th"?"คนอยากลอง":"want this"}</small>` : ""}</div><button class="btn${S.voted[w.id]?" on":""}" data-vote="${w.id}" ${S.voted[w.id]?"disabled":""}>${S.voted[w.id] ? t("wanted") + (S.voted[w.id]==="demo" ? " (demo)" : "") : t("want")}</button></div>`; }).join("")}</section>`;
+}
+// The calendar: Thai-hosted sessions and free community events, one schedule.
+function calItems(){
+  const to = Date.now() + 7*86400e3;
+  const host = EXP.flatMap(x => upcoming(x).filter(d => new Date(d.start) < to).map(d => ({kind:"host", start:d.start, x})));
+  const free = freeWeek().map(e => ({kind:"free", start:e.start, e}));
+  return [...host, ...free].filter(it => S.calF === "all" || S.calF === it.kind).sort((a,b) => a.start.localeCompare(b.start));
+}
+function calRow(it){
+  if (it.kind === "host"){ const x = it.x, h = HOSTS[x.host];
+    return `<a class="crow host" href="#x-${x.id}"><time>${esc(fmtTime(it.start))}</time><span class="cb"><img src="${x.img[0]}" alt=""><span><b>${esc(tx(x.title))}</b><small>${t("with")} ${esc(hn(h))} · ${baht(x.price)}</small></span>${ring(h.photo, hn(h))}</span></a>`; }
+  const e = it.e;
+  return `<button class="crow" data-ev="${e.i}|${esc(it.start)}"><time>${esc(fmtTime(it.start))}</time><span class="cb"><span><b>${esc(e.title)}</b><small>${esc(e.location || "Chiang Mai")}</small></span></span></button>`;
+}
+function vCal(){
+  const seg = `<div class="seg" role="group"><button data-calv="list" aria-pressed="${S.calView!=="map"}">${t("list")}</button><button data-calv="map" aria-pressed="${S.calView==="map"}">${t("map")}</button></div>`;
+  const head = `${topBar()}<div class="cal-h"><h1 class="h-big">${t("calH")}</h1>${seg}</div>`;
+  if (S.calView === "map"){
+    const sel = byId(S.mapSel);
+    return `${head}<div class="mapwrap" style="margin-top:8px">${mapSVG(S.mapSel)}</div><div class="note">${t("mapHosts")}</div>
+      ${(sel ? [sel, ...EXP.filter(x => x !== sel)] : EXP).map(x => { const h = HOSTS[x.host]; return `<a class="mini" href="#x-${x.id}" ${x===sel?'style="border-color:var(--ink)"':""}><img src="${x.img[0]}" alt=""><div><div class="t1">${esc(tx(x.title))}</div><div class="t2">${t("with")} ${esc(hn(h))} · ${esc(tx(HOODS[x.hood]))}</div><div class="t2">${stars(x.rating)} · <b style="color:var(--ink)">${baht(x.price)}</b></div></div></a>`; }).join("")}${foot()}`;
+  }
+  const chips = `<div class="fchips">${[["all","fAll"],["host","fHost"],["free","fFree"]].map(([k,l]) => `<button class="chipbtn" data-calf="${k}" aria-pressed="${S.calF===k}">${t(l)}</button>`).join("")}</div>`;
+  const todayYmd = new Date().toLocaleDateString("en-CA",TZ); let day = "", out = "";
+  calItems().forEach(it => { const ymd = new Date(it.start).toLocaleDateString("en-CA",TZ);
+    if (ymd !== day){ day = ymd; const d = new Date(it.start);
+      out += `<div class="cday"><b>${d.toLocaleDateString("en-GB",{...TZ,day:"numeric"})}</b><span>${ymd===todayYmd ? t("today") : esc(d.toLocaleDateString(L()==="th"?"th-TH":"en-GB",{...TZ,weekday:"long"}))}<small>${esc(d.toLocaleDateString(L()==="th"?"th-TH":"en-GB",{...TZ,month:"long"}))}</small></span></div>`; }
+    out += calRow(it); });
+  return `${head}${chips}<div class="agenda">${out || `<p class="note">${t("noResults")}</p>`}</div>${foot()}`;
+}
+function sheetEvent(key){
+  const [i, start] = key.split("|"); const e = (EVENTS||[])[+i]; if (!e) return "";
+  const x = hostFor(e), h = x && HOSTS[x.host];
+  return `<div class="scrim" data-act="close"><div class="sheet" role="dialog" aria-modal="true" data-stop>
+    <h3>${esc(e.title)}</h3><div class="note">${esc(fmtDay(start))} · ${esc(fmtTime(start))} · ${esc(e.location || "Chiang Mai")}${e.price ? " · " + esc(e.price) : ""}</div>
+    ${e.description ? `<p style="margin:0">${esc(e.description)}</p>` : ""}
+    ${x ? `<a class="hostrow" href="#x-${x.id}">${ring(h.photo, hn(h))}<div><b>${t("withHost")}</b><span>${esc(tx(x.title))} · ${baht(x.price)}</span></div><span class="go">›</span></a>` : ""}
+    ${/^https:\/\//.test(e.url||"") ? `<a class="btn wide" href="${esc(e.url)}" target="_blank" rel="noopener">${L()==="th"?"ดูประกาศต้นฉบับและจอง":"See the listing and book"} ↗</a>` : ""}
+    ${e.location ? `<a class="ghost" href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(e.location + ", Chiang Mai")}" target="_blank" rel="noopener">📍 ${L()==="th"?"เปิดในแผนที่":"Open in Maps"}</a>` : ""}
+    <p class="note" style="margin:0">${L()==="th"?"ข้อมูลจากประกาศสาธารณะ เช็กกับผู้จัดก่อนไป":"From a public listing. Check with the organiser before you go."}</p>
+    <button class="ghost" data-act="close">${L()==="th"?"ตกลง":"OK"}</button></div></div>`;
+}
+function sheetMenu(){
+  const th = L()==="th", nm = (S.name||"").trim(), av = `<span class="me">${esc(nm.slice(0,1).toUpperCase()) || "☺"}</span>`;
+  const shell = inner => `<div class="scrim" data-act="close"><div class="sheet" role="dialog" aria-modal="true" aria-label="${th?"เมนู":"Menu"}" data-stop>${inner}<button class="ghost" data-act="close">${th?"ปิด":"Close"}</button></div></div>`;
+  if (S.menu === "edit") return shell(`<button class="back" data-act="menuhome">‹ ${t("back")}</button><h3>${th?"แก้ไขโปรไฟล์":"Edit profile"}</h3>
+    <div class="field"><label for="pname">${th?"ชื่อ":"Name"}</label><input id="pname" value="${esc(S.name||"")}" autocomplete="name"></div>
+    <div class="field"><label for="pcontact">${t("contact")}</label><input id="pcontact" value="${esc(S.contact||"")}"></div>
+    <div class="field"><label for="pbio">${th?"เกี่ยวกับฉัน":"About me"}</label><input id="pbio" value="${esc(S.bio||"")}" placeholder="${th?"เช่น มาจากเบอร์ลิน อยู่ 3 เดือน ชอบวิ่ง":"e.g. From Berlin, here 3 months, into running"}"></div>
+    <div class="field"><label for="psocial">Instagram / TikTok</label><input id="psocial" value="${esc(S.social||"")}" placeholder="@"></div>
+    <p class="note" style="margin:0">${th?"เก็บไว้ในเครื่องนี้เท่านั้น ใช้กรอกฟอร์มให้อัตโนมัติ":"Saved on this phone only, to fill in forms for you."}</p>
+    <button class="btn wide" data-act="menuhome">${th?"บันทึก":"Save"}</button>`);
+  if (S.menu === "privacy") return shell(`<button class="back" data-act="menuhome">‹ ${t("back")}</button><h3>${th?"ความเป็นส่วนตัว":"Privacy"}</h3>
+    <p style="margin:0;font-size:14px">${th?"เราเก็บเฉพาะสิ่งที่คุณส่งในฟอร์ม (ชื่อ ช่องทางติดต่อ รายละเอียดคำขอ) ใน Google Sheets ของทีม ThaiCNX เพื่อประสานงาน และลบภายใน 90 วัน ข้อมูลโปรไฟล์และแผนของคุณอยู่ในเครื่องนี้เท่านั้น":"We keep only what you send in a form (name, contact, request details) in the ThaiCNX team's Google Sheets, to arrange it, and delete it within 90 days. Your profile and plans stay on this phone."}</p>
+    ${S.delDone ? `<div class="ok"><b>✓ ${th?"รับคำขอลบแล้ว เราจะลบภายใน 7 วัน":"Deletion request received. We'll delete your data within 7 days."}${S.delDemo ? t("demo") : ""}</b></div>` : `
+    <div class="field"><label for="dcontact">${th?"ช่องทางติดต่อที่คุณใช้กับเรา":"The contact you used with us"}</label><input id="dcontact" value="${esc(S.contact||"")}"></div>
+    <button class="btn wide" data-act="delreq">${th?"ขอให้ลบข้อมูลของฉัน":"Delete my data"}</button>`}`);
+  return shell(`<div class="mehead">${av}<div><b>${esc(nm) || (th?"ผู้มาเยือน":"Guest")}</b>${whoTag(false)}${S.bio ? `<div class="note">${esc(S.bio)}</div>` : ""}</div></div>
+    <nav class="menu"><hr>
+      <button data-act="menuedit">👤 ${th?"แก้ไขโปรไฟล์":"Edit profile"}</button>
+      <a href="#trips">📅 ${t("trips")}</a>
+      <a href="#chats">💬 ${t("chats")}</a>
+      <a href="#earn">🇹🇭 ${th?"เป็นโฮสต์":"Become a host"}</a><hr>
+      <button data-act="lang">🌐 ${th?"ภาษา":"Language"}<span class="v">${th?"ไทย":"English"}</span></button>
+      <button data-act="theme">${isDark()?"☀":"☾"} ${th?"โหมดมืด":"Dark mode"}<span class="v">${isDark()?(th?"เปิด":"On"):(th?"ปิด":"Off")}</span></button><hr>
+      <button data-act="privacy">🔒 ${th?"ความเป็นส่วนตัวและการลบข้อมูล":"Privacy and delete my data"}</button>
+    </nav>`);
+}
+function sheetNom(){
+  const n = S.nom;
+  if (n.done){ const msg = inviteMsg((n.name||"").trim(), (n.what||"").trim());
+    return `<div class="scrim" data-act="close"><div class="sheet" role="dialog" aria-modal="true" data-stop><div class="ok"><b>✓ ${t("nomDone")}${n.demo ? t("demo") : ""}</b></div>
+      <a class="btn wide" href="https://line.me/R/share?text=${msg}" target="_blank" rel="noopener">LINE · ${t("shareInvite")}</a>
+      <a class="btn wide" style="background:var(--good)" href="https://wa.me/?text=${msg}" target="_blank" rel="noopener">WhatsApp · ${t("shareInvite")}</a>
+      <button class="ghost" data-act="close">${L()==="th"?"ตกลง":"OK"}</button></div></div>`; }
+  return `<div class="scrim" data-act="close"><div class="sheet" role="dialog" aria-modal="true" data-stop><h3>${t("nomH")}</h3>
+    <div class="field"><label for="nName">${t("nomName")}</label><input id="nName" value="${esc(n.name||"")}"></div>
+    <div class="field"><label for="nWhat">${t("nomWhat")}</label><input id="nWhat" value="${esc(n.what||"")}" placeholder="${esc(t("nomP"))}"></div>
+    <div class="field"><label for="nYou">${t("nomYou")}</label><input id="nYou" value="${esc(n.you||"")}" autocomplete="given-name"></div>
+    <div class="field"><label for="nContact">${t("nomContact")}</label><input id="nContact" value="${esc(n.contact||"")}"></div>
+    <button class="btn wide" data-act="nomsend">${t("nomSend")}</button>${n.missing ? `<div class="ok err">${L()==="th"?"กรอกชื่อเพื่อน ชื่อคุณ และช่องทางติดต่อของคุณ":"Add your friend's name, your name and your contact."}</div>` : ""}${n.err ? `<div class="ok err">${esc(t("fail"))}</div>` : ""}
+    <p class="note" style="margin:0">${L()==="th"?"เราไม่เก็บข้อมูลติดต่อของเพื่อนคุณ เขาจะตัดสินใจสมัครเอง":"We don't store your friend's contact details. They decide for themselves."}</p>${consent()}</div></div>`;
 }
 function mapSVG(sel, only){
   const pins = EXP.filter(x => only ? x.id === only : (!S.mapCat || x.cat === S.mapCat));
@@ -523,12 +713,6 @@ function mapSVG(sel, only){
       return `<g class="pin" data-pin="${x.id}" tabindex="0" role="button" aria-label="${esc(tx(x.title))}"><circle cx="${px}" cy="${py}" r="${r+3.5}" fill="var(--ring)"/><circle cx="${px}" cy="${py}" r="${r+1}" fill="var(--app)"/><image href="${HOSTS[x.host].photo}" x="${px-r}" y="${py-r}" width="${2*r}" height="${2*r}" preserveAspectRatio="xMidYMid slice" clip-path="url(#c-${x.id})"/></g>`; }).join("")}
   </svg>`;
 }
-function vMap(){
-  const sel = byId(S.mapSel);
-  const list = EXP.filter(x => !S.mapCat || x.cat === S.mapCat);
-  return `${topBar()}${catChips("mapCat")}<div class="mapwrap" style="margin-top:8px">${mapSVG(S.mapSel)}</div><div class="note">${t("mapNote")}</div>
-    ${(sel ? [sel, ...list.filter(x => x !== sel)] : list).map(x => { const h = HOSTS[x.host]; return `<a class="mini" href="#x-${x.id}" ${x===sel?'style="border-color:var(--ink)"':""}><img src="${x.img[0]}" alt=""><div><div class="t1">${esc(tx(x.title))}</div><div class="t2">${t("with")} ${esc(hn(h))} · ${esc(tx(HOODS[x.hood]))}</div><div class="t2">${stars(x.rating)} · <b style="color:var(--ink)">${baht(x.price)}</b></div></div></a>`; }).join("")}`;
-}
 function vExp(x){
   const h = HOSTS[x.host]; const dates = upcoming(x).slice(0, 6);
   if (!dates.find(d => d.start === S.date)) S.date = dates[0]?.start ?? null;
@@ -539,18 +723,18 @@ function vExp(x){
     <div class="strip">${x.img.map(s => `<img src="${s}" alt="">`).join("")}</div>
     <h1 class="x-title">${esc(tx(x.title))}</h1>
     <div class="meta">${stars(x.rating)} · ${x.n} ${t("reviews")} · ${esc(tx(HOODS[x.hood]))} · ${CATS[x.cat].i} ${esc(tx(CATS[x.cat]))}</div>
-    <a class="hostrow" href="#h-${x.host}">${ring(h.photo, hn(h))}<div><b>${t("hostedBy")} ${esc(hn(h))}</b><span>${esc(tx(h.line))}</span><span>${stars(h.rating)} · ${h.reviews} ${t("reviews")}</span></div><span class="go">›</span></a>
+    <a class="hostrow" href="#h-${x.host}">${ring(h.photo, hn(h))}<div><b>${t("hostedBy")} ${esc(hn(h))}</b>${whoTag(true)}<span>${esc(tx(h.line))}</span><span>${stars(h.rating)} · ${h.reviews} ${t("reviews")}</span></div><span class="go">›</span></a>
     <div class="facts"><div><b>${esc(tx(x.dur))}</b><span>${t("duration")}</span></div><div><b>${left}</b><span>${L()==="th" ? `ที่ว่าง จาก ${x.cap}` : `of ${x.cap} left`}</span></div><div><b>${esc(h.langs.split(" (")[0])}</b><span>${t("language")}</span></div></div>
-    <div class="group"><div class="faces">${x.going.map((c,i) => `<button data-guest="${c}" style="background:${FACE[i%6]}" aria-label="${esc(GUESTS[c].n)}">${c}</button>`).join("")}${Array.from({length:left},() => `<button class="open" data-act="open" aria-label="${t("open")}">+</button>`).join("")}</div><p>${esc(t("small")(x.going.length, x.cap))}<br><span class="note">${t("tapFace")}</span></p></div>
+    <div class="group"><div class="faces">${x.going.map((c,i) => `<button data-guest="${c}" style="background:${FACE[i%6]}" aria-label="${esc(GUESTS[c].n)}">${c}<i class="flag">${esc(GUESTS[c].f.split(" ")[0])}</i></button>`).join("")}${Array.from({length:left},() => `<button class="open" data-act="open" aria-label="${t("open")}">+</button>`).join("")}</div><p>${esc(t("small")(x.going.length, x.cap))}<br><span class="note">${t("tapFace")}</span></p></div>
     <section class="blk"><h2>${t("plan")} ${esc(hn(h))}</h2><ol class="tl">${x.tl.map(([ph,tm,s]) => `<li><span class="ph">${t(ph)}</span><span class="tm">${esc(tm)}</span><p>${esc(tx(s))}</p></li>`).join("")}</ol></section>
-    ${ev ? `<section class="blk"><h2>${t("theEvent")}</h2>${ev.title ? `<p style="margin:0 0 4px"><b>${esc(ev.title)}</b></p>` : ""}<p style="margin:0">${esc(ev.description)}</p></section>` : ""}
+    ${ev ? `<section class="blk"><h2>${L()==="th"?"เกี่ยวกับกิจกรรม":"About"}</h2>${ev.title ? `<p style="margin:0 0 4px"><b>${esc(ev.title)}</b></p>` : ""}<p style="margin:0">${esc(ev.description)}</p></section>` : ""}
     <section class="blk"><h2>${t("bring")}</h2><ul class="list">${x.bring.map(([i,s]) => `<li><span>${i}</span><span>${esc(tx(s))}</span></li>`).join("")}</ul></section>
     <section class="blk"><h2>${t("good")}</h2><ul class="list">${x.good.map(([i,s]) => `<li><span>${i}</span><span>${esc(tx(s))}</span></li>`).join("")}</ul></section>
     <section class="blk"><h2>${t("where")}</h2><div class="mapwrap">${mapSVG(null, x.id)}</div><div class="note">${esc(tx(HOODS[x.hood]))} · ${t("mapNote")}</div></section>
     <section class="blk"><h2>${t("reviewsH")} <span class="tag-sample">${t("sample")}</span></h2>
       <div class="rate"><span class="big">${x.rating.toFixed(2).replace(/0$/,"")}</span><span><span class="star">★★★★★</span><br><span class="note">${x.n} ${t("reviews")}</span></span></div>
       <div class="dims">${DIMS.map(([k,lbl]) => { const v = Math.min(5, dimScore(k)); return `<div class="dim"><span>${esc(tx(lbl))}</span><span class="bar"><i style="width:${v/5*100}%"></i></span><b>${v.toFixed(1)}</b></div>`; }).join("")}</div>
-      ${(REVIEWS[x.id]||[]).map(([n,f,w,s,txt],i) => `<div class="rev"><div class="who"><span class="av" style="background:${FACE[(i+2)%6]}">${n[0]}</span><div><b>${esc(n)}</b> · ${esc(f)}<div class="note">${esc(w)} · <span class="star">${"★".repeat(s)}</span></div></div></div><p>${esc(txt)}</p></div>`).join("")}
+      ${(REVIEWS[x.id]||[]).map(([n,f,w,s,txt],i) => `<div class="rev"><div class="who"><span class="av" style="background:${FACE[(i+2)%6]}">${n[0]}</span><div><b>${esc(n)}</b> · ${esc(f)} ${whoTag(false)}<div class="note">${esc(w)} · <span class="star">${"★".repeat(s)}</span></div></div></div><p>${esc(txt)}</p></div>`).join("")}
     </section>
     ${EXP.filter(y => y.host === x.host && y !== x).length ? `<section class="blk"><h2>${t("moreHost")(hn(h))}</h2><div class="row">${EXP.filter(y => y.host === x.host && y !== x).map(tile).join("")}</div></section>` : ""}
     <section class="blk"><h2>${t("similar")}</h2><div class="row">${similar.map(tile).join("")}</div></section>
@@ -558,59 +742,86 @@ function vExp(x){
 }
 function bookbar(x){
   const d = upcoming(x)[0];
-  return `<div class="bookbar"><div><b>${baht(x.price)}</b> ${t("guest")}${d ? `<div class="note">${esc(fmtDay(d.start))} · ${esc(fmtTime(d.start))}</div>` : ""}</div><button class="btn" data-act="open">${t("book")}</button></div>`;
+  return `<div class="bookbar"><div><b>${baht(x.price)}</b> ${t("guest")}${d ? `<div class="note">${esc(fmtDay(d.start))} · ${esc(fmtTime(d.start))}</div>` : ""}</div>${S.trips.some(tr => tr.exp === x.id) ? `<a class="btn" href="#trips" style="background:var(--good)">✓ ${L()==="th"?"ขอแล้ว":"Requested"}</a>` : `<button class="btn" data-act="open">${t("requestSpot")}</button>`}</div>`;
 }
 function sheetBook(x){
   const h = HOSTS[x.host]; const dates = upcoming(x).slice(0, 6);
   if (S.sent && !S.sent.err) return `<div class="scrim" data-act="close"><div class="sheet" role="dialog" aria-modal="true" data-stop>
-    <div class="ok"><b>✓ ${esc(S.sent.msg)}</b><a class="btn wide" href="#trip-${S.trips.length-1}">${t("goTrip")}</a></div><button class="ghost" data-act="close">OK</button></div></div>`;
+    <div class="ok"><b>✓ ${esc(S.sent.msg)}</b><a class="btn wide" href="#trips">${t("goTrip")}</a></div><button class="ghost" data-act="close">${L()==="th"?"ตกลง":"OK"}</button></div></div>`;
   return `<div class="scrim" data-act="close"><div class="sheet" role="dialog" aria-modal="true" aria-label="${t("book")}" data-stop>
     <h3>${esc(tx(x.title))}</h3>
     <div class="field"><label>${t("choose")}</label><div class="dates">${dates.length ? dates.map(d => `<button class="date" data-date="${esc(d.start)}" aria-pressed="${d.start===S.date}">${esc(fmtDay(d.start))}<small>${esc(fmtTime(d.start))}</small></button>`).join("") : `<span class="note">${t("noDates")}</span>`}</div></div>
     <div class="stepper"><label>${t("guests")}</label><div><button data-g="-1" aria-label="Fewer guests">−</button><b>${S.guests}</b><button data-g="1" aria-label="More guests">+</button></div></div>
     <div class="field"><label for="gname">${t("yourName")}</label><input id="gname" autocomplete="given-name" value="${esc(S.name)}"></div>
-    <button class="btn wide" data-act="book" ${S.date?"":"disabled"}>${t("request")} · ${baht(x.price*S.guests)}</button>
-    <div class="note">${t("noPay")}</div>${S.sent && S.sent.err ? `<div class="ok err">${esc(S.sent.msg)}</div>` : ""}</div></div>`;
+    <div class="field"><label for="gcontact">${t("contact")}</label><input id="gcontact" value="${esc(S.contact)}"></div>
+    <button class="btn wide" data-act="book" ${S.date && S.name.trim() && S.contact.trim() ? "" : "disabled"}>${t("requestSpot")} · ${baht(x.price*S.guests)}</button>
+    <div class="note">${L()==="th" ? `ยังไม่ต้องจ่าย เมื่อ${esc(hn(h))}ยืนยัน จ่าย ${baht(x.price*S.guests)} ผ่านพร้อมเพย์ QR ของ ThaiCNX` : `Nothing to pay now. When ${esc(hn(h))} confirms, you pay ${baht(x.price*S.guests)} by PromptPay QR through ThaiCNX.`}</div>${consent()}${S.sent && S.sent.err ? `<div class="ok err">${esc(S.sent.msg)}</div>` : ""}</div></div>`;
 }
 function sheetGuest(c){
   const g = GUESTS[c];
   return `<div class="scrim" data-act="close"><div class="sheet" role="dialog" aria-modal="true" data-stop>
-    <div style="display:flex;gap:12px;align-items:center"><span class="rev"><span class="av" style="background:var(--brand);width:56px;height:56px;font-size:20px">${c}</span></span><div><h3>${esc(g.n)}</h3><div class="note">${esc(g.f)} · ${g.x} ${L()==="th"?"กิจกรรมบน MyCNX":"experiences on MyCNX"}</div></div></div>
-    <p class="note" style="margin:0">${L()==="th"?"คุยกับกลุ่มได้หลังจากจองแล้ว":"You can chat with the group after you book."}</p>
-    <button class="ghost" data-act="close">OK</button></div></div>`;
+    <div style="display:flex;gap:12px;align-items:center"><span class="rev"><span class="av" style="background:var(--brand);width:56px;height:56px;font-size:20px">${c}</span></span><div><h3>${esc(g.n)}</h3>${whoTag(isThai(g.f))}<div class="note">${esc(g.f)} · ${g.x} ${L()==="th"?"กิจกรรมบน ThaiCNX":"experiences on ThaiCNX"}</div></div></div>
+    <p class="note" style="margin:0">${L()==="th"?"คุยกับกลุ่มได้หลังโฮสต์ยืนยัน":"You can chat with the group after the host confirms."}</p>
+    <button class="ghost" data-act="close">${L()==="th"?"ตกลง":"OK"}</button></div></div>`;
 }
 function vHost(k){
   const h = HOSTS[k]; const mine = EXP.filter(x => x.host === k);
   const revs = mine.flatMap(x => (REVIEWS[x.id]||[]).map(r => [...r, x]));
   return `${topBar()}<a class="back" href="#explore">‹ ${t("back")}</a>
-    <div class="hp-head">${ring(h.photo, hn(h))}<h1>${esc(hn(h))}</h1><div class="meta">${esc(tx(h.line))}</div><div class="note">✓ ${t("verified")} · ${esc(h.langs)}</div>
+    <div class="hp-head">${ring(h.photo, hn(h))}<h1>${esc(hn(h))}</h1>${whoTag(true)}<div class="meta">${esc(tx(h.line))}</div><div class="note">✓ ${t("verified")} · ${esc(h.langs)}</div>
       ${h.socials.length ? `<div class="socials">${h.socials.map(([net,hdl,f]) => `<span>${esc(net)} ${esc(hdl)} · <b>${esc(f)}</b> ${t("followers")}</span>`).join("")}</div>` : ""}</div>
     <div class="stats"><div><b>${stars(h.rating)}</b><span>${h.reviews} ${t("reviews")}</span></div><div><b>${h.since}</b><span>${t("memberSince")}</span></div><div><b>${mine.length}</b><span>${t("experiences")}</span></div></div>
     <section class="blk"><h2>${t("whyHost")}</h2><p class="quote">${esc(tx(h.why))}</p></section>
     <section class="blk"><h2>${t("myCommunity")}</h2><p style="margin:0">${esc(tx(h.community))}</p></section>
     <section class="blk"><h2>${t("experiences")}</h2><div class="row">${mine.map(tile).join("")}</div></section>
-    <section class="blk"><h2>${t("reviewsH")} <span class="tag-sample">${t("sample")}</span></h2>${revs.map(([n,f,w,s,txt],i) => `<div class="rev"><div class="who"><span class="av" style="background:${FACE[(i+1)%6]}">${n[0]}</span><div><b>${esc(n)}</b> · ${esc(f)}<div class="note">${esc(w)} · <span class="star">${"★".repeat(s)}</span></div></div></div><p>${esc(txt)}</p></div>`).join("")}</section>
+    <section class="blk"><h2>${t("reviewsH")} <span class="tag-sample">${t("sample")}</span></h2>${revs.map(([n,f,w,s,txt],i) => `<div class="rev"><div class="who"><span class="av" style="background:${FACE[(i+1)%6]}">${n[0]}</span><div><b>${esc(n)}</b> · ${esc(f)} ${whoTag(false)}<div class="note">${esc(w)} · <span class="star">${"★".repeat(s)}</span></div></div></div><p>${esc(txt)}</p></div>`).join("")}</section>
     ${foot()}`;
 }
+function inviteMsg(name, idea){
+  return encodeURIComponent(`สวัสดี${name ? " " + name : ""}! มาเป็นโฮสต์บน ThaiCNX${idea ? ` พาแขกทำ "${idea}"` : ""} พาคนมาใหม่ไปรู้จักเชียงใหม่ของคุณ และได้ 80% ของค่าตัว ดูที่นี่ ` + location.href.split("#")[0] + "#earn");
+}
 function vTrips(){
+  const votes = WANTED.filter(w => S.voted[w.id]), noms = S.noms || [];
+  const reqs = S.trips.map((tr,i) => { const x = byId(tr.exp), h = HOSTS[x.host], d = tr.date || upcoming(x)[0]?.start;
+    return `<a class="trip" href="#x-${x.id}"><img src="${x.img[0]}" alt=""><div><div class="t1">${esc(tx(x.title))}</div><div class="t2">${t("with")} ${esc(hn(h))}${d ? " · " + esc(fmtDay(d)) : ""}</div><div class="t2">⏳ ${L()==="th" ? (tr.demo ? "คำขอเดโม ไม่ได้ส่งจริง" : "ขอแล้ว เราจะทักเมื่อมีโฮสต์คนไทยจัดจริง") : (tr.demo ? "Demo request, not sent." : `Requested. We'll message you when a Thai host runs this.`)}</div></div></a>`; }).join("");
+  const empty = !S.trips.length && !votes.length && !noms.length;
   return `${topBar()}<h1 class="h-big" style="margin-top:6px">${t("tripsH")}</h1>
-    ${S.trips.length ? S.trips.map((tr,i) => { const x = byId(tr.exp), h = HOSTS[x.host], d = tr.date || upcoming(x)[0]?.start; return `<a class="trip" href="#trip-${i}"><img src="${x.img[0]}" alt=""><div><div class="t1">${esc(tx(x.title))}</div><div class="t2">${t("with")} ${esc(hn(h))}${d ? " · " + esc(fmtDay(d)) : ""}</div><div class="t2">💬 ${t("groupChat")} · ${x.going.length + 2}</div></div></a>`; }).join("") : `<p class="note">${t("tripsEmpty")}</p>`}`;
+    ${reqs}
+    ${empty ? `<p class="note">${t("nothing")}</p><section class="sec"><div class="sec-h"><h2>${t("firstWeek")}</h2></div><div class="row">${EXP.filter(x => x.featured).map(tile).join("")}</div></section>` : ""}
+    ${votes.length ? `<section class="sec"><div class="sec-h"><h2>${t("myVotes")}</h2></div>${votes.map(w => `<div class="want"><span style="font-size:22px">${w.i}</span><div style="flex:1"><b>${esc(tx(w.t))}</b><small>${t("voteNote")}</small></div></div>`).join("")}</section>` : ""}
+    ${noms.length ? `<section class="sec"><div class="sec-h"><h2>${t("myNoms")}</h2></div>${noms.map(n => `<div class="want"><span style="font-size:22px">🤝</span><div style="flex:1"><b>${esc(n.name)}</b><small>${esc(n.what || "")}</small></div></div>`).join("")}</section>` : ""}
+    <section class="sec help"><h2>🇹🇭 ${t("helpH")}</h2><p>${t("helpP")}</p>
+      <div class="helpbtns"><a class="btn" href="https://line.me/R/share?text=${inviteMsg("","")}" target="_blank" rel="noopener">LINE</a><a class="btn" style="background:var(--good)" href="https://wa.me/?text=${inviteMsg("","")}" target="_blank" rel="noopener">WhatsApp</a><button class="btn ghostbtn" data-act="nom">${t("nominate")}</button></div></section>
+    ${foot()}`;
 }
 function seedChat(i){
   if (S.chat[i]) return S.chat[i];
-  const x = byId(S.trips[i].exp), h = HOSTS[x.host], g = x.going.map(c => GUESTS[c].n);
+  const x = i === "s" ? byId("muaythai") : byId(S.trips[i].exp), h = HOSTS[x.host], g = x.going.map(c => GUESTS[c].n);
   return S.chat[i] = [
     [hn(h), L()==="th" ? `สวัสดีทุกคน! เจอกัน ${x.tl[0][1]} นะ` : `Hi everyone! See you at ${x.tl[0][1]}. I'll be wearing a gold shirt.`],
     [g[0], L()==="th" ? "ตื่นเต้นมาก! ใครอยากนั่งรถไปด้วยกันไหม?" : "So excited! Anyone want to share a Grab from Nimman?"],
     [g[1] || hn(h), L()==="th" ? "ไปด้วย 🙋" : "Me! 🙋"],
   ];
 }
+function vChats(){
+  const x = byId("muaythai"), h = HOSTS[x.host];
+  return `${topBar()}<h1 class="h-big" style="margin-top:6px">${t("chats")}</h1>
+    <div class="soon"><span>💬</span><div><b>${t("soonH")}</b><p>${t("soonP")}</p></div></div>
+    <a class="trip" href="#chat-sample"><img src="${x.img[0]}" alt=""><div><div class="t1">${esc(tx(x.title))} <span class="tag-sample">${t("sample")}</span></div><div class="t2">${esc(hn(h))}, ${x.going.map(c => GUESTS[c].n).join(", ")}</div><div class="t2">${esc(seedChat("s")[1][1])}</div></div></a>${foot()}`;
+}
+function vChatSample(){
+  const x = byId("muaythai"), h = HOSTS[x.host], msgs = seedChat("s");
+  return `${topBar()}<a class="back" href="#chats">‹ ${t("back")}</a>
+    <a class="hostrow" href="#x-${x.id}">${ring(h.photo, hn(h))}<div><b>${esc(tx(x.title))} <span class="tag-sample">${t("sample")}</span></b><span>${[hn(h), ...x.going.map(c => GUESTS[c].n)].join(", ")}</span></div></a>
+    <div class="chat">${msgs.map(([who, m]) => `<div class="msg"><small>${esc(who)}</small>${esc(m)}</div>`).join("")}</div>
+    <div class="soon"><span>🔜</span><div><b>${t("soonH")}</b><p>${t("soonP")}</p></div></div>`;
+}
 function vTrip(i){
   const tr = S.trips[i]; if (!tr) return vTrips();
   const x = byId(tr.exp), h = HOSTS[x.host]; const msgs = seedChat(i);
   return `${topBar()}<a class="back" href="#trips">‹ ${t("back")}</a>
     <a class="hostrow" href="#x-${x.id}">${ring(h.photo, hn(h))}<div><b>${esc(tx(x.title))}</b><span>${t("with")} ${esc(hn(h))} · ${esc(fmtDay(tr.date || upcoming(x)[0]?.start || new Date().toISOString()))}</span><span>${[hn(h), ...x.going.map(c => GUESTS[c].n), L()==="th"?"คุณ":"You"].join(", ")}</span></div></a>
-    <div class="chat">${msgs.map(([who, m]) => `<div class="msg ${who==="me"?"me":""}"><small>${esc(who==="me" ? (L()==="th"?"คุณ":"You") : who)}</small>${esc(m)}</div>`).join("")}</div>`;
+    <p class="note" style="text-align:center">${L()==="th"?"แชทตัวอย่าง":"Sample chat"}</p><div class="chat">${msgs.map(([who, m]) => `<div class="msg ${who==="me"?"me":""}"><small>${esc(who==="me" ? (L()==="th"?"คุณ":"You") : who)}</small>${esc(m)}</div>`).join("")}</div>`;
 }
 function vEarn(){
   const monthly = 590 * .8 * S.calcG * S.calcP * 4.3; const n = HOSTS.noi;
@@ -627,27 +838,27 @@ function vEarn(){
       ${WANTED.map((w,i) => `<div class="want"><span style="font-size:22px">${w.i}</span><div style="flex:1"><b>${esc(tx(w.t))}</b><small>${esc(tx(w.by))} · ${t("est")} ${baht(w.earn)} ${t("perMonth")}</small></div><a class="btn" href="#earn-1" data-want="${i}">${t("canHost")}</a></div>`).join("")}
       <div class="want" style="border-style:dashed"><span style="font-size:22px">💡</span><div style="flex:1"><b>${t("ownIdea")}</b><small>${t("ownIdeaP")}</small></div><a class="btn" href="#earn-1">${t("suggest")}</a></div></section>
     <section class="blk"><h2>${t("howH")}</h2><ol class="steps4">${t("howL").map(s => `<li>${esc(s)}</li>`).join("")}</ol></section>
-    <section class="blk"><h2>${t("supportH")}</h2><div class="support"><span class="av">P</span><p style="margin:0;font-size:14px">${t("supportP")}</p></div></section>
+    <section class="blk"><h2>${t("supportH")}</h2><div class="support"><span class="av">🤝</span><p style="margin:0;font-size:14px">${t("supportP")}</p></div></section>
     <a class="btn gold wide" style="margin-top:18px;font-size:17px;padding:15px" href="#earn-1">${t("start")}</a>
     ${foot()}`;
 }
-const obDefaults = () => ({name:"", phone:"", social:"", cat:null, title:"", event:"", price:590, cap:Math.min(6,S.calcG), days:[6], time:"17:00"});
+const obDefaults = () => ({name:"", phone:"", social:"", eng:null, cat:null, title:"", event:"", price:590, cap:Math.min(6,S.calcG), days:[6], time:"17:00"});
 function vOnboard(n){
   const o = S.ob ||= obDefaults();
   const N = 4; const head = `${topBar()}<a class="back" href="${n>1?"#earn-"+(n-1):"#earn"}">‹ ${t("back")}</a><div class="progress"><i style="width:${n/N*100}%"></i></div>`;
-  if (n === 1) return `${head}<form class="ob" data-step="1"><h1>${t("s1")}</h1>
+  if (n === 1) return `${head}<form class="ob" data-step="1"><span class="tag-sample" style="align-self:start">🇹🇭 ${t("forThai")}</span><h1>${t("s1")}</h1>
     <div class="field"><label for="oName">${t("fName")}</label><input id="oName" required value="${esc(o.name)}" autocomplete="given-name"></div>
     <div class="field"><label for="oPhone">${t("fPhone")}</label><input id="oPhone" required value="${esc(o.phone)}" autocomplete="tel"></div>
     <div class="field"><label for="oSocial">${t("fSocial")}</label><input id="oSocial" value="${esc(o.social)}" placeholder="@"></div>
-    <button class="btn wide" type="submit">${t("next")}</button></form>`;
+    <div class="field"><label>${t("fEng")}</label><div class="pick">${t("eng").map((e,i) => `<button type="button" data-oeng="${i}" aria-pressed="${o.eng===i}">${esc(e)}</button>`).join("")}</div></div>
+    <button class="btn wide" type="submit" ${o.eng==null?"disabled":""}>${t("next")}</button>${consent()}</form>`;
   if (n === 2) return `${head}<form class="ob" data-step="2"><h1>${t("s2")}</h1>
     <div class="field"><label>${t("fCat")}</label><div class="pick">${SCENES.map(k => `<button type="button" data-ocat="${k}" aria-pressed="${o.cat===k}">${CATS[k].i} ${esc(tx(CATS[k]))}</button>`).join("")}</div></div>
     <div class="field"><label for="oTitle">${t("fTitle")}</label><input id="oTitle" required value="${esc(o.title)}" placeholder="${esc(t("fTitlePh"))}"></div>
-    <div class="field"><label for="oEvent">${t("fEvent")}</label><input id="oEvent" value="${esc(o.event)}" list="evlist"><datalist id="evlist">${[...new Set((EVENTS||[]).map(e => e.title))].map(s => `<option value="${esc(s)}">`).join("")}</datalist></div>
     <button class="btn wide" type="submit" ${o.cat===null?"disabled":""}>${t("next")}</button></form>`;
   if (n === 3) return `${head}<form class="ob" data-step="3"><h1>${t("s3")}</h1>
     <div class="money" style="margin-top:0">${baht(o.price)}</div><div class="money-sub">${t("perGuest")}</div>
-    <input type="range" id="oPrice" min="290" max="1490" step="50" value="${o.price}" aria-label="${t("perGuest")}">
+    <input type="range" id="oPrice" min="490" max="990" step="50" value="${o.price}" aria-label="${t("perGuest")}">
     <div class="rng"><div><span>${t("maxG")}</span><b>${o.cap}</b></div><input type="range" id="oCap" min="1" max="6" value="${o.cap}" aria-label="${t("maxG")}"></div>
     <div class="ok"><span>${t("could")} (${S.calcP}× / ${L()==="th"?"สัปดาห์":"week"})</span><b style="font-size:22px;color:var(--good)">${baht(o.price*.8*o.cap*S.calcP*4.3)} ${t("eMoney")}</b></div>
     <button class="btn wide" type="submit">${t("next")}</button></form>`;
@@ -655,12 +866,12 @@ function vOnboard(n){
     <div class="field"><label>${t("fDays")}</label><div class="pick">${t("days").map((d,i) => `<button type="button" data-oday="${i}" aria-pressed="${o.days.includes(i)}">${esc(d)}</button>`).join("")}</div></div>
     <div class="field"><label for="oTime">${t("fTime")}</label><input id="oTime" type="time" value="${esc(o.time)}"></div>
     <button class="btn gold wide" type="submit" ${o.days.length?"":"disabled"}>${t("goLive")}</button>${S.obErr ? `<div class="ok err">${esc(t("fail"))}</div>` : ""}</form>`;
-  return `${topBar()}<div class="ob"><span class="live"><i></i>LIVE</span><h1>🎉 ${t("liveH")}</h1><p style="margin:0">${t("liveP")}</p>
+  return `${topBar()}<div class="ob"><span class="live"><i></i>${L()==="th"?"รอทีมงานโทร":"We'll call you"}</span><h1>🎉 ${t("liveH")}</h1><p style="margin:0">${t("liveP")}${S.obDemo ? t("demo") : ""}</p>
     <span class="note">${t("yourCard")}</span>
     <div class="tile" style="width:180px"><div class="im"><div style="aspect-ratio:4/5;border-radius:14px;background:linear-gradient(135deg,var(--gold),var(--brand));display:grid;place-items:center;font-size:44px">${o.cat ? CATS[o.cat].i : "✨"}</div><span class="ring" style="position:absolute;left:8px;bottom:-18px;width:46px;height:46px"><span style="display:grid;place-items:center;width:100%;height:100%;border-radius:50%;background:var(--app);font-family:var(--display);font-size:18px">${esc((o.name||"?").slice(0,1))}</span></span></div>
-      <div class="tx"><div class="t1">${esc(o.title || "")}</div><div class="t2">${t("with")} ${esc(o.name)}</div><div class="t2"><b style="color:var(--ink)">${baht(o.price)}</b> ${t("guest")}</div></div></div>
-    <div class="support"><span class="av">P</span><div style="display:grid;gap:8px"><span style="font-size:14px">${t("supportP")}</span><button class="btn" data-act="ploy">${t("callPloy")}</button><span class="note" id="ployNote" hidden>✓ ${L()==="th"?"พลอยจะโทรหาคุณวันนี้":"Ploy will call you today."}</span></div></div>
-    <a class="ghost" href="#explore">${t("explore")}</a></div>`;
+      <div class="tx"><div class="t1">${esc(o.title || (o.cat ? tx(CATS[o.cat]) : ""))}</div><div class="t2">${t("with")} ${esc(o.name)}</div><div class="t2"><b style="color:var(--ink)">${baht(o.price)}</b> ${t("guest")}</div></div></div>
+    <div class="support"><span class="av">🤝</span><div style="display:grid;gap:8px"><span style="font-size:14px">${t("supportP")}</span></div></div>
+    <a class="ghost" href="#explore">${t("explore")}</a></div>${foot()}`;
 }
 
 /* ======================= render ======================= */
@@ -670,15 +881,22 @@ function render(keep){
   const x = r.startsWith("x-") ? byId(r.slice(2)) : null;
   if (x){ body = vExp(x); bottom = bookbar(x); if (S.sheet === "book") overlay = sheetBook(x); }
   else if (r.startsWith("h-") && HOSTS[r.slice(2)]) body = vHost(r.slice(2));
-  else if (r === "map") body = vMap();
+  else if (r === "map"){ S.calView = "map"; body = vCal(); }
+  else if (r === "calendar" || r === "events") body = vCal();
   else if (r === "trips") body = vTrips();
+  else if (r === "chats") body = vChats();
+  else if (r === "chat-sample"){ body = vChatSample(); bottom = `<form class="compose" id="compose"><input id="chatIn" placeholder="${esc(t("soonInput"))}" disabled aria-disabled="true"><button class="btn" type="button" disabled>${t("send")}</button></form>`; }
   else if (/^trip-\d+$/.test(r)){ body = vTrip(+r.slice(5)); bottom = `<form class="compose" id="compose"><input id="chatIn" placeholder="${esc(t("chatPh"))}" autocomplete="off"><button class="btn" type="submit">${t("send")}</button></form>`; }
   else if (r === "earn") body = vEarn();
   else if (/^earn-[1-5]$/.test(r)) body = vOnboard(+r.slice(5));
   else body = vExplore();
   if (S.sheet && S.sheet.startsWith("guest:")) overlay = sheetGuest(S.sheet.slice(6));
+  if (S.sheet && S.sheet.startsWith("ev:")) overlay = sheetEvent(S.sheet.slice(3));
+  if (S.sheet === "nom") overlay = sheetNom();
+  if (S.sheet === "menu") overlay = sheetMenu();
   document.documentElement.lang = L();
-  $("#phone").innerHTML = `<div class="tung" aria-hidden="true"></div><div class="scroll" id="scroll">${body}</div>${bottom || (x ? "" : tabbar())}${overlay}`;
+  $("#viewas").innerHTML = `<span>${t("viewAs")}</span><button data-view="explore" aria-pressed="${!isEarn(r)}">${t("newcomer")}</button><button data-view="earn" aria-pressed="${isEarn(r)}">🇹🇭 ${t("thaiHost")}</button>`;
+  $("#phone").innerHTML = `<div class="tung" aria-hidden="true"></div><div class="scroll" id="scroll">${body}</div>${bottom}${tabbar()}${overlay}`;
   if (keep){ sc().scrollTop = y; if (f){ const el = document.getElementById(f); if (el){ el.focus(); if (el.setSelectionRange && el.value) el.setSelectionRange(el.value.length, el.value.length); } } }
   if (/^trip-\d+$/.test(r) && !keep) sc().scrollTop = sc().scrollHeight;
 }
@@ -694,22 +912,39 @@ document.addEventListener("click", async ev => {
   if (act === "lang"){ langPref = L() === "th" ? "en" : "th"; render(true); return; }
   if (act === "theme"){ const nx = isDark() ? "light" : "dark"; document.documentElement.dataset.theme = nx; store.set("theme", nx); render(true); return; }
   if (act === "open"){ S.sheet = "book"; S.sent = null; render(true); return; }
-  if (act === "ploy"){ const n = $("#ployNote"); if (n) n.hidden = false; return; }
+  if (act === "menu"){ S.sheet = "menu"; S.menu = null; render(true); return; }
+  if (act === "menuedit"){ S.menu = "edit"; render(true); return; }
+  if (act === "menuhome"){ saveProfile(); S.menu = null; render(true); return; }
+  if (act === "privacy"){ ev.preventDefault(); S.sheet = "menu"; S.menu = "privacy"; S.delDone = false; render(true); return; }
+  if (act === "delreq"){ await once(async () => { const c = ($("#dcontact")?.value || "").trim(); if (!c) return;
+    try { S.delDemo = !(await send("deletions", {name:(S.name||"").trim(), contact:c, note:""})); S.delDone = true; } catch(e){ S.delDone = false; } render(true); }); return; }
+  if (act === "nom"){ S.sheet = "nom"; S.nom = {}; render(true); return; }
+  if (act === "nomsend"){ await once(async () => { const n = S.nom; if (!n.name?.trim() || !n.you?.trim() || !n.contact?.trim()){ n.missing = true; render(true); return; } n.missing = false;
+    try { n.demo = !(await send("nominations", {friendFirstName:n.name.trim(), idea:(n.what||"").trim(), nominator:(n.you||"").trim(), nominatorContact:n.contact.trim()})); n.done = true; n.err = false; (S.noms ||= []).push({name:n.name.trim(), what:(n.what||"").trim()}); } catch(e){ n.err = true; } render(true); }); return; }
+  const ev1 = el.closest("[data-ev]"); if (ev1){ S.sheet = "ev:" + ev1.dataset.ev; render(true); return; }
+  const st = el.closest("[data-stay]"); if (st){ S.stay = st.dataset.stay; store.set("stay", S.stay); render(true); return; }
+  const vo = el.closest("[data-vote]"); if (vo){ const id = vo.dataset.vote; if (S.voted[id]) return; S.voted[id] = true; render(true);
+    try { const ok = await send("votes", {idea:id}); if (ok && COUNTS) COUNTS[id] = (COUNTS[id]||0) + 1; S.voted[id] = ok ? true : "demo"; } catch(e){ S.voted[id] = false; } store.set("voted", JSON.stringify(S.voted)); render(true); return; }
+  const oe = el.closest("[data-oeng]"); if (oe){ S.ob.eng = +oe.dataset.oeng; render(true); return; }
   const gu = el.closest("[data-guest]"); if (gu){ S.sheet = "guest:" + gu.dataset.guest; render(true); return; }
   const d = el.closest("[data-date]"); if (d){ S.date = d.dataset.date; render(true); return; }
   const g = el.closest("[data-g]"); if (g){ const x = byId(route().slice(2)); S.guests = Math.min(x.cap - x.going.length, Math.max(1, S.guests + +g.dataset.g)); render(true); return; }
-  if (act === "book"){
+  if (act === "book"){ await once(async () => {
     const x = byId(route().slice(2)), h = HOSTS[x.host];
+    if (S.trips.some(tr => tr.exp === x.id)) return;
     try {
-      if (db) await db.collection("requests").doc(crypto.randomUUID()).set({experience:x.id, host:x.host, date:S.date, guests:S.guests, name:S.name.trim(), total:x.price*S.guests, lang:L(), createdAt:new Date().toISOString()});
-      S.trips.push({exp:x.id, date:S.date});
-      S.sent = {msg: t("sent")(hn(h), fmtDay(S.date)) + (db ? "" : t("demo"))};
+      const ok = await send("requests", {experience:x.id, host:x.host, date:S.date, guests:S.guests, name:S.name.trim(), contact:S.contact.trim(), total:x.price*S.guests});
+      S.trips.push({exp:x.id, date:S.date, demo:!ok}); store.set("plans", JSON.stringify(S.trips)); saveProfile();
+      S.sent = {msg: t("reqSent") + (ok ? "" : t("demo"))};
     } catch(e){ S.sent = {err:true, msg:t("fail")}; }
-    render(true); return;
+    render(true); }); return;
   }
   const c1 = el.closest("[data-cat]"); if (c1){ S.cat = c1.dataset.cat || null; render(true); return; }
   const c2 = el.closest("[data-mapCat],[data-mapcat]"); if (c2){ S.mapCat = c2.dataset.mapcat || null; S.mapSel = null; render(true); return; }
-  const pin = el.closest("[data-pin]"); if (pin && route() === "map"){ S.mapSel = pin.dataset.pin; render(true); return; }
+  const cv = el.closest("[data-calv]"); if (cv){ S.calView = cv.dataset.calv; render(true); return; }
+  const cf = el.closest("[data-calf]"); if (cf){ S.calF = cf.dataset.calf; render(true); return; }
+  const va = el.closest("[data-view]"); if (va){ location.hash = va.dataset.view; return; }
+  const pin = el.closest("[data-pin]"); if (pin && ["map","calendar","events"].includes(route())){ S.mapSel = pin.dataset.pin; render(true); return; }
   const oc = el.closest("[data-ocat]"); if (oc){ S.ob.cat = oc.dataset.ocat; render(true); return; }
   const od = el.closest("[data-oday]"); if (od){ const i = +od.dataset.oday; S.ob.days = S.ob.days.includes(i) ? S.ob.days.filter(z => z !== i) : [...S.ob.days, i]; render(true); return; }
   const w = el.closest("[data-want]"); if (w){ S.ob = S.ob || obDefaults(); if (!S.ob.title) S.ob.title = tx(WANTED[+w.dataset.want].t); }
@@ -721,7 +956,9 @@ document.addEventListener("keydown", ev => {
 document.addEventListener("input", ev => {
   const id = ev.target.id, v = ev.target.value;
   if (id === "q"){ S.q = v; render(true); return; }
-  if (id === "gname"){ S.name = v; return; }
+  const pm = {pname:"name", pcontact:"contact", pbio:"bio", psocial:"social"}; if (pm[id]){ S[pm[id]] = v; return; }
+  if (id === "gname" || id === "gcontact"){ S[id === "gname" ? "name" : "contact"] = v; const b = document.querySelector('[data-act="book"]'); if (b) b.disabled = !(S.date && S.name.trim() && S.contact.trim()); return; }
+  const nm = {nName:"name", nWhat:"what", nYou:"you", nContact:"contact"}; if (nm[id]){ S.nom[nm[id]] = v; return; }
   if (id === "cG" || id === "cP"){ S[id === "cG" ? "calcG" : "calcP"] = +v; render(true); return; }
   if (id === "oPrice" || id === "oCap"){ S.ob[id === "oPrice" ? "price" : "cap"] = +v; render(true); return; }
   const map = {oName:"name", oPhone:"phone", oSocial:"social", oTitle:"title", oEvent:"event", oTime:"time"};
@@ -736,17 +973,18 @@ document.addEventListener("submit", async ev => {
   const f = ev.target.closest("form[data-step]"); if (!f) return;
   const n = +f.dataset.step;
   if (n < 4){ location.hash = "earn-" + (n + 1); return; }
-  try {
+  await once(async () => { try {
     const o = S.ob;
-    if (db) await db.collection("applications").doc(crypto.randomUUID()).set({name:o.name.trim(), phone:o.phone.trim(), social:o.social.trim(), category:o.cat, title:o.title.trim(), event:o.event.trim(), price:o.price, cap:o.cap, days:o.days, time:o.time, lang:L(), createdAt:new Date().toISOString()});
-    S.obErr = false; location.hash = "earn-5";
-  } catch(e){ S.obErr = true; render(true); }
+    S.obDemo = !(await send("applications", {name:o.name.trim(), phone:o.phone.trim(), social:o.social.trim(), english:["basic","conversational","fluent"][o.eng], category:o.cat, title:o.title.trim(), price:o.price, cap:o.cap, days:o.days, time:o.time}));
+    S.obErr = false; location.hash = "earn-5"; S.ob = null;
+  } catch(e){ S.obErr = true; render(true); } });
 });
 
 render(false);
 (async () => {
   db = window.claude ? await window.claude.use("db") : null;
-  if (!db){ try { const d = await (await fetch("data/feed.json")).json(); EVENTS = d.events || []; } catch(e){ EVENTS = []; } render(true); return; }
+  if (!db){ try { const d = await (await fetch("data/feed.json")).json(); EVENTS = d.events || []; } catch(e){ EVENTS = []; } render(true);
+    if (API){ try { COUNTS = (await (await fetch(API + "?counts=1")).json()).votes || {}; render(true); } catch(e){} } return; }
   db.doc("feed/cm-events").onSnapshot(snap => { const d = snap.exists ? snap.data() : null; EVENTS = d && Array.isArray(d.events) ? d.events : []; render(true); }, () => {});
 })();
 })();
