@@ -73,6 +73,8 @@ This is why the prototype looks the way it does. The decisions were made during 
 - **Privacy at collection.** Every form says who keeps the data (the ThaiCNX team, in Google Sheets, outside Thailand), why, and that it is deleted within 90 days, with a "Delete my data" link that files a deletion request. The sheet stores only whitelisted fields, treats formula-looking input as text, and its alert emails carry no personal data.
 - **The public events file carries no calendar ids,** and Facebook links pass only when they point at an event page.
 
+- **Backend: Google Sheet for launch, Convex for the real product.** Convex (TypeScript, live queries) fits the next features: live vote counts, host confirmations, group chat. Firebase was the other contender for the Google credits; Supabase free projects pause when idle.
+
 ## Host side
 
 - **Earn opens in Thai.** Hosts are local, so the host side defaults to Thai. Everything can be switched to English, and the toggle resets when you move between the guest and host sides.

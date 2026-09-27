@@ -50,21 +50,18 @@ Launch verification flows (all must pass on the live URL):
 - **Week 1:** move the feed out of the deploy, so `/cm-events-update` can refresh it with no deploy (Phase 2, step 1). Its last step runs only if `~/.config/thaicnx/enabled` exists. The founder creates that file; the agent never does. A failed export is reported and never fails the calendar run.
 - **Kill:** delete the switch file (updates stop), then remove the Vercel project or domain (site down). The calendar pipeline is untouched either way.
 
-## Phase 2: week 1, only if launch shows demand
+## Phase 2: the real backend on Convex (decided 27 September)
 
-1. **Feed and submissions in Firestore** on the Google Cloud project with the credits. The exporter writes `events/current` with a service-account key stored at `~/.config/thaicnx/sa.json` (the founder downloads it). Security rules:
-   - **Public submissions:** create-only collections, with field whitelists, length caps and `createdAt == request.time`.
-   - **Admin access:** `email_verified == true` plus an `admins/{email}` document.
-   - **No client-side counters.**
-2. **Admin view** (`#admin`, Google sign-in by redirect, which also works in in-app browsers). The first screen shows requests per experience, votes per idea, applications and nominations. Completed sessions become the headline metric once real hosts run sessions.
-3. **Real hosts replace samples** one by one: a hosts collection, or code edits while there are few.
-4. **Organiser "List your event" form**; approved listings go into the CM Events calendar, which stays the single source of truth.
-5. **Committed Playwright suite plus Firestore rules tests on the emulator**, including a known-bad control that must fail.
-6. **Spam defence** (App Check) if spam appears.
+Launch runs on the Google Sheet; the real product moves to **Convex**: database, backend functions and live queries, all in TypeScript. Chosen over Firebase and Supabase because the next features are live vote counts, host confirmations and group chat, which Convex's reactive queries give almost for free. Free tier covers the first thousands of users; switching is small because every write already goes through `send()` in `index.html`.
 
-## Before the sheet goes live (privacy review, 27 September)
-
-The review found the push safe while `API` is empty. Before setting `API`: fill in the team contact as data holder in the privacy text, agree who handles the `deletions` tab (delete within 7 days), and keep rows at most 90 days. The sheet hardening (field whitelist, formula-safe cells, alerts without personal data) is done in `backend/apps-script.gs`.
+1. **Set up** (needs the founder: a Convex account and OK for `npm install convex` in the project). Keep the app a single page; add a small build only if Convex's browser client needs it.
+2. **Schema and functions** (`convex/schema.ts`, mutations with argument validators): `events` (written by the exporter through an authenticated mutation, replacing `data/feed.json`), `requests` (with status: requested, confirmed, completed, cancelled), `votes` (one per device id), `nominations`, `applications`, `deletions`. Validation and rate limits live in the mutations, not the browser.
+3. **Live queries:** vote counts and "people going" update on every open screen.
+4. **Calendar hook:** `export_mycnx_feed.py` writes events through a Convex HTTP action with a deploy key kept in `~/.config/thaicnx/`. `/cm-events-update` runs it only if `~/.config/thaicnx/enabled` exists (created by the founder). A refresh no longer needs a site deploy.
+5. **Admin view** (`#admin`, sign-in via Convex Auth, allowlisted team emails): requests per experience, votes per idea, applications, nominations, deletion requests, status changes, and the key metric.
+6. **Group chat per confirmed session** (replaces "coming soon"), members only; no messages between strangers.
+7. **Tests:** a committed Playwright suite for every flow against a Convex dev deployment, plus function tests that must reject bad input (a known-bad control that has to fail).
+8. **Migration:** import any Google Sheet rows, then switch `send()` to Convex and retire the sheet.
 
 ## Out of scope
 
