@@ -169,6 +169,7 @@ button:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
   .thread{left:calc(clamp(120px,40vw,160px));right:calc(clamp(120px,40vw,160px))}
 }
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+.thaiside{margin:0;max-width:34em;font:500 clamp(16px,1.7vw,24px)/1.35 var(--body);color:var(--cream)}
 .demo{margin:0;font-size:clamp(13px,1.3vw,17px);color:var(--muted);letter-spacing:.02em;font-style:italic}
 </style>
 
@@ -188,6 +189,7 @@ button:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
       <div class="gap">same city,<br>separate lives</div>
       <div class="orb local">Local<small>คนเมือง · Thai</small></div>
     </div>
+    <p class="thaiside r">And Thai locals have skills to share, but no way to reach newcomers and no budget to market.</p>
   </section>
 
   <section class="slide solo" id="s-solution" aria-label="Solution: live app">
@@ -246,7 +248,7 @@ button:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
 <script>
 (() => {
   // Set this to the public app URL once it is deployed; the QR code follows it.
-  const LIVE_URL = "https://thaicnx.com";
+  const LIVE_URL = "https://thaicnx.com/presi/app";
   const slides = [...document.querySelectorAll(".slide")], bar = document.getElementById("bar");
   let i = 0;
   function go(n){
