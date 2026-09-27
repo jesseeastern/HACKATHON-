@@ -10,7 +10,8 @@ const FIELDS = {
   applications: ["name", "phone", "social", "english", "category", "title", "price", "cap", "days", "time"],
   deletions: ["name", "contact", "note"],
 };
-const COMMON = ["kind", "lang", "createdAt"];
+const COMMON = ["receivedAt", "kind", "lang", "createdAt"];
+const KEEP_DAYS = 90;
 const IDEAS = ["w-muaywomen", "w-salaw", "w-doi", "w-market", "w-thai", "w-football"];
 
 function clean(v) {
@@ -21,7 +22,13 @@ function clean(v) {
 }
 
 function doPost(e) {
+  // Rate limit: at most 30 submissions a minute across the whole endpoint.
+  const cache = CacheService.getScriptCache(), slot = "n" + Math.floor(Date.now() / 60000);
+  const n = Number(cache.get(slot) || 0) + 1;
+  if (n > 30) return out({ok: false, error: "busy"});
+  cache.put(slot, String(n), 120);
   const rec = JSON.parse(e.postData.contents);
+  rec.receivedAt = new Date().toISOString();  // server time, used for the 90-day purge
   const fields = FIELDS[rec.kind];
   if (!fields) return out({ok: false});
   if (rec.kind === "votes" && IDEAS.indexOf(rec.idea) < 0) return out({ok: false});
@@ -46,6 +53,20 @@ function doGet() {
     rows.slice(1).forEach(r => { if (IDEAS.indexOf(r[col]) >= 0) votes[r[col]] = (votes[r[col]] || 0) + 1; });
   }
   return out({votes: votes});
+}
+
+// Run daily from a time-driven trigger (Triggers > Add trigger > purgeOld > Day timer).
+// Deletes every row older than KEEP_DAYS on every tab, keeping the promise in the privacy note.
+function purgeOld() {
+  const cutoff = Date.now() - KEEP_DAYS * 86400000;
+  SpreadsheetApp.getActiveSpreadsheet().getSheets().forEach(sh => {
+    const rows = sh.getDataRange().getValues(); if (rows.length < 2) return;
+    const col = rows[0].indexOf("receivedAt"); if (col < 0) return;
+    for (let r = rows.length - 1; r >= 1; r--) {
+      const t = Date.parse(rows[r][col]);
+      if (!isNaN(t) && t < cutoff) sh.deleteRow(r + 1);
+    }
+  });
 }
 
 function out(o) {
