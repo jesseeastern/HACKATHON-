@@ -401,6 +401,16 @@ const CATS = {
   games:{en:"Games",th:"เกม",i:"🎲"}, wellness:{en:"Mind & body",th:"กายและใจ",i:"🧘"},
 };
 const HOSTS = {
+  tong:{name:"Tong",th:"ต้อง",photo:"img/tong.jpg",rating:4.98,reviews:37,since:2025,langs:"TH · EN",
+    line:{en:"Saxophonist, plays the old city jazz bars five nights a week",th:"นักแซกโซโฟน เล่นบาร์แจ๊สในเมืองเก่าห้าคืนต่อสัปดาห์"},
+    why:{en:"Visitors see the stage. I want them to see the scene: where musicians eat, drink and jam after the gig.",th:"คนมาเที่ยวเห็นแค่เวที ผมอยากให้เห็นทั้งซีน ว่านักดนตรีไปกิน ไปนั่ง ไปแจมกันที่ไหนหลังเลิกงาน"},
+    community:{en:"The bar owners and the noodle aunties know me. You arrive as my friend, not as a tourist.",th:"เจ้าของบาร์กับป้าร้านก๋วยเตี๋ยวรู้จักผม คุณมาในฐานะเพื่อนผม ไม่ใช่นักท่องเที่ยว"},
+    socials:[["Instagram","@tong.sax.cnx","6.4k"]]},
+  dao:{name:"Dao",th:"ดาว",photo:"img/dao.jpg",rating:4.99,reviews:22,since:2026,langs:"TH · EN",
+    line:{en:"Kham Mueang teacher, born and raised in Chiang Mai",th:"ครูสอนคำเมือง เกิดและโตที่เชียงใหม่"},
+    why:{en:"Our northern dialect is fading among young people. When a foreigner says \"jao\", the whole market smiles.",th:"คำเมืองเริ่มหายไปจากคนรุ่นใหม่ พอฝรั่งพูดว่า \"เจ้า\" ทั้งกาดยิ้มเลย"},
+    community:{en:"I shop at these stalls every week. The aunties love being the teachers too.",th:"ดาวซื้อของแผงเหล่านี้ทุกอาทิตย์ ป้าๆ ชอบได้เป็นครูด้วย"},
+    socials:[["Instagram","@kru.dao.lanna","3.1k"]]},
   noi:{name:"Noi",th:"น้อย",photo:"img/noi.jpg",rating:4.97,reviews:41,since:2025,langs:"TH · EN",
     line:{en:"3rd-generation Wua Lai silversmith",th:"ช่างเงินวัวลายรุ่นที่ 3"},
     why:{en:"My grandfather hammered silver on this street. I want visitors to meet the people, not just buy the bowls.",th:"ปู่ของฉันตีเงินบนถนนนี้ อยากให้คนมาเที่ยวได้รู้จักคน ไม่ใช่แค่ซื้อของ"},
@@ -460,24 +470,36 @@ Object.entries(GUESTS).forEach(([k,g]) => g.photo = `img/g_${k}.jpg`);
 const guestByName = n => Object.values(GUESTS).find(g => g.n === n);
 const B = (en,th) => ({en,th});
 const EXP = [
-  {id:"silver", host:"noi", cat:"crafts", tags:["market","craft","night"], featured:true, img:["img/s_silver.jpg","img/noi.jpg"], price:690, cap:6, dur:B("3.5 h","3.5 ชม."), hood:"wualai", xy:[228,250],
+  {id:"jazz", host:"tong", cat:"social", tags:["music","nightlife","food"], featured:true, img:["img/s_jazz.jpg","img/tong.jpg"], price:890, cap:6, dur:B("5 h","5 ชม."), hood:"santitham", xy:[214,140],
+   title:B("Front Row, Then After-Hours with a Jazz Musician","นั่งแถวหน้า แล้วตามนักดนตรีแจ๊สไปต่อหลังเลิกงาน"), sched:{days:[5,6],time:"20:00"}, rating:4.98, n:37, going:["S","L","C"],
+   about:B("Watch Tong play from the front row, then follow him to where Chiang Mai's musicians go after the gig, and end the night at their noodle stall.","ดูต้องเล่นจากแถวหน้า แล้วตามไปที่ที่นักดนตรีเชียงใหม่ไปนั่งกันหลังเลิกงาน ปิดท้ายที่ร้านก๋วยเตี๋ยวประจำของพวกเขา"),
+   tl:[["before","20:00",B("Meet Tong at the stage door. He saves your front-row table.","เจอต้องที่หลังเวที ต้องจองโต๊ะแถวหน้าไว้ให้")],["during","20:30",B("Watch him play the first set, right in front of the band.","ดูต้องเล่นเซ็ตแรก ติดขอบเวที")],["during","22:30",B("Bar-hop with the band to where the city's musicians hang out.","ไปต่อกับวงที่บาร์ที่นักดนตรีในเมืองไปนั่งกัน")],["after","00:30",B("Midnight noodles at the stall the musicians eat at after every show.","ก๋วยเตี๋ยวเที่ยงคืนที่ร้านที่นักดนตรีกินกันหลังทุกโชว์")]],
+   bring:[["💵",B("Cash for drinks and noodles","เงินสดค่าเครื่องดื่มและก๋วยเตี๋ยว")],["🪪",B("ID for the bars","บัตรประชาชนหรือพาสปอร์ต")]],
+   good:[["🔞",B("20+ only.","อายุ 20 ปีขึ้นไป")],["🥤",B("No need to drink alcohol.","ไม่ดื่มแอลกอฮอล์ก็ได้")]]},
+  {id:"kham", host:"dao", cat:"culture", tags:["language","market","morning"], featured:true, img:["img/s_kham.jpg","img/dao.jpg"], price:490, cap:6, dur:B("2.5 h","2.5 ชม."), hood:"oldcity", xy:[262,192],
+   title:B("Speak Kham Mueang at the Morning Market","พูดคำเมืองที่กาดเช้า"), sched:{days:[2,6],time:"08:00"}, rating:4.99, n:22, going:["P","T"],
+   about:B("Learn the northern Thai dialect over coffee with Dao, then use it for real, ordering your breakfast from the market aunties.","เรียนคำเมืองกับดาวระหว่างจิบกาแฟ แล้วใช้จริงด้วยการสั่งอาหารเช้ากับป้าๆ ในกาด"),
+   tl:[["before","08:00",B("Coffee with Dao. Ten Kham Mueang phrases, and why locals end sentences with \"jao\".","จิบกาแฟกับดาว เรียนคำเมืองสิบคำ และทำไมคนเหนือลงท้ายด้วย \"เจ้า\"")],["during","08:45",B("Walk the market and order sticky rice and herbs in Kham Mueang, yourself.","เดินกาด สั่งข้าวเหนียวกับผักด้วยคำเมืองเอง")],["after","10:15",B("Tell a vendor her food is \"lam khanat\", very delicious. Watch her face.","บอกแม่ค้าว่า \"ลำขนาด\" แล้วดูหน้าป้า")]],
+   bring:[["🪙",B("Small change for the market","เหรียญหรือแบงก์ย่อยไว้ซื้อของ")]],
+   good:[["🗣️",B("No Thai needed. You keep the phrase card.","ไม่ต้องพูดไทยเป็น ได้การ์ดคำศัพท์กลับบ้าน")],["🍚",B("Breakfast is included.","รวมอาหารเช้าแล้ว")]]},
+  {id:"silver", host:"noi", cat:"crafts", tags:["market","craft","night"], img:["img/s_silver.jpg","img/noi.jpg"], price:690, cap:6, dur:B("3.5 h","3.5 ชม."), hood:"wualai", xy:[228,250],
    title:B("Saturday Night on Silver Street","คืนวันเสาร์ ถนนคนเดินวัวลาย"), match:/saturday walking street/i, sched:{days:[6],time:"16:30"}, rating:4.97, n:41, going:["A","K","S"],
    tl:[["before","16:30",B("Noi's family workshop. Watch a bowl hammered by hand.","เจอกันที่โรงตีเงินบ้านน้อย ดูตีขันเงินด้วยมือ")],["during","17:30",B("Walk the market. Meet silversmiths her family has known for decades.","เดินตลาด น้อยพาไปทักช่างเงินที่รู้จักกันมาหลายสิบปี")],["during","19:00",B("Dinner at her favourite street stalls.","กินข้าวเย็นร้านข้างทางที่น้อยชอบ")],["after","20:30",B("Stamp your own little silver piece. Take it home.","ตอกลายเงินชิ้นเล็กของตัวเอง เอากลับบ้านได้")]],
    bring:[["💵",B("Cash for the market (about ฿300)","เงินสดไว้ช้อป (ประมาณ ฿300)")],["👟",B("Comfortable walking shoes","รองเท้าเดินสบาย")]],
    good:[["🙂",B("No experience needed. Kids 10+ welcome.","ไม่ต้องมีพื้นฐาน เด็ก 10 ขวบขึ้นไปมาได้")],["🍜",B("Dinner is included in the price.","รวมค่าอาหารเย็นแล้ว")]]},
-  {id:"muaythai", host:"beam", cat:"sport", tags:["fitness","outdoor","beginner"], featured:true, img:["img/s_muaythai.jpg","img/beam.jpg"], price:890, cap:6, dur:B("2 h","2 ชม."), hood:"santitham", xy:[236,108],
+  {id:"muaythai", host:"beam", cat:"sport", tags:["fitness","outdoor","beginner"], img:["img/s_muaythai.jpg","img/beam.jpg"], price:890, cap:6, dur:B("2 h","2 ชม."), hood:"santitham", xy:[236,108],
    title:B("Train with a Real Muay Thai Camp","ซ้อมมวยไทยกับค่ายจริง"), sched:{days:[1,3,5],time:"17:00"}, rating:4.95, n:88, going:["B","F","D","T"],
    about:B("An evening session at a working Muay Thai camp: warm-up with the fighters, pad work in pairs, and a cool-down on the ring.","ซ้อมช่วงเย็นที่ค่ายมวยจริง วอร์มกับนักมวย ต่อเป้าเป็นคู่ และคูลดาวน์บนเวที"),
    tl:[["before","16:40",B("Beam wraps your hands and tells how he started fighting at nine.","บีมพันมือให้ และเล่าว่าเริ่มชกตั้งแต่ 9 ขวบ")],["during","17:00",B("Train alongside the camp's fighters, pads and all.","ซ้อมจริงกับนักมวยในค่าย ต่อเป้าเต็มรูปแบบ")],["after","18:45",B("Iced tea with the camp family, and a photo in the ring.","ชาเย็นกับครอบครัวค่ายมวย และถ่ายรูปบนเวที")]],
    bring:[["💧",B("A big bottle of water","น้ำขวดใหญ่")],["👕",B("Clothes you can sweat in","เสื้อผ้าที่เหงื่อออกได้")],["🧤",B("Nothing else. Gloves and wraps provided.","ไม่ต้องเอาอะไรมา มีนวมและผ้าพันมือให้")]],
    good:[["💪",B("Any fitness level. Beam adjusts for you.","ทุกระดับความฟิต บีมปรับให้")],["🚫",B("No sparring unless you ask.","ไม่มีการชกจริงถ้าไม่ขอ")]]},
-  {id:"cooking", host:"jaeng", cat:"food", tags:["cooking","market","family"], featured:true, img:["img/s_cook.jpg","img/jaeng.jpg"], price:790, cap:6, dur:B("4 h","4 ชม."), hood:"oldcity", xy:[250,172],
+  {id:"cooking", host:"jaeng", cat:"food", tags:["cooking","market","family"], img:["img/s_cook.jpg","img/jaeng.jpg"], price:790, cap:6, dur:B("4 h","4 ชม."), hood:"oldcity", xy:[250,172],
    title:B("Sunday Khao Soi in Grandma's Kitchen","ข้าวซอยวันอาทิตย์ในครัวยาย"), sched:{days:[0],time:"09:30"}, rating:4.99, n:63, going:["N","W"],
    about:B("A morning at the market and in a family kitchen, cooking northern Thai dishes from scratch, then eating together.","ตลาดตอนเช้าและครัวของครอบครัว ทำอาหารเหนือแบบเริ่มจากศูนย์ แล้วกินด้วยกัน"),
    tl:[["before","09:30",B("Shop the market stalls she has used for 40 years.","เดินตลาดแผงเดิมที่ยายซื้อมา 40 ปี")],["during","10:30",B("Pound the curry paste and cook khao soi with her.","ตำพริกแกงและทำข้าวซอยกับยาย")],["after","12:30",B("Lunch at the family table. Take the recipe home.","กินข้าวที่โต๊ะครอบครัว ได้สูตรกลับบ้าน")]],
    bring:[["🛍️",B("A tote bag for the market","ถุงผ้าไว้ใส่ของ")],["📷",B("An empty stomach","ท้องว่างๆ")]],
    good:[["🌶️",B("Vegetarian version on request.","ขอเมนูมังสวิรัติได้")],["🗣️",B("Grandma speaks Thai; Mint translates.","ยายพูดไทย มิ้นท์ช่วยแปล")]]},
-  {id:"karaoke", host:"bank", cat:"social", tags:["nightlife","music","bar"], img:["img/s_karaoke.jpg","img/bank.jpg"], price:490, cap:6, dur:B("3 h","3 ชม."), hood:"oldcity", xy:[196,168],
+  {id:"karaoke", host:"bank", cat:"social", tags:["nightlife","music","bar"], featured:true, img:["img/s_karaoke.jpg","img/bank.jpg"], price:490, cap:6, dur:B("3 h","3 ชม."), hood:"oldcity", xy:[196,168],
    title:B("Thai Karaoke Thursday with the Regulars","คาราโอเกะไทยคืนวันพฤหัสกับขาประจำ"), sched:{days:[4],time:"19:30"}, rating:4.94, n:26, going:["R","C","E","L"],
    tl:[["before","19:30",B("Street food with Bank. Pick your first song together.","กินของริมทางกับแบงก์ เลือกเพลงแรกด้วยกัน")],["during","20:30",B("He sings the first duet with you and introduces the bar crew.","ร้องคู่เพลงแรกกับคุณ แล้วแนะนำทีมร้าน")],["after","23:00",B("You're in the karaoke group chat for next week.","เข้ากลุ่มแชทคาราโอเกะไว้สัปดาห์หน้า")]],
    bring:[["💵",B("Cash for drinks","เงินสดค่าเครื่องดื่ม")],["🎤",B("Your worst song","เพลงที่ร้องแย่ที่สุด")]],
@@ -489,6 +511,8 @@ const EXP = [
    good:[["🙏",B("The temple session is free. You pay for Ananda's walk, guidance and tea.","การนั่งสมาธิที่วัดฟรี คุณจ่ายค่าเดินชมวัด การแนะนำ และน้ำชากับอานันท์")],["🤫",B("Quiet space. Phones on silent.","พื้นที่เงียบ ปิดเสียงโทรศัพท์")]]},
 ];
 const REVIEWS = {
+  jazz:[["Sara","Austin","September",5,"Front row, then noodles at 1am with the band. Best night of my trip."],["Lukas","Vienna","September",5,"Tong introduced me to half the musicians in town."]],
+  kham:[["Priya","Pune","September",5,"I ordered breakfast in Kham Mueang and the vendor gave me extra mango."],["Tom","Utrecht","August",5,"Three weeks here, and this was the first morning I felt like I lived here."]],
   silver:[["Anna","Berlin","September",5,"Noi's uncle let me try the hammer. I'd never have found that workshop on my own."],["Kenji","Osaka","August",5,"It felt like being shown around by a friend's family."]],
   muaythai:[["Ben","Perth","September",5,"Hardest and friendliest two hours of my trip. The kids at the camp are amazing."],["Dan","Leeds","September",5,"Beam's story before training made the whole thing mean more."]],
   cooking:[["Nina","Lyon","September",5,"Grandma Jaeng barely speaks English and we laughed for four hours."],["Wei","Singapore","August",5,"Best khao soi in the city, and now I can make it."]],
@@ -516,7 +540,7 @@ const SCENES = Object.keys(CATS);
 const T = {
   en:{expH:"Experience CNX",expP:"Explore with a Thai local",shareH:"Share my CNX",shareP:"Host what you love, and earn",landH:"Chiang Mai, with a local",landP:"Pick your path",
       intH:"What are you into?",intP:"Pick a few. We'll shape your feed around them.",intGo:"Show my feed",skip:"Skip",forYou:"Picked for you",editLikes:"Edit",
-      explore:"Explore",map:"Map",calendar:"Calendar",trips:"Plans",chats:"Chats",soonH:"Group chats are coming soon",soonP:"When a Thai host confirms your spot, you'll chat here with them and everyone going, before and after.",soonInput:"Coming soon",earn:"Earn",search:"Search: Muay Thai, cooking, Nimman…",all:"All",featured:"Featured",weekend:"This weekend",locals:"Meet the locals",
+      explore:"Explore",map:"Map",calendar:"Calendar",trips:"Plans",chats:"Chats",soonH:"Group chats are coming soon",soonP:"When a Thai host confirms your spot, you'll chat here with them and everyone going, before and after.",soonInput:"Coming soon",earn:"Earn",search:"Search: jazz, Kham Mueang, Nimman…",all:"All",featured:"Featured",weekend:"This weekend",locals:"Meet the locals",
       more:"More",with:"with",hostedBy:"Hosted by",guest:"/ guest",reviews:"reviews",back:"Back",duration:"Duration",spotsLeft:(a,b)=>`${a} of ${b} left`,language:"Language",
       small:(n,c)=>`Small group · max ${c}. You + ${n} others going.`,tapFace:"Tap a face to see who's going.",open:"Open spot",
       plan:"The plan with",before:"Before",during:"During",after:"After",theEvent:"The event",bring:"What to bring",good:"Good to know",where:"Where",
@@ -545,7 +569,7 @@ const T = {
       forThai:"For Thai locals",kick:"Meet Thai Chiang Mai through a local",thisWeek:"This week",openCal:"Open calendar",guestsSay:"What guests say",hostLink:"Host an event: share your CNX",calH:"This week's CNX",fAll:"All",fHost:"With a Thai host",fFree:"Community events",list:"List",today:"Today",mapHosts:"The map shows sessions with a Thai host.",viewAs:"View as",newcomer:"Newcomer",thaiHost:"Thai host",fEng:"Your English",eng:["Basic","Conversational","Fluent"]},
   th:{expH:"Experience CNX",expP:"เที่ยวกับคนไทยในท้องถิ่น",shareH:"Share my CNX",shareP:"จัดกิจกรรมที่คุณรัก และมีรายได้",landH:"เชียงใหม่ ในแบบคนท้องถิ่น",landP:"เลือกเส้นทางของคุณ",
       intH:"คุณชอบอะไร?",intP:"เลือกสักสองสามอย่าง เราจะจัดฟีดให้ตรงใจ",intGo:"ดูฟีดของฉัน",skip:"ข้าม",forYou:"เลือกมาเพื่อคุณ",editLikes:"แก้ไข",
-      explore:"สำรวจ",map:"แผนที่",calendar:"ปฏิทิน",trips:"แผน",chats:"แชท",soonH:"แชทกลุ่มกำลังจะมา",soonP:"เมื่อโฮสต์คนไทยยืนยันที่นั่งของคุณ คุณจะคุยกับโฮสต์และทุกคนในกลุ่มได้ที่นี่ ทั้งก่อนและหลังกิจกรรม",soonInput:"เร็วๆ นี้",earn:"หารายได้",search:"ค้นหา: มวยไทย ทำอาหาร นิมมาน…",all:"ทั้งหมด",featured:"แนะนำ",weekend:"สุดสัปดาห์นี้",locals:"รู้จักคนท้องถิ่น",
+      explore:"สำรวจ",map:"แผนที่",calendar:"ปฏิทิน",trips:"แผน",chats:"แชท",soonH:"แชทกลุ่มกำลังจะมา",soonP:"เมื่อโฮสต์คนไทยยืนยันที่นั่งของคุณ คุณจะคุยกับโฮสต์และทุกคนในกลุ่มได้ที่นี่ ทั้งก่อนและหลังกิจกรรม",soonInput:"เร็วๆ นี้",earn:"หารายได้",search:"ค้นหา: แจ๊ส คำเมือง นิมมาน…",all:"ทั้งหมด",featured:"แนะนำ",weekend:"สุดสัปดาห์นี้",locals:"รู้จักคนท้องถิ่น",
       more:"ดูเพิ่ม",with:"กับ",hostedBy:"โฮสต์โดย",guest:"/ คน",reviews:"รีวิว",back:"กลับ",duration:"ระยะเวลา",spotsLeft:(a,b)=>`เหลือ ${a} จาก ${b}`,language:"ภาษา",
       small:(n,c)=>`กลุ่มเล็ก สูงสุด ${c} คน · คุณ + อีก ${n} คน`,tapFace:"แตะรูปเพื่อดูว่าใครไปบ้าง",open:"ที่ว่าง",
       plan:"ไปกับ",before:"ก่อนเริ่ม",during:"ระหว่างงาน",after:"หลังจบ",theEvent:"อีเวนต์",bring:"สิ่งที่ต้องเตรียม",good:"ข้อควรรู้",where:"ที่ไหน",
@@ -973,7 +997,7 @@ function vTrips(){
     ${foot()}`;
 }
 // Chat: Thai hosts write in Thai; every message is shown in the reader's chat language (auto-translate).
-const MALE = new Set(["beam","ananda","bank","krit","tee"]);
+const MALE = new Set(["tong","beam","ananda","bank","krit","tee"]);
 const CHATL = {en:{name:"English", from:{th:"Translated from Thai", en:"Translated from English"}, see:"See original", back:"Show translation", doing:"Translating…", chip:"Auto-translate: English"},
                ru:{name:"Русский", from:{th:"Переведено с тайского", en:"Переведено с английского"}, see:"Оригинал", back:"Показать перевод", doing:"Перевод…", chip:"Автоперевод: Русский"}};
 const cl = () => CHATL[S.chatLang] ? S.chatLang : "en";

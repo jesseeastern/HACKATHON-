@@ -169,6 +169,7 @@ button:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
   .thread{left:calc(clamp(120px,40vw,160px));right:calc(clamp(120px,40vw,160px))}
 }
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+.demo{margin:0;font-size:clamp(13px,1.3vw,17px);color:var(--muted);letter-spacing:.02em;font-style:italic}
 </style>
 
 <main class="deck" id="deck">
@@ -207,11 +208,6 @@ button:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
     </div>
   </section>
 
-  <section class="slide" id="s-model" aria-label="Business model">
-    <p class="eyebrow r">Business model</p>
-    <div class="earn r"><div class="lbl">A Thai host can earn about</div><div class="num g">฿<span id="earnNum">19,000</span></div><div class="lbl">a month, two evenings a week with 4&nbsp;guests. We keep&nbsp;20%.</div></div>
-  </section>
-
   <section class="slide alt" id="s-grow" aria-label="How we grow">
     <p class="eyebrow r">How we grow</p>
     <div class="wheel r" aria-label="Growth loop in four steps">
@@ -235,6 +231,12 @@ button:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
       <div class="qr" id="qr"><div class="ph">QR code goes here<br>when the app is live</div></div>
       <p class="url" id="url"></p>
     </div>
+  </section>
+
+  <section class="slide" id="s-model" aria-label="Business model">
+    <p class="eyebrow r">Business model</p>
+    <div class="earn r"><div class="lbl">A Thai host can earn about</div><div class="num g">฿<span id="earnNum">19,000</span></div><div class="lbl">a month, two evenings a week with 4&nbsp;guests.</div></div>
+    <p class="demo r">Illustrative example, for demonstration purposes only</p>
   </section>
 </main>
 
