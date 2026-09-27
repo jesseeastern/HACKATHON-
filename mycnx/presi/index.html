@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="robots" content="noindex">
-<title>ThaiCNX Pitch</title>
+<title>MyCNX Pitch</title>
 </head>
 <body>
 
@@ -127,7 +127,10 @@ button:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
   background:radial-gradient(circle,rgba(224,174,76,.22),rgba(224,174,76,0) 62%);animation:halo 5s ease-in-out infinite;pointer-events:none}
 @keyframes halo{50%{opacity:.55;transform:translate(-50%,-50%) scale(1.06)}}
 .solo .phone{position:relative}
-.solo{display:grid;grid-template-columns:auto auto;column-gap:clamp(20px,3vw,48px);align-items:center;justify-content:center;padding-block:24px}
+.solo{display:grid;grid-template-columns:auto auto auto;column-gap:clamp(20px,3vw,48px);align-items:center;justify-content:center;padding-block:24px}
+.appnav{width:clamp(56px,5vw,76px);aspect-ratio:1;border-radius:50%;border:2px solid rgba(224,174,76,.6);background:rgba(14,20,48,.5);color:var(--gold);font:600 clamp(28px,3vw,42px)/1 var(--display);cursor:pointer;display:grid;place-items:center;padding:0 0 6px;transition:background .2s,opacity .2s}
+.appnav:hover:not([disabled]){background:var(--gold);color:var(--indigo)}
+.appnav[disabled]{opacity:.25;cursor:default}
 .viewas{position:relative;display:flex;flex-direction:column;gap:8px;background:rgba(14,20,48,.5);border:1px solid rgba(185,192,218,.3);border-radius:22px;padding:6px}
 .viewas button{border:0;background:none;color:var(--muted);font:600 clamp(16px,1.4vw,22px)/1.2 var(--body);padding:14px 22px;border-radius:16px;cursor:pointer;text-align:left;white-space:nowrap}
 .viewas button[aria-pressed="true"]{background:var(--gold);color:var(--indigo)}
@@ -154,7 +157,7 @@ button:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
   .slide{position:relative;inset:auto;opacity:1;visibility:visible;transform:none;min-height:100vh;padding-block:56px 72px}
   .sol,.cta{grid-template-columns:1fr;row-gap:24px}
   .solo{grid-template-columns:1fr;row-gap:14px;justify-items:center}
-  .viewas{flex-direction:row}
+  .appnav{display:none}
   .phone{height:min(760px,calc(100vh - 150px))}
   .vs{grid-template-columns:1fr}
   .nav{display:none}
@@ -171,10 +174,9 @@ button:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
 <main class="deck" id="deck">
   <section class="slide on" id="s-cover" aria-label="Cover">
     <p class="eyebrow r">Chiang Mai Hackathon · 27 Sept 2026</p>
-    <h1 class="r">Thai<span>CNX</span></h1>
+    <h1 class="r">My<span>CNX</span></h1>
     <p class="lead r">Meet Thai Chiang Mai through a local.</p>
     <p class="team">Toby · Ryan · Slava · Jesse · Molly</p>
-      <aside class="notes">~10 s. "Who here has lived in Chiang Mai for a month? How many Thai friends did you make?"</aside>
   </section>
 
   <section class="slide alt" id="s-problem" aria-label="Problem">
@@ -185,13 +187,12 @@ button:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
       <div class="gap">same city,<br>separate lives</div>
       <div class="orb local">Local<small>คนเมือง · Thai</small></div>
     </div>
-      <aside class="notes">~25 s. We pull the city's community listings into one calendar: 74 events that week. About 3 in 4 are mostly foreigners meeting foreigners (AI-tagged estimate, if asked). The Thai city is right next to you, and you never step in.</aside>
   </section>
 
   <section class="slide solo" id="s-solution" aria-label="Solution: live app">
-    <div class="viewas r" role="group" aria-label="View the app as"><button data-app="explore" aria-pressed="true">Newcomer</button><button data-app="earn" aria-pressed="false">🇹🇭 Thai host</button></div>
-    <div class="phone r"><iframe id="app" src="/" title="ThaiCNX app, live" loading="lazy"></iframe></div>
-    <aside class="notes">~60 s. Live demo, no slide text. Tap a walking-street event: the Thai host's face. Open Muay Thai with Beam, Request a spot. Flip to Earn: it opens in Thai.</aside>
+    <button class="appnav r" id="appBack" aria-label="Back in the app" disabled>&lsaquo;</button>
+        <div class="phone r"><iframe id="app" src="/presi/app" title="MyCNX app, live" loading="lazy"></iframe></div>
+    <button class="appnav r" id="appFwd" aria-label="Forward in the app" disabled>&rsaquo;</button>
   </section>
 
   <section class="slide alt bridge" id="s-bridge" aria-label="Differentiator">
@@ -201,16 +202,14 @@ button:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
       <div class="orb cosmo">Cosmo<small>ต่างชาติ</small></div>
       <div class="gap">same city,<br>separate lives</div>
       <div class="thread" aria-hidden="true"></div>
-      <div class="host"><img src="/img/beam.jpg" alt="A Thai host"></div>
+      <div class="host"><img src="/presi/img/beam.jpg" alt="A Thai host"></div>
       <div class="orb local">Local<small>คนเมือง</small></div>
     </div>
-      <aside class="notes">~20 s. Tours show you sights. Expat meetups keep you in the bubble. Only a Thai local can walk you in. Only Thais host (if asked: guiding is reserved for Thai nationals).</aside>
   </section>
 
   <section class="slide" id="s-model" aria-label="Business model">
     <p class="eyebrow r">Business model</p>
     <div class="earn r"><div class="lbl">A Thai host can earn about</div><div class="num g">฿<span id="earnNum">19,000</span></div><div class="lbl">a month, two evenings a week with 4&nbsp;guests. We keep&nbsp;20%.</div></div>
-    <aside class="notes">~25 s. Example: ฿690 a guest, 4 guests, twice a week, host keeps 80% = about ฿19,000 a month. We keep 20% of every session.</aside>
   </section>
 
   <section class="slide alt" id="s-grow" aria-label="How we grow">
@@ -223,7 +222,6 @@ button:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
       <span class="w4 you">They upvote what they want<em>you, tonight</em></span>
       <span class="w5">Nomads help us recruit Thai hosts</span>
     </div>
-    <aside class="notes">~20 s. We gather every event in the city, Thai and expat, into one free calendar. Organisers promote it because it fills their events. Expats come for the calendar and find the Thai experiences. They upvote what they want, which proves demand. And nomads help us recruit the Thai hosts, through their trainer, their barista, their language partner. Step four is you, tonight.</aside>
   </section>
 
   <section class="slide cta" id="s-cta" aria-label="Call to action">
@@ -237,7 +235,6 @@ button:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
       <div class="qr" id="qr"><div class="ph">QR code goes here<br>when the app is live</div></div>
       <p class="url" id="url"></p>
     </div>
-      <aside class="notes">~15 s. "Take out your phone. The calendar is live today. Upvote the Thai experience you want, or nominate a Thai friend. That is how we launch."</aside>
   </section>
 </main>
 
@@ -269,7 +266,6 @@ button:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
   addEventListener("keydown", e => {
     if (["ArrowRight","PageDown"," "].includes(e.key)){ e.preventDefault(); go(i + 1); }
     if (["ArrowLeft","PageUp"].includes(e.key)){ e.preventDefault(); go(i - 1); }
-    if (e.key === "n" || e.key === "N") document.body.classList.toggle("shownotes");
   });
   document.getElementById("deck").addEventListener("click", e => {
     if (e.target.closest("iframe, a, button, .phone")) return;
@@ -280,10 +276,10 @@ button:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
     if (e.target.matches && e.target.matches("input, textarea")) return;
     if (["ArrowRight","PageDown","ArrowLeft","PageUp"].includes(e.key)){ e.preventDefault(); go(i + (e.key === "ArrowRight" || e.key === "PageDown" ? 1 : -1)); window.focus(); }
   }); } catch(e){} });
-  document.querySelectorAll("[data-app]").forEach(b => b.addEventListener("click", () => {
-    try { app.contentWindow.location.hash = b.dataset.app; } catch(e){ app.src = "/#" + b.dataset.app; }
-    document.querySelectorAll("[data-app]").forEach(o => o.setAttribute("aria-pressed", o === b ? "true" : "false"));
-  }));
+  const appBack = document.getElementById("appBack"), appFwd = document.getElementById("appFwd");
+  appBack.addEventListener("click", () => app.contentWindow.postMessage("mycnx:back", "*"));
+  appFwd.addEventListener("click", () => app.contentWindow.postMessage("mycnx:fwd", "*"));
+  addEventListener("message", e => { if (e.source === app.contentWindow && e.data && e.data.mycnxNav){ appBack.disabled = !e.data.mycnxNav.back; appFwd.disabled = !e.data.mycnxNav.fwd; } });
   let x0 = null;
   addEventListener("touchstart", e => { x0 = e.target.closest(".phone") ? null : e.touches[0].clientX; }, {passive:true});
   addEventListener("touchend", e => { if (x0 === null) return; const dx = e.changedTouches[0].clientX - x0; if (Math.abs(dx) > 50) go(i + (dx < 0 ? 1 : -1)); x0 = null; }, {passive:true});
