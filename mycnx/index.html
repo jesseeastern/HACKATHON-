@@ -15,6 +15,8 @@
 <style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
 </head>
 <body>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mitr:wght@400;500;600&family=Sarabun:wght@400;600;700&display=swap">
 <style>
@@ -385,29 +387,29 @@ const GUESTS = {A:{n:"Anna",f:"🇩🇪 Berlin",x:4},K:{n:"Kenji",f:"🇯🇵 Os
   N:{n:"Nina",f:"🇫🇷 Lyon",x:2},T:{n:"Tom",f:"🇳🇱 Utrecht",x:4},E:{n:"Emma",f:"🇸🇪 Malmö",x:1},W:{n:"Wei",f:"🇸🇬 Singapore",x:3},C:{n:"Chloe",f:"🇨🇦 Toronto",x:2},F:{n:"Finn",f:"🇮🇪 Cork",x:5}};
 const B = (en,th) => ({en,th});
 const EXP = [
-  {id:"silver", host:"noi", cat:"crafts", tags:["market","craft","night"], featured:true, img:["img/s_silver.jpg","img/noi.jpg"], price:690, cap:6, dur:B("3.5 h","3.5 ชม."), hood:"wualai", xy:[228,250],
+  {id:"silver", host:"noi", cat:"crafts", tags:["market","craft","night"], featured:true, img:["img/s_silver.jpg","img/noi.jpg"], price:690, cap:6, dur:B("3.5 h","3.5 ชม."), hood:"wualai", xy:[228,250], latlng:[18.777, 98.983],
    title:B("Saturday night on Silver Street","คืนวันเสาร์ ถนนคนเดินวัวลาย"), match:/saturday walking street/i, sched:{days:[6],time:"16:30"}, rating:4.97, n:41, going:["A","K","S"],
    tl:[["before","16:30",B("Noi's family workshop. Watch a bowl hammered by hand.","เจอกันที่โรงตีเงินบ้านน้อย ดูตีขันเงินด้วยมือ")],["during","17:30",B("Walk the market. Meet silversmiths her family has known for decades.","เดินตลาด น้อยพาไปทักช่างเงินที่รู้จักกันมาหลายสิบปี")],["during","19:00",B("Dinner at her favourite street stalls.","กินข้าวเย็นร้านข้างทางที่น้อยชอบ")],["after","20:30",B("Stamp your own little silver piece. Take it home.","ตอกลายเงินชิ้นเล็กของตัวเอง เอากลับบ้านได้")]],
    bring:[["💵",B("Cash for the market (about ฿300)","เงินสดไว้ช้อป (ประมาณ ฿300)")],["👟",B("Comfortable walking shoes","รองเท้าเดินสบาย")]],
    good:[["🙂",B("No experience needed. Kids 10+ welcome.","ไม่ต้องมีพื้นฐาน เด็ก 10 ขวบขึ้นไปมาได้")],["🍜",B("Dinner is included in the price.","รวมค่าอาหารเย็นแล้ว")]]},
-  {id:"muaythai", host:"beam", cat:"sport", tags:["fitness","outdoor","beginner"], featured:true, img:["img/s_muaythai.jpg","img/beam.jpg"], price:890, cap:6, dur:B("2 h","2 ชม."), hood:"santitham", xy:[236,108],
+  {id:"muaythai", host:"beam", cat:"sport", tags:["fitness","outdoor","beginner"], featured:true, img:["img/s_muaythai.jpg","img/beam.jpg"], price:890, cap:6, dur:B("2 h","2 ชม."), hood:"santitham", xy:[236,108], latlng:[18.803, 98.979],
    title:B("Train with a real Muay Thai camp","ซ้อมมวยไทยกับค่ายจริง"), sched:{days:[1,3,5],time:"17:00"}, rating:4.95, n:88, going:["B","F","D","T"],
    about:B("An evening session at a working Muay Thai camp: warm-up with the fighters, pad work in pairs, and a cool-down on the ring.","ซ้อมช่วงเย็นที่ค่ายมวยจริง วอร์มกับนักมวย ต่อเป้าเป็นคู่ และคูลดาวน์บนเวที"),
    tl:[["before","16:40",B("Beam wraps your hands and tells how he started fighting at nine.","บีมพันมือให้ และเล่าว่าเริ่มชกตั้งแต่ 9 ขวบ")],["during","17:00",B("Train alongside the camp's fighters, pads and all.","ซ้อมจริงกับนักมวยในค่าย ต่อเป้าเต็มรูปแบบ")],["after","18:45",B("Iced tea with the camp family, and a photo in the ring.","ชาเย็นกับครอบครัวค่ายมวย และถ่ายรูปบนเวที")]],
    bring:[["💧",B("A big bottle of water","น้ำขวดใหญ่")],["👕",B("Clothes you can sweat in","เสื้อผ้าที่เหงื่อออกได้")],["🧤",B("Nothing else. Gloves and wraps provided.","ไม่ต้องเอาอะไรมา มีนวมและผ้าพันมือให้")]],
    good:[["💪",B("Any fitness level. Beam adjusts for you.","ทุกระดับความฟิต บีมปรับให้")],["🚫",B("No sparring unless you ask.","ไม่มีการชกจริงถ้าไม่ขอ")]]},
-  {id:"cooking", host:"jaeng", cat:"food", tags:["cooking","market","family"], featured:true, img:["img/s_cook.jpg","img/jaeng.jpg"], price:790, cap:6, dur:B("4 h","4 ชม."), hood:"oldcity", xy:[250,172],
+  {id:"cooking", host:"jaeng", cat:"food", tags:["cooking","market","family"], featured:true, img:["img/s_cook.jpg","img/jaeng.jpg"], price:790, cap:6, dur:B("4 h","4 ชม."), hood:"oldcity", xy:[250,172], latlng:[18.788, 98.985],
    title:B("Sunday khao soi in Grandma's kitchen","ข้าวซอยวันอาทิตย์ในครัวยาย"), sched:{days:[0],time:"09:30"}, rating:4.99, n:63, going:["N","W"],
    about:B("A morning at the market and in a family kitchen, cooking northern Thai dishes from scratch, then eating together.","ตลาดตอนเช้าและครัวของครอบครัว ทำอาหารเหนือแบบเริ่มจากศูนย์ แล้วกินด้วยกัน"),
    tl:[["before","09:30",B("Shop the market stalls she has used for 40 years.","เดินตลาดแผงเดิมที่ยายซื้อมา 40 ปี")],["during","10:30",B("Pound the curry paste and cook khao soi with her.","ตำพริกแกงและทำข้าวซอยกับยาย")],["after","12:30",B("Lunch at the family table. Take the recipe home.","กินข้าวที่โต๊ะครอบครัว ได้สูตรกลับบ้าน")]],
    bring:[["🛍️",B("A tote bag for the market","ถุงผ้าไว้ใส่ของ")],["📷",B("An empty stomach","ท้องว่างๆ")]],
    good:[["🌶️",B("Vegetarian version on request.","ขอเมนูมังสวิรัติได้")],["🗣️",B("Grandma speaks Thai; Mint translates.","ยายพูดไทย มิ้นท์ช่วยแปล")]]},
-  {id:"karaoke", host:"bank", cat:"social", tags:["nightlife","music","bar"], img:["img/s_karaoke.jpg","img/bank.jpg"], price:490, cap:6, dur:B("3 h","3 ชม."), hood:"oldcity", xy:[196,168],
+  {id:"karaoke", host:"bank", cat:"social", tags:["nightlife","music","bar"], img:["img/s_karaoke.jpg","img/bank.jpg"], price:490, cap:6, dur:B("3 h","3 ชม."), hood:"oldcity", xy:[196,168], latlng:[18.785, 98.988],
    title:B("Thai karaoke Thursday with the regulars","คาราโอเกะไทยคืนวันพฤหัสกับขาประจำ"), sched:{days:[4],time:"19:30"}, rating:4.94, n:26, going:["R","C","E","L"],
    tl:[["before","19:30",B("Street food with Bank. Pick your first song together.","กินของริมทางกับแบงก์ เลือกเพลงแรกด้วยกัน")],["during","20:30",B("He sings the first duet with you and introduces the bar crew.","ร้องคู่เพลงแรกกับคุณ แล้วแนะนำทีมร้าน")],["after","23:00",B("You're in the karaoke group chat for next week.","เข้ากลุ่มแชทคาราโอเกะไว้สัปดาห์หน้า")]],
    bring:[["💵",B("Cash for drinks","เงินสดค่าเครื่องดื่ม")],["🎤",B("Your worst song","เพลงที่ร้องแย่ที่สุด")]],
    good:[["🔞",B("20+ only.","อายุ 20 ปีขึ้นไป")],["🥤",B("No need to drink alcohol.","ไม่ดื่มแอลกอฮอล์ก็ได้")]]},
-  {id:"temple", host:"ananda", cat:"culture", tags:["meditation","temple","evening"], img:["img/s_temple.jpg","img/ananda.jpg"], price:490, cap:6, dur:B("3 h","3 ชม."), hood:"oldcity", xy:[222,204],
+  {id:"temple", host:"ananda", cat:"culture", tags:["meditation","temple","evening"], img:["img/s_temple.jpg","img/ananda.jpg"], price:490, cap:6, dur:B("3 h","3 ชม."), hood:"oldcity", xy:[222,204], latlng:[18.790, 98.981],
    title:B("Evening meditation at a Lanna temple","นั่งสมาธิยามเย็นที่วัดล้านนา"), link:/loving-kindness|buddhist study/i, sched:{days:[0],time:"18:30"}, rating:4.98, n:29, going:["E","W"],
    tl:[["before","18:00",B("Temple walk: what to wear, where to sit, the temple's story.","เดินชมวัด รู้ว่าแต่งตัวยังไง นั่งตรงไหน และเรื่องของวัด")],["during","18:30",B("Meditation and Q&A, Ananda beside you.","นั่งสมาธิและถามตอบ อานันท์นั่งข้างคุณ")],["after","20:00",B("Tea, and ask anything about monk life.","จิบชา ถามเรื่องชีวิตพระได้ทุกเรื่อง")]],
    bring:[["👖",B("Clothes covering shoulders and knees","เสื้อผ้าปิดไหล่และเข่า")]],
@@ -635,7 +637,7 @@ function vCal(){
   const head = `${topBar()}<div class="cal-h"><h1 class="h-big">${t("calH")}</h1>${seg}</div>`;
   if (S.calView === "map"){
     const sel = byId(S.mapSel);
-    return `${head}<div class="mapwrap" style="margin-top:8px">${mapSVG(S.mapSel)}</div><div class="note">${t("mapHosts")}</div>
+    return `${head}<div id="leaflet-map" data-mapsel="${S.mapSel||''}" style="height: 300px; width: 100%; z-index:1; border-radius: 18px; margin-top:8px;"></div><div class="note">${t("mapHosts")}</div>
       ${(sel ? [sel, ...EXP.filter(x => x !== sel)] : EXP).map(x => { const h = HOSTS[x.host]; return `<a class="mini" href="#x-${x.id}" ${x===sel?'style="border-color:var(--ink)"':""}><img src="${x.img[0]}" alt=""><div><div class="t1">${esc(tx(x.title))}</div><div class="t2">${t("with")} ${esc(hn(h))} · ${esc(tx(HOODS[x.hood]))}</div><div class="t2">${stars(x.rating)} · <b style="color:var(--ink)">${baht(x.price)}</b></div></div></a>`; }).join("")}${foot()}`;
   }
   const chips = `<div class="fchips">${[["all","fAll"],["host","fHost"],["free","fFree"]].map(([k,l]) => `<button class="chipbtn" data-calf="${k}" aria-pressed="${S.calF===k}">${t(l)}</button>`).join("")}</div>`;
@@ -730,7 +732,7 @@ function vExp(x){
     ${ev ? `<section class="blk"><h2>${L()==="th"?"เกี่ยวกับกิจกรรม":"About"}</h2>${ev.title ? `<p style="margin:0 0 4px"><b>${esc(ev.title)}</b></p>` : ""}<p style="margin:0">${esc(ev.description)}</p></section>` : ""}
     <section class="blk"><h2>${t("bring")}</h2><ul class="list">${x.bring.map(([i,s]) => `<li><span>${i}</span><span>${esc(tx(s))}</span></li>`).join("")}</ul></section>
     <section class="blk"><h2>${t("good")}</h2><ul class="list">${x.good.map(([i,s]) => `<li><span>${i}</span><span>${esc(tx(s))}</span></li>`).join("")}</ul></section>
-    <section class="blk"><h2>${t("where")}</h2><div class="mapwrap">${mapSVG(null, x.id)}</div><div class="note">${esc(tx(HOODS[x.hood]))} · ${t("mapNote")}</div></section>
+    <section class="blk"><h2>${t("where")}</h2><div id="leaflet-map" data-maponly="${x.id}" style="height: 200px; width: 100%; z-index:1; border-radius: 18px;"></div><div class="note">${esc(tx(HOODS[x.hood]))} · ${t("mapNote")}</div></section>
     <section class="blk"><h2>${t("reviewsH")} <span class="tag-sample">${t("sample")}</span></h2>
       <div class="rate"><span class="big">${x.rating.toFixed(2).replace(/0$/,"")}</span><span><span class="star">★★★★★</span><br><span class="note">${x.n} ${t("reviews")}</span></span></div>
       <div class="dims">${DIMS.map(([k,lbl]) => { const v = Math.min(5, dimScore(k)); return `<div class="dim"><span>${esc(tx(lbl))}</span><span class="bar"><i style="width:${v/5*100}%"></i></span><b>${v.toFixed(1)}</b></div>`; }).join("")}</div>
@@ -897,6 +899,28 @@ function render(keep){
   document.documentElement.lang = L();
   $("#viewas").innerHTML = `<span>${t("viewAs")}</span><button data-view="explore" aria-pressed="${!isEarn(r)}">${t("newcomer")}</button><button data-view="earn" aria-pressed="${isEarn(r)}">🇹🇭 ${t("thaiHost")}</button>`;
   $("#phone").innerHTML = `<div class="tung" aria-hidden="true"></div><div class="scroll" id="scroll">${body}</div>${bottom}${tabbar()}${overlay}`;
+
+  const mapEl = document.getElementById('leaflet-map');
+  if (mapEl) {
+    if (window.leafletMap) { window.leafletMap.remove(); }
+    const map = window.L.map('leaflet-map', { zoomControl: false }).setView([18.788, 98.985], 13);
+    window.leafletMap = map;
+    window.L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19,
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a>'
+    }).addTo(map);
+    
+    const only = mapEl.dataset.maponly;
+    EXP.forEach(x => {
+       if (only && x.id !== only) return;
+       if (!only && S.mapCat && x.cat !== S.mapCat) return;
+       if (x.latlng) {
+          const m = window.L.marker(x.latlng).addTo(map);
+          m.on('click', () => { window.location.hash = '#x-' + x.id; });
+       }
+    });
+  }
+
   if (keep){ sc().scrollTop = y; if (f){ const el = document.getElementById(f); if (el){ el.focus(); if (el.setSelectionRange && el.value) el.setSelectionRange(el.value.length, el.value.length); } } }
   if (/^trip-\d+$/.test(r) && !keep) sc().scrollTop = sc().scrollHeight;
 }
